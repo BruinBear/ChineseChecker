@@ -3,8 +3,8 @@ import java.util.*;
 /**
  * Created by JingyuLiu on 4/1/2015.
  */
-public class BoardGird {
-    private char[][] m_grid;
+public class CheckerBoard {
+    protected char[][] m_grid;
     private int m_grid_size;
     /*
     grid should be square
@@ -13,13 +13,32 @@ public class BoardGird {
     1 is player one's pieces
     2 is player two's pieces
     */
-    BoardGird(char[][] g) {
-        m_grid = g ;
+    CheckerBoard(char[][] g) {
         m_grid_size = g.length;
+        m_grid = new char[m_grid_size][m_grid_size];
+        for(int i = 0; i< m_grid_size; i++) {
+            m_grid[i] = g[i].clone();
+        }
+    }
+
+    /* copy constructor */
+    CheckerBoard(CheckerBoard b) {
+        m_grid_size = b.getSize();
+        m_grid = new char[m_grid_size][m_grid_size];
+        for (int i = 0; i < m_grid_size; i++) {
+            m_grid[i] = b.getGrid()[i].clone();
+        }
+    }
+
+    public char[][] getGrid () {
+        return m_grid;
+    }
+
+    public int getSize() {
+        return m_grid_size;
     }
 
     public void printBoard() {
-        System.out.println("Printing board configuration");
         // top half
         for(int i = 1; i <= m_grid_size; i++) {
             // print align spaces
@@ -84,7 +103,7 @@ public class BoardGird {
        Given a IntPair where a piece is return a list of places reacheable through jumps
        searched through BFS because depth is limited by grid size
     */
-    public List<IntPair> pieceJumpCanReach(IntPair root) {
+    public ArrayList<IntPair> pieceJumpCanReach(IntPair root) {
         Set<IntPair> visited = new HashSet<IntPair>();
         Queue<IntPair> frontier = new LinkedList<IntPair>();
         frontier.add(root);
@@ -129,5 +148,40 @@ public class BoardGird {
         }
         return new ArrayList<IntPair>(visited);
     }
-    
+
+
+    /*
+    Give a merged result of next move for a piece
+     */
+    public ArrayList<IntPair> pieceCanMove(IntPair pair) {
+        ArrayList<IntPair> res = new ArrayList<IntPair>(this.pieceOneStepCanReach(pair));
+        res.addAll(this.pieceJumpCanReach(pair));
+        return res;
+    }
+
+
+    public boolean movePieceTo(IntPair piece, IntPair destination) {
+        if ('0' < m_grid[piece.x][piece.y] &&
+                m_grid[piece.x][piece.y] <= '6' &&
+                m_grid[destination.x][destination.y] == '0') {
+            char tmp = m_grid[piece.x][piece.y];
+            m_grid[piece.x][piece.y] = '0';
+            m_grid[destination.x][destination.y] = tmp;
+            return true;
+        }
+        else
+            return false;
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuffer b = new StringBuffer();
+        for (int i = 0; i < m_grid_size; i++) {
+            for (int j = 0; j < m_grid_size; j++) {
+                b.append(m_grid[i][j]);
+            }
+        }
+        return b.toString();
+    }
 }
