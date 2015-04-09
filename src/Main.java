@@ -46,11 +46,12 @@ public class Main {
             turn++;
             alg.minimax(b, 2, true, (turn+1)%2, turn%2);
             b = b.bestnext;
-            b.printBoard();
-            System.out.printf("Evaluation for player %d: %d\n", b.m_turn+1, turn);
-            System.out.print("Press enter key to continue");
-            sc.nextLine();
+//            b.printBoard();
+//            System.out.printf("Evaluation for player %d: %d\n", b.m_turn+1, turn);
+//            System.out.print("Press enter key to continue");
+//            sc.nextLine();
         }
+        System.out.printf("Number of nodes looked up: %d\n", alg.node_generated);
 
 //        for (CheckerState ch : b.nextStates()) {
 //            ch.printBoard();
