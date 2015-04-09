@@ -1,14 +1,30 @@
+import java.util.Scanner;
+
 public class Main {
 
 
     public static void main(String[] args) {
-        System.out.println("Welcome to Chinese Checker!");
+        System.out.println("Welcome to Chinese Checker!\n");
 
         CheckerState b = new CheckerState();
         b.printBoard();
-        for (CheckerState ch : b.nextStates()) {
-            ch.printBoard();
+        System.out.printf("Player one eval to %f!\n", b.evaluation_goal_distance(0));
+        b.printBoard();        b = b.nextStates().remove(0);
+        Scanner sc = new Scanner(System.in);
+        while(b.gameOver() == 0) {
+            b = b.nextStates().remove(0);
+            b.printBoard();
+            System.out.printf("Player one eval to %f!\n\n" +
+                    "", b.evaluation_goal_distance(0));
+            System.out.print("Pressenter key to continue");
+            sc.nextLine();
         }
+
+
+
+//        for (CheckerState ch : b.nextStates()) {
+//            ch.printBoard();
+//        }
     }
 }
 

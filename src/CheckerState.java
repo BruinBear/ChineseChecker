@@ -46,6 +46,7 @@ public class CheckerState {
         }
         m_num_players = 2;
         m_players_goals = b.m_players_goals;
+        m_players_goal_center = b.m_players_goal_center;
     }
 
     private static char[][] empty_grid = new char[][]{
@@ -117,6 +118,26 @@ public class CheckerState {
     private int m_num_players;
     private ArrayList<ArrayList<IntPair>> m_players_goals = new ArrayList<ArrayList<IntPair>>();
     private ArrayList<ArrayList<IntPair>> m_players_pieces = new ArrayList<ArrayList<IntPair>>();
+    private ArrayList<IntPair> m_players_goal_center = new ArrayList<IntPair>();
+
+
+    public double evaluation_goal_distance(int player_id) {
+        if(player_id >= m_num_players) { return -1.0;}
+
+        IntPair avg_goal = m_players_goal_center.get(player_id);
+        double eval = 100;
+        for(IntPair p : m_players_pieces.get(player_id))
+        {
+            eval = eval + (100.0- (p.x-avg_goal.x)*(p.x-avg_goal.x)+(p.y-avg_goal.y)*(p.y-avg_goal.y));
+        }
+        int completion_reward = 1000;
+        for(IntPair p : m_players_goals.get(player_id)) {
+            if(m_grid[p.x][p.y] == '1' + player_id) {
+                eval += completion_reward;
+            }
+        }
+        return eval;
+    }
 
 
     // Scan goals, only done once
@@ -132,6 +153,16 @@ public class CheckerState {
                     m_players_pieces.get(m_grid[i][j] - '1').add(new IntPair(i, j));
                 }
             }
+        }
+        int num_pieces = m_players_goals.size();
+        for(int i = 0; i < m_players_goals.size(); i++) {
+            int x_sum = 0;
+            int y_sum = 0;
+            for(IntPair goal: m_players_goals.get(i)){
+                x_sum += goal.x;
+                y_sum += goal.y;
+            }
+            m_players_goal_center.add(new IntPair(x_sum/num_pieces, y_sum/num_pieces));
         }
     }
 
@@ -154,7 +185,7 @@ public class CheckerState {
     // returns who wins, 0 if none wins
     public int gameOver() {
         // we only need to check if player the m_turn before has won
-        int player_index = (m_turn -1)%m_num_players;
+        int player_index = (m_turn +m_num_players-1)%m_num_players;
         for(IntPair piece : m_players_goals.get(player_index)) {
             if(m_grid[piece.x][piece.y] != ('1'+ player_index)) {
                 return 0;
