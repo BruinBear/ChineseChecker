@@ -1,3 +1,5 @@
+import javafx.util.Pair;
+
 import java.util.Scanner;
 
 public class Main {
@@ -8,19 +10,47 @@ public class Main {
 
         CheckerState b = new CheckerState();
         b.printBoard();
-        System.out.printf("Player one eval to %f!\n", b.evaluation_goal_distance(0));
-        b.printBoard();        b = b.nextStates().remove(0);
+        System.out.printf("Player one eval to %d!\n", b.evaluation_goal_distance(0));
+        b.printBoard();
         Scanner sc = new Scanner(System.in);
+//        while(b.gameOver() == 0) {
+//            b = b.nextStates().remove(0);
+//            b.printBoard();
+//            System.out.printf("Player one eval to %f!\n\n" +
+//                    "", b.evaluation_goal_distance(0));
+//            System.out.print("Pressenter key to continue");
+//            sc.nextLine();
+//        }
+
+        Algorithm alg = new Algorithm();
+//        b.evaluation_goal_distance(0);
+////
+//        Pair<Integer, CheckerState> res_minimax = alg.minimax(b, 2, true, 0, 1);
+//        b = res_minimax.getValue().state_chain.get(1);
+//        b.printBoard();
+//
+//        res_minimax = alg.minimax(b, 2, true, 1, 0);
+//        b = res_minimax.getValue().state_chain.get(2);
+//        b.printBoard();
+//
+//        res_minimax = alg.minimax(b, 2, true, 0, 1);
+//        b = res_minimax.getValue().state_chain.get(3);
+//        b.printBoard();
+//
+//        res_minimax = alg.minimax(b, 2, true, 1, 0);
+//        b = res_minimax.getValue().state_chain.get(4);
+//        b.printBoard();
+
+        int turn = 0;
         while(b.gameOver() == 0) {
-            b = b.nextStates().remove(0);
+            turn++;
+            alg.minimax(b, 2, true, (turn+1)%2, turn%2);
+            b = b.bestnext;
             b.printBoard();
-            System.out.printf("Player one eval to %f!\n\n" +
-                    "", b.evaluation_goal_distance(0));
-            System.out.print("Pressenter key to continue");
+            System.out.printf("Evaluation for player %d: %d\n", b.m_turn+1, turn);
+            System.out.print("Press enter key to continue");
             sc.nextLine();
         }
-
-
 
 //        for (CheckerState ch : b.nextStates()) {
 //            ch.printBoard();

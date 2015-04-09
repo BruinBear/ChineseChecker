@@ -6,15 +6,13 @@ import java.util.*;
 public class CheckerState {
 
     private char[][] m_grid;
-    private int m_grid_size = 19;
+    private int m_grid_size;
 
     // next m_turn info
     int m_turn = 0;
     // total turns info
     int m_turn_played = 0;
-    // game status, 0 is in progress
-    int m_winner = 0;
-
+    protected CheckerState bestnext;
     /**
      * grid should be square
      * assume two players
@@ -24,9 +22,10 @@ public class CheckerState {
      */
     CheckerState() {
         // clone a copy of 2 player game
+        m_grid_size = grid_2_s.length;
         m_grid = new char[m_grid_size][m_grid_size];
         for(int i = 0; i< m_grid_size; i++) {
-            m_grid[i] = this.grid_2[i].clone();
+            m_grid[i] = this.grid_2_s[i].clone();
         }
         // add player pieces to pool and the goal states to pool
         m_num_players = 2;
@@ -39,7 +38,6 @@ public class CheckerState {
         m_grid_size = b.getSize();
         m_turn = b.m_turn;
         m_turn_played = b.m_turn_played;
-        m_winner = b.m_winner;
         m_grid = new char[m_grid_size][m_grid_size];
         for (int i = 0; i < m_grid_size; i++) {
             m_grid[i] = b.getGrid()[i].clone();
@@ -92,6 +90,23 @@ public class CheckerState {
             {' ', ' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
     };
+    private static char[][] grid_2_s = new char[][]{
+            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', '0', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', '0', '0', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0', ' '},
+            {' ', ' ', ' ', ' ', '1', '1', '0', '0', '0', '0', '0', '0', '0', ' ', ' '},
+            {' ', ' ', ' ', ' ', '1', '0', '0', '0', '0', '0', '0', '0', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', '0', '0', '0', '0', '0', '0', '0', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', '0', '0', '0', '0', '0', '0', '0', '2', ' ', ' ', ' ', ' '},
+            {' ', ' ', '0', '0', '0', '0', '0', '0', '0', '2', '2', ' ', ' ', ' ', ' '},
+            {' ', '0', '0', '0', '0', '0', '0', '0', '2', '2', '2', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', '0', '0', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', '0', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
+    };
 
     private static char[][] grid_3 = new char[][]{
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
@@ -121,14 +136,14 @@ public class CheckerState {
     private ArrayList<IntPair> m_players_goal_center = new ArrayList<IntPair>();
 
 
-    public double evaluation_goal_distance(int player_id) {
-        if(player_id >= m_num_players) { return -1.0;}
+    public int evaluation_goal_distance(int player_id) {
+        if(player_id >= m_num_players) { return -1;}
 
         IntPair avg_goal = m_players_goal_center.get(player_id);
-        double eval = 100;
+        int eval = 0;
         for(IntPair p : m_players_pieces.get(player_id))
         {
-            eval = eval + (100.0- (p.x-avg_goal.x)*(p.x-avg_goal.x)+(p.y-avg_goal.y)*(p.y-avg_goal.y));
+            eval = eval - (int)( Math.abs(p.x - avg_goal.x) + Math.abs(p.y-avg_goal.y));
         }
         int completion_reward = 1000;
         for(IntPair p : m_players_goals.get(player_id)) {
@@ -149,12 +164,12 @@ public class CheckerState {
         for(int i=0; i<m_grid_size; i++) {
             for(int j=0; j<m_grid_size; j++) {
                 if( '0' < m_grid[i][j] && m_grid[i][j] <='6') {
-                    m_players_goals.get(m_grid[i][j] - '1').add(new IntPair(18 - i, 18 - j));
+                    m_players_goals.get(m_grid[i][j] - '1').add(new IntPair(m_grid_size-1 - i, m_grid_size-1 - j));
                     m_players_pieces.get(m_grid[i][j] - '1').add(new IntPair(i, j));
                 }
             }
         }
-        int num_pieces = m_players_goals.size();
+        int num_pieces = m_players_goals.get(0).size();
         for(int i = 0; i < m_players_goals.size(); i++) {
             int x_sum = 0;
             int y_sum = 0;
@@ -327,12 +342,12 @@ public class CheckerState {
 
 
     public ArrayList<CheckerState> nextStates() {
+        ArrayList<CheckerState> nextStates = new ArrayList<CheckerState>();
         // no more expansion
-        if(this.m_winner != 0) {
-            return null;
+        if(this.gameOver() != 0) {
+            return nextStates;
         }
 
-        ArrayList<CheckerState> nextStates = new ArrayList<CheckerState>();
         for (IntPair piece : m_players_pieces.get(m_turn)) {
             for (IntPair dest : pieceCanMove(piece)) {
                 // A new state
@@ -341,7 +356,6 @@ public class CheckerState {
                 newState.m_grid[piece.x][piece.y] = '0';
                 newState.rescanPieces();
                 newState.m_turn = (newState.m_turn+1) % m_num_players;
-                newState.m_winner = newState.gameOver();
                 nextStates.add(newState);
             }
         }
