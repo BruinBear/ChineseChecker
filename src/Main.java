@@ -44,12 +44,13 @@ public class Main {
         int turn = 0;
         while(b.gameOver() == 0) {
             turn++;
-            alg.minimax(b, 2, true, (turn+1)%2, turn%2);
+            alg.alphabeta(b,2,true, (turn+1)%2, turn%2, Integer.MIN_VALUE, Integer.MAX_VALUE);
+//            alg.minimax(b, 2, true, (turn+1)%2, turn%2);
             b = b.bestnext;
-//            b.printBoard();
-//            System.out.printf("Evaluation for player %d: %d\n", b.m_turn+1, turn);
-//            System.out.print("Press enter key to continue");
-//            sc.nextLine();
+            b.printBoard();
+            System.out.printf("Evaluation for player %d: %d\n", b.m_turn+1, turn);
+            System.out.print("Press enter key to continue");
+            sc.nextLine();
         }
         System.out.printf("Number of nodes looked up: %d\n", alg.node_generated);
 
