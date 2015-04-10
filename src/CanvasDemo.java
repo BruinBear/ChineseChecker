@@ -13,7 +13,7 @@ public class CanvasDemo extends JFrame{
     }
     private GameCanvas canvas = new GameCanvas();
 
-    public static void main(String[] args) {
+    public static void __main(String[] args) {
         CanvasDemo fr = new CanvasDemo();
     }
 

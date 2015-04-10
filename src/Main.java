@@ -1,14 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.applet.Applet;
-import java.awt.*;
+import java.util.concurrent.*;
 
-public class Main extends Applet{
-    public void paint (Graphics g) {
-        // Code goes here
-        g.drawString("Welcome in Java Applet.",40,20);
-
-    }
+public class Main{
 
     public static void main(String[] args) {
         System.out.println("Welcome to Chinese Checker!\n");
@@ -18,224 +12,45 @@ public class Main extends Applet{
         System.out.printf("Player one eval to %d!\n", b.evaluation_goal_distance(0));
         b.printBoard();
         Scanner sc = new Scanner(System.in);
-//        while(b.gameOver() == 0) {
-//            b = b.nextStates().remove(0);
-//            b.printBoard();
-//            System.out.printf("Player one eval to %f!\n\n" +
-//                    "", b.evaluation_goal_distance(0));
-//            System.out.print("Pressenter key to continue");
-//            sc.nextLine();
-//        }
-
-//        b.evaluation_goal_distance(0);
-////
-//        Pair<Integer, CheckerState> res_minimax = alg.minimax(b, 2, true, 0, 1);
-//        b = res_minimax.getValue().state_chain.get(1);
-//        b.printBoard();
-//
-//        res_minimax = alg.minimax(b, 2, true, 1, 0);
-//        b = res_minimax.getValue().state_chain.get(2);
-//        b.printBoard();
-//
-//        res_minimax = alg.minimax(b, 2, true, 0, 1);
-//        b = res_minimax.getValue().state_chain.get(3);
-//        b.printBoard();
-//
-//        res_minimax = alg.minimax(b, 2, true, 1, 0);
-//        b = res_minimax.getValue().state_chain.get(4);
-//        b.printBoard();
 
         int turn = 0;
         ArrayList<Algorithm> algorithms = new ArrayList<Algorithm>();
         algorithms.add(new Algorithm("MINIMAX"));
         algorithms.add(new Algorithm("ALPHABETA"));
         while(b.gameOver() == 0) {
-            algorithms.get(turn%2).execute(b, 3, turn%2, (turn+1)%2);
-            turn++;
-//            alg.minimax(b, 2, true, (turn+1)%2, turn%2);
+            System.out.printf("Turn %d, Player %d move\n", turn, b.m_turn+1);
+            int current_num_nodes_processed = algorithms.get(turn%2).node_generated;
+            ExecutorService executor = Executors.newSingleThreadExecutor();
+            Future<Integer> future = executor.submit(new GetBestNextMoveTask(algorithms.get(turn%2),b,8, turn%2, (turn+1)%2));
+            try {
+                System.out.println("Started..");
+                System.out.println(future.get(6, TimeUnit.SECONDS));
+                System.out.println("Finished!");
+            } catch (TimeoutException e) {
+                System.out.println("Terminated!");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            }
+            System.out.printf("%d out of %d levels searched.\n", algorithms.get(turn%2).current_depth,algorithms.get(turn%2).max_depth);
+            System.out.printf("%d more nodes generated\n", algorithms.get(turn%2).node_generated - current_num_nodes_processed);
+            executor.shutdownNow();
+
+            // commit move
             b = b.bestnext;
+            // printing move info
             b.printBoard();
-            System.out.printf("Evaluation for player %d: %d\n", b.m_turn+1, turn);
-            System.out.print("Press enter key to continue\n");
-            sc.nextLine();
+
+            // increment turn
+            turn++;
+//            System.out.print("Press enter key to continue\n");
+//            sc.nextLine();
         }
         System.out.printf("Number of nodes looked up: %d\n", algorithms.get(0).node_generated);
         System.out.printf("Number of nodes looked up: %d\n", algorithms.get(1).node_generated);
-
-
-//        for (CheckerState ch : b.nextStates()) {
-//            ch.printBoard();
-//        }
+        System.out.printf("Winner is player %d\n", b.gameOver());
     }
-}
 
-//
-//        CheckerBoard b = new CheckerBoard(testBoard);
-//        b.printBoard();
-//
-//        CheckerGame g = new CheckerGame(b, 2);
-//        Stack<CheckerGame> gameStack = new Stack<CheckerGame>();
-////        HashSet<String> hash = new HashSet<String>();
-//
-//        gameStack.add(g);
-//        GameTreeNode WinningTree = isWinningNode(g, null);
-//        if (WinningTree != null)
-//            System.out.println("Player one has winning strategy");
-//        else
-//            System.out.println("Player one doesn't have winning strategy");
-////
-////        LinkedList<GameTreeNode> treeQ = new LinkedList<GameTreeNode>();
-////        treeQ.add(WinningTree);
-////        while(!treeQ.isEmpty()){
-////            GameTreeNode first = treeQ.removeFirst();
-////            first.printNode();
-////            treeQ.addAll(first.children);
-////        }
-//
-////
-////        // for printing
-////        Stack<GameTreeNode> treeStack = new Stack<GameTreeNode>();
-////
-////        System.out.println("Winning Strategy:");
-//////        treeStack.push(winningTree);
-//
-////
-////        while(!gameStack.isEmpty()) {
-////            CheckerGame toplay = gameStack.pop();
-//////            hash.add(toplay.toString());
-////            toplay.m_board.printBoard();
-////            System.out.printf("Player %d's m_turn\n", toplay.m_turn+1);
-////            if (toplay.gameOver())
-////                break;
-////            else {
-////                ArrayList<CheckerGame> checkerGames = toplay.nextStates();
-////                for (CheckerGame newState : checkerGames) {
-//////                    if(!hash.contains(newState.toString()))
-////                        gameStack.add(newState);
-////                }
-////            }
-////        }
-//
-//    }
-//
-////
-//    public static void printLeafToRoot(GameTreeNode leaf) {
-//        int i = 0;
-//        System.out.printf("Level 0\n");
-//        leaf.game.printGame();
-//        while(leaf.parent!=null) {
-//            leaf = leaf.parent;
-//            i++;
-//            System.out.printf("Level %d\n",i);
-//            leaf.game.printGame();
-//        }
-//    }
-//
-//    public static GameTreeNode isWinningNode(CheckerGame g, GameTreeNode parent) {
-//        GameTreeNode root = new GameTreeNode(g);
-//        root.parent = parent;
-//        if (g.m_board.m_grid[4][4] == '1' && g.m_turn == 1) {
-//            System.out.printf("Start printing one winning route\n");
-//            printLeafToRoot(root);
-//            System.out.printf("Finshed one winning route\n");
-//            return root; //game won by player 1
-//        } else if (g.m_board.m_grid[2][2] == '2' && g.m_turn == 0) {
-//            return null; // game lost by player 1
-//        } else {
-//            if (g.m_turn == 0) // player one to play  OR NODE
-//            {
-//                for (CheckerGame checkerGame : g.nextStates()) {
-//                    GameTreeNode orNode = isWinningNode(checkerGame, root);
-//                    if (orNode != null) {
-//                        orNode.level = root.level+1;
-//                        orNode.parentHash = root.game.m_hash.get(root.game.toString());
-//                        root.addChild(orNode);
-//                        // wins
-//                        return root;
-//                    }
-//                }
-//                // if all or nodes fail
-//                return null;
-//            } else {    // player two to play  AND NODE
-//                for (CheckerGame checkerGame : g.nextStates()) {
-//                    GameTreeNode andNode = isWinningNode(checkerGame, parent);
-//                    if (null == andNode) {
-//                        return null;
-//                    } else { // append child to root
-//                        andNode.level = root.level+1;
-//                        andNode.parentHash = root.game.m_hash.get(root.game.toString());
-//                        root.addChild(andNode);
-//                    }
-//                    // if all wins
-//                }
-//                return root;
-//            }
-//        }
-//    }
-////        if(g.m_board.m_grid[4][4] == '1' && g.m_turn == 1) {
-////            //end game and player 1 wins
-////            return true;
-////        } else if (g.m_board.m_grid[2][2] == '2' && g.m_turn == 0){
-////            //end game and player 2 wins
-////            return false;
-////        } else { // keep playing
-////            if(g.m_turn == 0) {
-////                for (CheckerGame checkerGame : g.nextStates()) {
-////                    if(isWinningNode(checkerGame, newparent)) {
-////                        return true;
-////                    }
-////                }
-////                return false;
-////            }
-////            // assume two turns
-////            else {
-////                for (CheckerGame checkerGame : g.nextStates()) {
-////                    if(!isWinningNode(checkerGame, newparent)) {
-////                        return false;
-////                    }
-////                }
-////                return true;
-////            }
-////        }
-////    }
-//
-////
-////    public static GameTreeNode buildWinningTreeOne(CheckerGame g) {
-////        GameTreeNode root = new GameTreeNode(g);
-////        // base case, game is won
-////        if(g.m_board.m_grid[4][4] == '1' && g.m_turn == 1) {
-////            System.out.println("Ending Round");
-////            g.printGame();
-////            return root;
-////        } else {
-////            ArrayList<CheckerGame> nextStates = g.nextStates();
-////            if(g.m_turn == 0) { // player one's m_turn
-////                for (CheckerGame checkerGame : nextStates) {
-////                    GameTreeNode childTree = buildWinningTreeOne(checkerGame);
-////                    if(childTree != null) {
-////                        // only one child needs to be linked
-////                        root.addChild(childTree);
-////                        childTree.root.printGame();
-////                        return root;
-////                    }
-////                }
-////                // if no child gives a good winning game tree then we return null
-////                return null;
-////            }
-////            // assume two turns
-////            else {  // player two's m_turn
-////                for (CheckerGame checkerGame : nextStates) {
-////                    GameTreeNode childTree = buildWinningTreeOne(checkerGame);
-////                    if(childTree == null) {
-////                        return null;
-////                    } else {
-////                        childTree.root.printGame();
-////                        root.addChild(childTree);
-////                    }
-////                }
-////                return root;
-////            }
-////        }
-////    }
-//
-//}
+
+}
