@@ -7,6 +7,27 @@ import java.util.ArrayList;
  */
 public class Algorithm {
     protected int node_generated = 0;
+    public enum ALGORITHM_NAME {
+        MINIMAX,
+        ALPHABETA
+    }
+
+    protected ALGORITHM_NAME m_name;
+    Algorithm(String name) {
+        m_name = ALGORITHM_NAME.valueOf(name.toUpperCase());
+    }
+
+    public void execute(CheckerState node, int depth, int max_player_id, int min_player_id) {
+        switch(m_name) {
+            case MINIMAX:
+                minimax(node, 3, true, max_player_id, min_player_id);
+                break;
+            case ALPHABETA:
+                alphabeta(node,3,true, max_player_id, min_player_id, Integer.MIN_VALUE, Integer.MAX_VALUE);
+                 break;
+        }
+        return;
+    }
 
     public int minimax(CheckerState node, int depth, boolean maximizing, int max_player_id, int min_player_id) {
         if(depth == 0 || node.gameOver() != 0) {

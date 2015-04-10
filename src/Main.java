@@ -1,9 +1,14 @@
-import javafx.util.Pair;
-
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.applet.Applet;
+import java.awt.*;
 
-public class Main {
+public class Main extends Applet{
+    public void paint (Graphics g) {
+        // Code goes here
+        g.drawString("Welcome in Java Applet.",40,20);
 
+    }
 
     public static void main(String[] args) {
         System.out.println("Welcome to Chinese Checker!\n");
@@ -22,7 +27,6 @@ public class Main {
 //            sc.nextLine();
 //        }
 
-        Algorithm alg = new Algorithm();
 //        b.evaluation_goal_distance(0);
 ////
 //        Pair<Integer, CheckerState> res_minimax = alg.minimax(b, 2, true, 0, 1);
@@ -42,17 +46,22 @@ public class Main {
 //        b.printBoard();
 
         int turn = 0;
+        ArrayList<Algorithm> algorithms = new ArrayList<Algorithm>();
+        algorithms.add(new Algorithm("MINIMAX"));
+        algorithms.add(new Algorithm("ALPHABETA"));
         while(b.gameOver() == 0) {
+            algorithms.get(turn%2).execute(b, 3, turn%2, (turn+1)%2);
             turn++;
-            alg.alphabeta(b,2,true, (turn+1)%2, turn%2, Integer.MIN_VALUE, Integer.MAX_VALUE);
 //            alg.minimax(b, 2, true, (turn+1)%2, turn%2);
             b = b.bestnext;
             b.printBoard();
             System.out.printf("Evaluation for player %d: %d\n", b.m_turn+1, turn);
-            System.out.print("Press enter key to continue");
+            System.out.print("Press enter key to continue\n");
             sc.nextLine();
         }
-        System.out.printf("Number of nodes looked up: %d\n", alg.node_generated);
+        System.out.printf("Number of nodes looked up: %d\n", algorithms.get(0).node_generated);
+        System.out.printf("Number of nodes looked up: %d\n", algorithms.get(1).node_generated);
+
 
 //        for (CheckerState ch : b.nextStates()) {
 //            ch.printBoard();
