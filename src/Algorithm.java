@@ -1,5 +1,3 @@
-import javafx.util.Pair;
-
 import java.util.ArrayList;
 
 /**
@@ -40,7 +38,7 @@ public class Algorithm {
 
     public int minimax(CheckerState node, int depth, boolean maximizing, int max_player_id, int min_player_id) {
         if(depth == 0 || node.gameOver() != 0) {
-            return node.evaluation_goal_distance(max_player_id)-node.evaluation_goal_distance(min_player_id);
+            return node.eval_distance_and_goal(max_player_id)-node.eval_distance_and_goal(min_player_id);
         }
         CheckerState bestNextState = null;
         ArrayList<CheckerState> checkerNextStates = node.nextStates();
@@ -77,7 +75,7 @@ public class Algorithm {
 
     public int alphabeta(CheckerState node, int depth, boolean maximizing, int max_player_id, int min_player_id, int alpha, int beta) {
         if(depth == 0 || node.gameOver() != 0) {
-            return node.evaluation_goal_distance(max_player_id)-node.evaluation_goal_distance(min_player_id);
+            return node.eval_distance_and_goal(max_player_id)-node.eval_distance_and_goal(min_player_id);
         }
         CheckerState bestNextState = null;
         ArrayList<CheckerState> checkerNextStates = node.nextStates();

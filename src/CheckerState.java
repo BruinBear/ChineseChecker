@@ -4,8 +4,17 @@ import java.util.*;
  * Created by JingyuLiu on 4/1/2015.
  */
 public class CheckerState {
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
 
-    private char[][] m_grid;
+    protected char[][] m_grid;
     private int m_grid_size;
 
     // next m_turn info
@@ -29,6 +38,7 @@ public class CheckerState {
         }
         // add player pieces to pool and the goal states to pool
         m_num_players = 2;
+        this.setupGoals(1);
         this.scanForPlayerPiecesGoals();
     }
 
@@ -133,25 +143,62 @@ public class CheckerState {
     private int m_num_players;
     private ArrayList<ArrayList<IntPair>> m_players_goals = new ArrayList<ArrayList<IntPair>>();
     private ArrayList<ArrayList<IntPair>> m_players_pieces = new ArrayList<ArrayList<IntPair>>();
-    private ArrayList<IntPair> m_players_goal_center = new ArrayList<IntPair>();
+
+    public static ArrayList<IntPair> m_players_goal_center;
+
+    private void setupGoals (int board_num) {
+        m_players_goal_center = new ArrayList<IntPair>();
+        switch(board_num) {
+            case 1:
+                // goal for player 1
+                m_players_goal_center.add(new IntPair(10,10));
+                // goal for player 2
+                m_players_goal_center.add(new IntPair(4,4));
+                break;
+        }
+    }
 
 
-    public int evaluation_goal_distance(int player_id) {
-        if(player_id >= m_num_players) { return -1;}
 
+    public int eval_distance_and_goal(int player_id) {
         IntPair avg_goal = m_players_goal_center.get(player_id);
-        int eval = 0;
+
+        // Static goal distance evaluation
+        int oneStepSum = 0;
+        int piece_dist = 0;
+        int farthest_piece_dist = 0;
+
         for(IntPair p : m_players_pieces.get(player_id))
         {
-            eval = eval - (int)( Math.abs(p.x - avg_goal.x) + Math.abs(p.y-avg_goal.y));
+            piece_dist = Math.abs(p.x - avg_goal.x) + Math.abs(p.y-avg_goal.y);
+            farthest_piece_dist = Math.max(farthest_piece_dist, piece_dist);
+            oneStepSum += piece_dist;
         }
-        int completion_reward = 1000;
-        for(IntPair p : m_players_goals.get(player_id)) {
-            if(m_grid[p.x][p.y] == '1' + player_id) {
-                eval += completion_reward;
+
+
+
+        // Static goal evaluation
+        int goalBonus = 0;
+
+        int goalReward = 100;
+        for(IntPair goal : m_players_goals.get(player_id)) {
+            if(m_grid[goal.x][goal.y] == '1' + player_id) {
+                goalBonus = goalBonus + goalReward;
             }
         }
-        return eval;
+
+        int evaluation;
+        // Winning reward
+        if(gameOver() == player_id+1) {
+            evaluation = 9999999;
+        } else {
+            evaluation = goalBonus - oneStepSum - farthest_piece_dist*10;
+        }
+//        System.out.printf("One Step Sum: %d, Max Distance: %d\n", oneStepSum, farthest_piece_dist);
+//        System.out.printf("Goal bonus: %d\n", goalBonus);
+//        System.out.printf("Evaluation: %d\n", evaluation);
+
+        return evaluation;
     }
 
 
@@ -177,12 +224,11 @@ public class CheckerState {
                 x_sum += goal.x;
                 y_sum += goal.y;
             }
-            m_players_goal_center.add(new IntPair(x_sum/num_pieces, y_sum/num_pieces));
         }
     }
 
 
-    private void rescanPieces() {
+    public void rescanPieces() {
         m_players_pieces = new ArrayList<ArrayList<IntPair>>();
         for(int i=0;i<m_num_players;i++) {
             m_players_pieces.add(new ArrayList<IntPair>());
@@ -219,6 +265,34 @@ public class CheckerState {
         return m_grid_size;
     }
 
+
+    private void printPiece(char c) {
+        switch(c) {
+            case '1':
+                System.out.print(ANSI_RED+c+" "+ANSI_RESET);
+                break;
+            case '2':
+                System.out.print(ANSI_GREEN+c+" "+ANSI_RESET);
+                break;
+            case '3':
+                System.out.print(ANSI_YELLOW+c+" "+ANSI_RESET);
+                break;
+            case '4':
+                System.out.print(ANSI_BLUE+c+" "+ANSI_RESET);
+                break;
+            case '5':
+                System.out.print(ANSI_PURPLE+c+" "+ANSI_RESET);
+                break;
+            case '6':
+                System.out.print(ANSI_CYAN+c+" "+ANSI_RESET);
+                break;
+            default:
+                System.out.print(ANSI_WHITE+c+" "+ANSI_RESET);
+                break;
+        }
+        return;
+    }
+
     public void printBoard() {
         // top half
         for(int i = 1; i <= m_grid_size; i++) {
@@ -229,7 +303,7 @@ public class CheckerState {
             // print chars total i chars to print
             for(int k = 0; k < i; k++) {
                 // x, y sums to k
-                System.out.printf("%c ", m_grid[i-1-k][k]);
+                printPiece(m_grid[i - 1 - k][k]);
             }
             System.out.println();
         }
@@ -242,7 +316,7 @@ public class CheckerState {
             // print chars total i chars to print
             for(int k = 0; k < i; k++) {
                 // x, y sums to k
-                System.out.printf("%c ", m_grid[m_grid_size-1-k][k+m_grid_size-i]);
+                printPiece(m_grid[m_grid_size-1-k][k+m_grid_size-i]);
             }
             System.out.println();
         }
@@ -356,6 +430,7 @@ public class CheckerState {
                 newState.m_grid[piece.x][piece.y] = '0';
                 newState.rescanPieces();
                 newState.m_turn = (newState.m_turn+1) % m_num_players;
+                newState.m_turn_played++;
                 nextStates.add(newState);
             }
         }
