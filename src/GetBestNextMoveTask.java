@@ -1,6 +1,6 @@
 import java.util.concurrent.Callable;
 
-class GetBestNextMoveTask implements Callable<Integer> {
+public class GetBestNextMoveTask implements Callable<Integer> {
     private Algorithm m_alg;
     private CheckerState m_state;
     private int m_max_depth;
