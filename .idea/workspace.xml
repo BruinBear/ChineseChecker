@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13e1dcbf-98ff-4506-9841-6ecd7f31cf5c" name="Default" comment="created checker board">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithm.java" afterPath="$PROJECT_DIR$/src/Algorithm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CheckerState.java" afterPath="$PROJECT_DIR$/src/CheckerState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DepthGameSimulation.java" afterPath="$PROJECT_DIR$/src/DepthGameSimulation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Move.java" afterPath="$PROJECT_DIR$/src/Move.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TimedGameSimulation.java" afterPath="$PROJECT_DIR$/src/TimedGameSimulation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\ChineseChecker\src\evaluation.java" afterPath="$PROJECT_DIR$/src/Evaluation.java" />
     </list>
     <ignored path="ChineseChecker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Algorithm.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Algorithm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Algorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63193506" vertical-offset="213" max-vertical-offset="952">
+            <state vertical-scroll-proportion="0.0" vertical-offset="213" max-vertical-offset="952">
               <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -160,11 +154,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Evaluation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Evaluation.java">
+      <file leaf-file-name="evaluation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/evaluation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="332" max-vertical-offset="1071">
               <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.023809524" vertical-offset="0" max-vertical-offset="714">
+              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -199,7 +203,7 @@
                 <element signature="e#19393#19402#0" expanded="true" />
                 <element signature="e#19736#19742#0" expanded="true" />
                 <element signature="e#20081#20095#0" expanded="true" />
-                <marker date="1429216528598" expanded="false" signature="2085:11259" placeholder="..." />
+                <marker date="1429220552986" expanded="false" signature="2085:11259" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -233,7 +237,6 @@
         <option value="$PROJECT_DIR$/src/CheckerBoard.java" />
         <option value="$PROJECT_DIR$/src/CheckerGame.java" />
         <option value="$PROJECT_DIR$/src/GameTreeNode.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/StateTreeNode.java" />
         <option value="$PROJECT_DIR$/src/Minimax.java" />
         <option value="$PROJECT_DIR$/src/game.html" />
@@ -250,6 +253,7 @@
         <option value="$PROJECT_DIR$/src/TimedGameSimulation.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Algorithm.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -780,12 +784,12 @@
       <workItem from="1429137933347" duration="1197000" />
       <workItem from="1429150926666" duration="424000" />
       <workItem from="1429155801608" duration="5532000" />
-      <workItem from="1429162166591" duration="11136000" />
+      <workItem from="1429162166591" duration="11257000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154523000" />
+    <option name="totallyTimeSpent" value="154644000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -952,7 +956,7 @@
             <element signature="e#19393#19402#0" expanded="true" />
             <element signature="e#19736#19742#0" expanded="true" />
             <element signature="e#20081#20095#0" expanded="true" />
-            <marker date="1429216528598" expanded="false" signature="2085:11259" placeholder="..." />
+            <marker date="1429220552986" expanded="false" signature="2085:11259" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1023,7 +1027,7 @@
             <element signature="e#19393#19402#0" expanded="true" />
             <element signature="e#19736#19742#0" expanded="true" />
             <element signature="e#20081#20095#0" expanded="true" />
-            <marker date="1429216528598" expanded="false" signature="2085:11259" placeholder="..." />
+            <marker date="1429220552986" expanded="false" signature="2085:11259" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1094,7 +1098,7 @@
             <element signature="e#19393#19402#0" expanded="true" />
             <element signature="e#19736#19742#0" expanded="true" />
             <element signature="e#20081#20095#0" expanded="true" />
-            <marker date="1429216528598" expanded="false" signature="2085:11259" placeholder="..." />
+            <marker date="1429220552986" expanded="false" signature="2085:11259" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1221,14 +1225,6 @@
             <element signature="e#474#475#0" expanded="true" />
             <element signature="e#522#523#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1364,7 +1360,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Evaluation.java">
+    <entry file="file://$PROJECT_DIR$/src/evaluation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="332" max-vertical-offset="1071">
           <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
@@ -1390,7 +1386,7 @@
             <element signature="e#19393#19402#0" expanded="true" />
             <element signature="e#19736#19742#0" expanded="true" />
             <element signature="e#20081#20095#0" expanded="true" />
-            <marker date="1429216528598" expanded="false" signature="2085:11259" placeholder="..." />
+            <marker date="1429220552986" expanded="false" signature="2085:11259" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1433,7 +1429,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63193506" vertical-offset="213" max-vertical-offset="952">
+        <state vertical-scroll-proportion="0.0" vertical-offset="213" max-vertical-offset="952">
           <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1446,6 +1442,14 @@
             <element signature="method#minimax_state#0;class#Algorithm#0" expanded="false" />
             <element signature="method#alphabeta_state#0;class#Algorithm#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.023809524" vertical-offset="0" max-vertical-offset="714">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
