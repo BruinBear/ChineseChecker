@@ -27,6 +27,7 @@ public class Algorithm {
         m_name = name.toUpperCase();
     }
 
+    // For timed task Iteratively increament level. if timer expires, early termination is possible
     public void execute_iteratively(CheckerState node, int depth, int max_player_id, int min_player_id) {
         System.out.printf("Using algorithm: %s\n", m_name);
         max_depth = depth;
@@ -51,6 +52,7 @@ public class Algorithm {
         return;
     }
 
+    // Regular calls limited by max depth, guaranteed completion
     public void execute_once(CheckerState node, int depth, int max_player_id, int min_player_id) {
         System.out.printf("Using algorithm: %s\n", m_name);
         switch (ALGORITHM_NAME.valueOf(m_name)) {
@@ -70,6 +72,7 @@ public class Algorithm {
         current_depth++;
         return;
     }
+
 
     public double minimax(CheckerState node, int depth, boolean maximizing, int max_player_id, int min_player_id) {
         if(depth == 0 || node.gameOver()!=0) {
@@ -102,6 +105,55 @@ public class Algorithm {
                     bestValue = val;
                     bestNextState = child;
                     //System.out.printf("New best found in min node: %d\n", bestValue);
+                }
+            }
+            node.bestnext = bestNextState;
+            return bestValue;
+        }
+    }
+
+
+    public double alphabeta(CheckerState node, int depth, boolean maximizing, int max_player_id, int min_player_id, double alpha, double beta) {
+        ArrayList<CheckerState> checkerNextStates = node.nextStates();
+        if(depth == 0 || node.gameOver() != 0 || checkerNextStates.size() == 0) {
+            return eval_func.eval_distance_and_goal(max_player_id, node)
+                    -eval_func.eval_distance_and_goal(min_player_id, node);
+        }
+        double val;
+        CheckerState bestNextState = checkerNextStates.get(0);
+        if(maximizing) {
+            double bestValue = Double.NEGATIVE_INFINITY;
+            for(CheckerState child : checkerNextStates) {
+                val = alphabeta(child, depth - 1, false, max_player_id, min_player_id, alpha, beta);
+                //System.out.printf("New value found in max node: %d\n", val);
+                if(val > bestValue){
+                    bestNextState = child;
+                    //System.out.printf("New best found in max node: %d\n", bestValue);
+                }
+                bestValue = Math.max(bestValue, val);
+                alpha = Math.max(alpha, bestValue);
+                node_generated++;
+                if(beta <= alpha) {
+                    break;
+                }
+            }
+            node.bestnext = bestNextState;
+            return bestValue;
+        }else{
+            double bestValue = Double.POSITIVE_INFINITY;
+            for(CheckerState child : checkerNextStates) {
+                val = alphabeta(child, depth - 1, true, max_player_id, min_player_id, alpha, beta);
+                //System.out.printf("New value found in max node: %d\n", val);
+                // update next best move
+                if(val < bestValue){
+                    bestNextState = child;
+                    //System.out.printf("New best found in max node: %d\n", bestValue);
+                }
+                bestValue = Math.min(bestValue, val);
+                beta = Math.min(beta, bestValue);
+                node_generated++;
+                if(beta <= alpha) {
+                    break;
                 }
             }
             node.bestnext = bestNextState;
@@ -228,51 +280,5 @@ public class Algorithm {
     }
 
 
-    public double alphabeta(CheckerState node, int depth, boolean maximizing, int max_player_id, int min_player_id, double alpha, double beta) {
-        ArrayList<CheckerState> checkerNextStates = node.nextStates();
-        if(depth == 0 || node.gameOver() != 0 || checkerNextStates.size() == 0) {
-            return eval_func.eval_distance_and_goal(max_player_id, node)
-                    -eval_func.eval_distance_and_goal(min_player_id, node);
-        }
-        double val;
-        CheckerState bestNextState = checkerNextStates.get(0);
-        if(maximizing) {
-            double bestValue = Double.NEGATIVE_INFINITY;
-            for(CheckerState child : checkerNextStates) {
-                val = alphabeta(child, depth - 1, false, max_player_id, min_player_id, alpha, beta);
-                //System.out.printf("New value found in max node: %d\n", val);
-                if(val > bestValue){
-                    bestNextState = child;
-                    //System.out.printf("New best found in max node: %d\n", bestValue);
-                }
-                bestValue = Math.max(bestValue, val);
-                alpha = Math.max(alpha, bestValue);
-                node_generated++;
-                if(beta <= alpha) {
-                    break;
-                }
-            }
-            node.bestnext = bestNextState;
-            return bestValue;
-        }else{
-            double bestValue = Double.POSITIVE_INFINITY;
-            for(CheckerState child : checkerNextStates) {
-                val = alphabeta(child, depth - 1, true, max_player_id, min_player_id, alpha, beta);
-                //System.out.printf("New value found in max node: %d\n", val);
-                // update next best move
-                if(val < bestValue){
-                    bestNextState = child;
-                    //System.out.printf("New best found in max node: %d\n", bestValue);
-                }
-                bestValue = Math.min(bestValue, val);
-                beta = Math.min(beta, bestValue);
-                node_generated++;
-                if(beta <= alpha) {
-                    break;
-                }
-            }
-            node.bestnext = bestNextState;
-            return bestValue;
-        }
-    }
+
 }
