@@ -17,10 +17,16 @@ public class CheckerState {
     protected char[][] m_grid;
     private int m_grid_size;
 
-    // next m_turn info
+    // next player to play, e.g. 0 means player 1 plays next
     int m_turn = 0;
     // total turns info
     int m_turn_played = 0;
+
+    // move stack, most recent move is on top, importatn for game history
+    // saves memory and skip clone action of arrays
+    Stack<Move> m_move_stack = new Stack<Move>();
+
+
     protected CheckerState bestnext;
     /**
      * grid should be square
@@ -175,7 +181,6 @@ public class CheckerState {
                 break;
         }
     }
-
 
 
     // Scan goals, only done once
@@ -388,8 +393,8 @@ public class CheckerState {
     }
 
 
-    /*
-    Give a merged result of next move for a piece
+    /**
+     * Give a merged result of next move for a piece
      */
     public ArrayList<IntPair> pieceCanMove(IntPair pair) {
         ArrayList<IntPair> res = new ArrayList<IntPair>(this.pieceOneStepCanReach(pair));
@@ -397,6 +402,21 @@ public class CheckerState {
         return res;
     }
 
+
+    /**
+     * Generate all possible moves
+     * we can potentially sort the moves based on some score
+     * and we will
+     */
+    public ArrayList<Move> nextMoves() {
+        ArrayList<Move> nextMoves = new ArrayList<Move> ();
+        for (IntPair piece : m_players_pieces.get(m_turn)) {
+            for (IntPair dest : pieceCanMove(piece)) {
+                nextMoves.add(new Move(piece,dest));
+            }
+        }
+        return nextMoves;
+    }
 
     public ArrayList<CheckerState> nextStates() {
         ArrayList<CheckerState> nextStates = new ArrayList<CheckerState>();
@@ -420,17 +440,53 @@ public class CheckerState {
         return nextStates;
     }
 
-    public boolean movePieceTo(IntPair piece, IntPair destination) {
+
+    /**
+     *    Commit a move that increases turn number
+     *    Also important make inverse possible, to pop a move action off stack
+     */
+    public boolean movePieceTo(Move mv) {
+        IntPair piece = mv.piece;
+        IntPair dest = mv.dest;
         if ('0' < m_grid[piece.x][piece.y] &&
                 m_grid[piece.x][piece.y] <= '6' &&
-                m_grid[destination.x][destination.y] == '0') {
-            char tmp = m_grid[piece.x][piece.y];
+                m_grid[dest.x][dest.y] == '0') {
+            // swaping a piece to new blank, no tmp needed because dest is 0
+            m_grid[dest.x][dest.y] = m_grid[piece.x][piece.y];
             m_grid[piece.x][piece.y] = '0';
-            m_grid[destination.x][destination.y] = tmp;
+            m_move_stack.push(new Move(piece, dest));
+            // next player play next turn
+            m_turn = (m_turn+1)%m_num_players;
+            m_turn_played++;
+            this.rescanPieces();
             return true;
         }
         else
             return false;
+    }
+
+
+    /**
+     *    Commit a move that increases turn number
+     *    Also important make inverse possible, to pop a move action off stack
+     */
+    public boolean reverseMove() {
+        // if the state doesn't have previous move
+        if(m_move_stack.isEmpty()) {
+            return false;
+        }
+        Move mv = m_move_stack.pop();
+        IntPair piece = mv.piece;
+        IntPair dest = mv.dest;
+        // we can assume a move is valid, so checking is not necessary
+        // piece char
+        m_grid[piece.x][piece.y] = m_grid[dest.x][dest.y];
+        m_grid[dest.x][dest.y] = '0';
+        // next player play next turn
+        m_turn = (m_turn-1+m_num_players)%m_num_players;
+        m_turn_played--;
+        this.rescanPieces();
+        return true;
     }
 
 

@@ -19,13 +19,14 @@ public class TimedGameSimulation {
         // turn number 0,1,2,3...
         int turn = 0;
         ArrayList<Algorithm> algorithms = new ArrayList<Algorithm>();
-        algorithms.add(new Algorithm("ALPHABETA"));
-        algorithms.add(new Algorithm("MINIMAX"));
+        algorithms.add(new Algorithm("ALPHABETA_STATE"));
+        algorithms.add(new Algorithm("MINIMAX_STATE"));
         while(m_state.gameOver() == 0) {
             System.out.printf("Turn %d, Player %d move\n", turn, m_state.m_turn+1);
-            int current_num_nodes_processed = algorithms.get(turn%2).node_generated;
+            Algorithm alg_to_use =  algorithms.get(turn%2);
+            int current_num_nodes_processed = alg_to_use.node_generated;
             ExecutorService executor = Executors.newSingleThreadExecutor();
-            Future<Integer> future = executor.submit(new GetBestNextMoveTask(algorithms.get(turn%2), m_state, m_max_depth, turn%2, (turn+1)%2));
+            Future<Integer> future = executor.submit(new GetBestNextMoveTask(alg_to_use, m_state, m_max_depth, turn%2, (turn+1)%2));
             try {
                 System.out.println("Started..");
                 // Force return the best move so far
@@ -43,7 +44,7 @@ public class TimedGameSimulation {
             executor.shutdownNow();
 
             // commit move
-            m_state = m_state.bestnext;
+            m_state.movePieceTo(alg_to_use.bestMove);
             // printing move info
             m_state.printBoard();
             // increment turn

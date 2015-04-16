@@ -4,8 +4,6 @@ import java.util.LinkedList;
  * Created by JingyuLiu on 4/13/2015.
  */
 public class Evaluation {
-
-
     /**
      *     Three strategies are implied by this evaluation function
      *     1. pair wise pieces not at goal to the closest goal distance
@@ -47,7 +45,7 @@ public class Evaluation {
         } else if(b.gameOver() != 0) {
             evaluation = Double.NEGATIVE_INFINITY;
         } else{
-            evaluation = - piece_dist - farthest_piece_dist;
+            evaluation = - piece_dist;
         }
 //        System.out.printf("One Step Sum: %d, Max Distance: %d\n", oneStepSum, farthest_piece_dist);
 //        System.out.printf("Goal bonus: %d\n", goalBonus);
