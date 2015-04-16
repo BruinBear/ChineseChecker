@@ -18,7 +18,7 @@ class GetBestNextMoveTask implements Callable<Integer> {
     @Override
     public Integer call() throws Exception {
 //            Thread.sleep(4000); // Just to demo a long running task of 4 seconds.
-        m_alg.execute(m_state, m_max_depth, m_maximizer, m_minimizer);
+        m_alg.execute_iteratively(m_state, m_max_depth, m_maximizer, m_minimizer);
         return 0;
     }
 }

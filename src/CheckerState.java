@@ -57,7 +57,7 @@ public class CheckerState {
         m_players_goal_center = b.m_players_goal_center;
     }
 
-    private static char[][] empty_grid = new char[][]{
+    public static char[][] empty_grid = new char[][]{
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' ', ' '},
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', '0', ' ', ' ', ' ', ' ', ' '},
@@ -79,7 +79,7 @@ public class CheckerState {
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
     };
 
-    private static char[][] grid_2 = new char[][]{
+    public static char[][] grid_2 = new char[][]{
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' ', ' '},
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', '0', ' ', ' ', ' ', ' ', ' '},
@@ -100,7 +100,7 @@ public class CheckerState {
             {' ', ' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
     };
-    private static char[][] grid_2_s = new char[][]{
+    public static char[][] grid_2_s = new char[][]{
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' '},
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', '0', ' ', ' ', ' ', ' '},
@@ -118,7 +118,25 @@ public class CheckerState {
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
     };
 
-    private static char[][] grid_3 = new char[][]{
+    public static char[][] grid_2_s_goal = new char[][]{
+            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', '0', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', '0', '0', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', '2', '2', '2', '0', '0', '0', '0', '0', '0', '0', ' '},
+            {' ', ' ', ' ', ' ', '2', '2', '0', '0', '0', '0', '0', '0', '0', ' ', ' '},
+            {' ', ' ', ' ', ' ', '2', '0', '0', '0', '0', '0', '0', '0', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', '0', '0', '0', '0', '0', '0', '0', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', '0', '0', '0', '0', '0', '0', '0', '1', ' ', ' ', ' ', ' '},
+            {' ', ' ', '0', '0', '0', '0', '0', '0', '0', '1', '1', ' ', ' ', ' ', ' '},
+            {' ', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', '0', '0', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', '0', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
+    };
+
+    public static char[][] grid_3 = new char[][]{
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '2', ' ', ' ', ' ', ' ', ' '},
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '2', '2', ' ', ' ', ' ', ' ', ' '},
@@ -140,9 +158,9 @@ public class CheckerState {
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
     };
 
-    private int m_num_players;
-    private ArrayList<ArrayList<IntPair>> m_players_goals = new ArrayList<ArrayList<IntPair>>();
-    private ArrayList<ArrayList<IntPair>> m_players_pieces = new ArrayList<ArrayList<IntPair>>();
+    protected int m_num_players;
+    protected ArrayList<ArrayList<IntPair>> m_players_goals = new ArrayList<ArrayList<IntPair>>();
+    protected ArrayList<ArrayList<IntPair>> m_players_pieces = new ArrayList<ArrayList<IntPair>>();
 
     public static ArrayList<IntPair> m_players_goal_center;
 
@@ -158,48 +176,6 @@ public class CheckerState {
         }
     }
 
-
-
-    public int eval_distance_and_goal(int player_id) {
-        IntPair avg_goal = m_players_goal_center.get(player_id);
-
-        // Static goal distance evaluation
-        int oneStepSum = 0;
-        int piece_dist = 0;
-        int farthest_piece_dist = 0;
-
-        for(IntPair p : m_players_pieces.get(player_id))
-        {
-            piece_dist = Math.abs(p.x - avg_goal.x) + Math.abs(p.y-avg_goal.y);
-            farthest_piece_dist = Math.max(farthest_piece_dist, piece_dist);
-            oneStepSum += piece_dist;
-        }
-
-
-
-        // Static goal evaluation
-        int goalBonus = 0;
-
-        int goalReward = 100;
-        for(IntPair goal : m_players_goals.get(player_id)) {
-            if(m_grid[goal.x][goal.y] == '1' + player_id) {
-                goalBonus = goalBonus + goalReward;
-            }
-        }
-
-        int evaluation;
-        // Winning reward
-        if(gameOver() == player_id+1) {
-            evaluation = 9999999;
-        } else {
-            evaluation = goalBonus - oneStepSum - farthest_piece_dist*10;
-        }
-//        System.out.printf("One Step Sum: %d, Max Distance: %d\n", oneStepSum, farthest_piece_dist);
-//        System.out.printf("Goal bonus: %d\n", goalBonus);
-//        System.out.printf("Evaluation: %d\n", evaluation);
-
-        return evaluation;
-    }
 
 
     // Scan goals, only done once
@@ -247,12 +223,19 @@ public class CheckerState {
     public int gameOver() {
         // we only need to check if player the m_turn before has won
         int player_index = (m_turn +m_num_players-1)%m_num_players;
+        boolean finished_one_piece = false;
         for(IntPair piece : m_players_goals.get(player_index)) {
-            if(m_grid[piece.x][piece.y] != ('1'+ player_index)) {
+            if(m_grid[piece.x][piece.y] == ('1'+ player_index)) {
+                finished_one_piece = true;
+            }
+            if(m_grid[piece.x][piece.y] == '0') {
                 return 0;
             }
         }
-        return player_index+1;
+        if (finished_one_piece)
+            return player_index+1;
+        else
+            return 0;
     }
 
 
