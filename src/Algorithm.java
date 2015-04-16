@@ -52,14 +52,7 @@ public class Algorithm {
     }
 
     public double minimax(CheckerState node, int depth, boolean maximizing, int max_player_id, int min_player_id) {
-        int game_winner = node.gameOver();
-        if(game_winner != 0) {
-            if(game_winner == max_player_id+1)
-                return Double.POSITIVE_INFINITY;
-            else
-                return Double.NEGATIVE_INFINITY;
-        }
-        if(depth == 0) {
+        if(depth == 0 || node.gameOver()!=0) {
             return eval_func.eval_distance_and_goal(max_player_id, node)
                     -eval_func.eval_distance_and_goal(min_player_id, node);
         }
@@ -98,19 +91,12 @@ public class Algorithm {
 
 
     public double alphabeta(CheckerState node, int depth, boolean maximizing, int max_player_id, int min_player_id, double alpha, double beta) {
-        int game_winner = node.gameOver();
-        if(game_winner != 0) {
-            if(game_winner == max_player_id+1) // +1 is needed becuz real id is 1 based
-                return Double.POSITIVE_INFINITY;
-            else
-                return Double.NEGATIVE_INFINITY;
-        }
-        if(depth == 0) {
+        ArrayList<CheckerState> checkerNextStates = node.nextStates();
+        if(depth == 0 || node.gameOver() != 0 || checkerNextStates.size() == 0) {
             return eval_func.eval_distance_and_goal(max_player_id, node)
                     -eval_func.eval_distance_and_goal(min_player_id, node);
         }
         double val;
-        ArrayList<CheckerState> checkerNextStates = node.nextStates();
         CheckerState bestNextState = checkerNextStates.get(0);
         if(maximizing) {
             double bestValue = Double.NEGATIVE_INFINITY;

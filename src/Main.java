@@ -13,10 +13,10 @@ public class Main{
 //        System.out.printf("Player two eval to %d!\n", b.eval_distance_and_goal(1));
         Scanner sc = new Scanner(System.in);
 //
-//        TimedGameSimulation simulation1 = new TimedGameSimulation(b, 5000, 8);
-//        simulation1.startGame();
-        DepthGameSimulation simulation2 = new DepthGameSimulation(b, 4);
-        simulation2.startGame();
+        TimedGameSimulation simulation1 = new TimedGameSimulation(b, 2000, 8);
+        simulation1.startGame();
+//        DepthGameSimulation simulation2 = new DepthGameSimulation(b, 4);
+//        simulation2.startGame();
 
 //        b.m_grid = new char[][]{
 //                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
