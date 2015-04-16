@@ -33,7 +33,7 @@ public class DepthGameSimulation {
             // increment turn
             turn++;
             System.out.printf("Player one eval to %f!\n", algorithms.get(0).eval_func.eval_distance_and_goal(0, m_state));
-            System.out.printf("Player one eval to %f!\n", algorithms.get(0).eval_func.eval_distance_and_goal(1, m_state));
+            System.out.printf("Player two eval to %f!\n", algorithms.get(0).eval_func.eval_distance_and_goal(1, m_state));
 //            System.out.print("Press enter key to continue\n");
 //            sc.nextLine();
         }

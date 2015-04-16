@@ -10,7 +10,6 @@ public class Evaluation {
      *     Three strategies are implied by this evaluation function
      *     1. pair wise pieces not at goal to the closest goal distance
      *     2. farthest piece distance to goal center
-     *     3. piece completion reward
      *     4. game won reward and game lose penalty
      */
     public double eval_distance_and_goal(int player_id, CheckerState b) {
@@ -41,23 +40,6 @@ public class Evaluation {
             piece_dist += min_to_goal;
         }
 
-//        int weighted_distance_from_goal = 0;
-//        int weight = 1;
-//        while(!goal_queue.isEmpty()) {
-//            weighted_distance_from_goal += weight * goal_queue.remove();
-//            weight++ ;
-//        }
-
-        // Static goal evaluation
-        int goalBonus = 0;
-
-        int goalReward = 100;
-        for(IntPair goal : b.m_players_goals.get(player_id)) {
-            if(b.m_grid[goal.x][goal.y] == '1' + player_id) {
-                goalBonus = goalBonus + goalReward;
-            }
-        }
-
         double evaluation;
         // Winning reward
         if(b.gameOver() == player_id+1) {
@@ -65,7 +47,7 @@ public class Evaluation {
         } else if(b.gameOver() != 0) {
             evaluation = Double.NEGATIVE_INFINITY;
         } else{
-            evaluation = goalBonus - piece_dist - farthest_piece_dist;
+            evaluation = - piece_dist - farthest_piece_dist;
         }
 //        System.out.printf("One Step Sum: %d, Max Distance: %d\n", oneStepSum, farthest_piece_dist);
 //        System.out.printf("Goal bonus: %d\n", goalBonus);
