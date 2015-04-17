@@ -12,9 +12,12 @@ public class Main{
 //        System.out.printf("Player one eval to %d!\n", b.eval_distance_and_goal(0));
 //        System.out.printf("Player two eval to %d!\n", b.eval_distance_and_goal(1));
         Scanner sc = new Scanner(System.in);
-//
-        TimedGameSimulation simulation1 = new TimedGameSimulation(b, 5000, 4);
-        simulation1.startGame();
+
+
+        HumanAgainstAI game = new HumanAgainstAI(b, 4);
+        game.startGame();
+//        TimedGameSimulation simulation1 = new TimedGameSimulation(b, 5000, 4);
+//        simulation1.startGame();
 //        DepthGameSimulation simulation2 = new DepthGameSimulation(b, 3);
 //        simulation2.startGame();
 

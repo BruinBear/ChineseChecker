@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.*;
 
 /**
@@ -107,21 +108,22 @@ public class CheckerState {
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
     };
     public static char[][] grid_2_s = new char[][]{
-            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' '},
-            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', '0', ' ', ' ', ' ', ' '},
-            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', '0', '0', ' ', ' ', ' ', ' '},
-            {' ', ' ', ' ', ' ', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0', ' '},
-            {' ', ' ', ' ', ' ', '1', '1', '0', '0', '0', '0', '0', '0', '0', ' ', ' '},
-            {' ', ' ', ' ', ' ', '1', '0', '0', '0', '0', '0', '0', '0', ' ', ' ', ' '},
-            {' ', ' ', ' ', ' ', '0', '0', '0', '0', '0', '0', '0', ' ', ' ', ' ', ' '},
-            {' ', ' ', ' ', '0', '0', '0', '0', '0', '0', '0', '2', ' ', ' ', ' ', ' '},
-            {' ', ' ', '0', '0', '0', '0', '0', '0', '0', '2', '2', ' ', ' ', ' ', ' '},
-            {' ', '0', '0', '0', '0', '0', '0', '0', '2', '2', '2', ' ', ' ', ' ', ' '},
-            {' ', ' ', ' ', ' ', '0', '0', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-            {' ', ' ', ' ', ' ', '0', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-            {' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
+//            0    1    2    3    4    5    6    7    8    9    10   11   12   13   14
+/*1*/       {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+/*2*/       {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' '},
+/*3*/       {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', '0', ' ', ' ', ' ', ' '},
+/*4*/       {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', '0', '0', ' ', ' ', ' ', ' '},
+/*5*/       {' ', ' ', ' ', ' ', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0', ' '},
+/*6*/       {' ', ' ', ' ', ' ', '1', '1', '0', '0', '0', '0', '0', '0', '0', ' ', ' '},
+/*7*/       {' ', ' ', ' ', ' ', '1', '0', '0', '0', '0', '0', '0', '0', ' ', ' ', ' '},
+/*8*/       {' ', ' ', ' ', ' ', '0', '0', '0', '0', '0', '0', '0', ' ', ' ', ' ', ' '},
+/*9*/       {' ', ' ', ' ', '0', '0', '0', '0', '0', '0', '0', '2', ' ', ' ', ' ', ' '},
+/*10*/      {' ', ' ', '0', '0', '0', '0', '0', '0', '0', '2', '2', ' ', ' ', ' ', ' '},
+/*11*/      {' ', '0', '0', '0', '0', '0', '0', '0', '2', '2', '2', ' ', ' ', ' ', ' '},
+/*12*/      {' ', ' ', ' ', ' ', '0', '0', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+/*13*/      {' ', ' ', ' ', ' ', '0', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+/*14*/      {' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+/*15*/      {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
     };
 
     public static char[][] grid_2_s_goal = new char[][]{
@@ -281,6 +283,38 @@ public class CheckerState {
         return;
     }
 
+    private void printPieceOnGraphics(char c, Graphics g, int gx, int gy, int radius, int x, int y) {
+        switch(c) {
+            case '0':
+                g.setColor(Color.white);
+                break;
+            case '1':
+                g.setColor(Color.red);
+                break;
+            case '2':
+                g.setColor(Color.green);
+                break;
+            case '3':
+                g.setColor(Color.yellow);
+                break;
+            case '4':
+                g.setColor(Color.blue);
+                break;
+            case '5':
+                g.setColor(Color.pink);
+                break;
+            case '6':
+                g.setColor(Color.cyan);
+                break;
+            default:
+                return;
+        }
+        g.fillOval(gx, gy, radius, radius);
+        g.setColor(Color.black);
+        g.drawString(String.format("%d,%d", x, y), gx, gy);
+        return;
+    }
+
     public void printBoard() {
         // top half
         for(int i = 1; i <= m_grid_size; i++) {
@@ -291,7 +325,9 @@ public class CheckerState {
             // print chars total i chars to print
             for(int k = 0; k < i; k++) {
                 // x, y sums to k
-                printPiece(m_grid[i - 1 - k][k]);
+                int x = i-1-k;
+                int y = k;
+                printPiece(m_grid[x][y]);
             }
             System.out.println();
         }
@@ -304,14 +340,104 @@ public class CheckerState {
             // print chars total i chars to print
             for(int k = 0; k < i; k++) {
                 // x, y sums to k
-                printPiece(m_grid[m_grid_size-1-k][k+m_grid_size-i]);
+                printPiece(m_grid[m_grid_size - 1 - k][k + m_grid_size - i]);
             }
             System.out.println();
         }
     }
 
 
-    public List<IntPair> pieceOneStepCanReach(IntPair pair) {
+    public void printBoardWithPosition() {
+        // top half
+        for(int i = 1; i <= m_grid_size; i++) {
+            // print align spaces
+            for(int j = m_grid_size-i; j >=0; j--) {
+                System.out.print("     ");
+            }
+            // print chars total i chars to print
+            for(int k = 0; k < i; k++) {
+                // x, y sums to k
+                int x,y;
+                x = i-1-k;
+                y = k;
+                if(m_grid[x][y]== ' ')
+                    System.out.print("      ");
+                else
+                    System.out.printf(new IntPair(x, y).toString());
+                printPiece(m_grid[x][y]);
+            }
+            System.out.println();
+            System.out.println();
+        }
+        // lower half
+        for(int i = m_grid_size-1; i > 0; i--) {
+            // print align spaces
+            for(int j = m_grid_size-i; j >=0; j--) {
+                System.out.print("     ");
+            }
+            // print chars total i chars to print
+            for(int k = 0; k < i; k++) {
+                // x, y sums to k
+                int x,y;
+                x = m_grid_size-1-k;
+                y = k+m_grid_size-i;
+                if(m_grid[x][y]== ' ')
+                    System.out.print("     ");
+                else
+                    System.out.print(new IntPair(x, y).toString());
+                printPiece(m_grid[x][y]);
+            }
+            System.out.println();
+            System.out.println();
+        }
+    }
+
+
+    public void printBoardOnGraphics(Graphics g) {
+        // top half
+        int x, y;
+        int gxStep = 30;
+        int gxSpace = 15;
+        int gyStep = 30;
+        int oval_size = 18;
+        int gy = 0;
+        for(int i = 8; i <= m_grid_size; i++) {
+            // print align spaces
+            int gx = 0;
+            for(int j = m_grid_size-i; j>0; j--) {
+                gx+=gxSpace;
+            }
+            // print chars total i chars to print
+            for(int k = 0; k < i; k++) {
+                // x, y sums to k
+                x = i-1-k;
+                y = k;
+                printPieceOnGraphics(m_grid[x][y], g, gx, gy, oval_size, x, y);
+                gx += gxStep;
+//                printPiece(m_grid[x][y]);
+            }
+            gy += gyStep;
+        }
+        // lower half
+        for(int i = m_grid_size-1; i > 7; i--) {
+            int gx = 0;
+            // print align spaces
+            for(int j = m_grid_size-i; j>0; j--) {
+                gx += gxSpace;
+            }
+            // print chars total i chars to print
+            for(int k = 0; k < i; k++) {
+                x = m_grid_size - 1 - k;
+                y = k + m_grid_size - i;
+                printPieceOnGraphics(m_grid[x][y], g, gx, gy, oval_size, x, y);
+                gx += gxStep;
+            }
+            gy += gyStep;
+        }
+    }
+
+
+    public ArrayList<IntPair> pieceOneStepCanReach(IntPair pair) {
         ArrayList<IntPair> res = new ArrayList<IntPair>();
         // Single move
         // up right

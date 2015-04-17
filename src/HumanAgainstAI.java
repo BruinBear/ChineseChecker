@@ -1,46 +1,30 @@
-import java.awt.*;
 import java.util.ArrayList;
+
+/**
+ * Created by JingyuLiu on 4/16/2015.
+ */
 import java.util.Scanner;
-import javax.swing.*;
 
-public class CanvasDemo extends JFrame{
+public class HumanAgainstAI {
+    private int m_max_depth;
+    private CheckerState m_state;
 
-    private CheckerState checkerboard;
-    private CheckerState checkerboard_buf;
-
-    public CanvasDemo() {
-        checkerboard = new CheckerState();
-        checkerboard_buf = new CheckerState();
-        setLayout(new BorderLayout());
-        setSize(600, 600);
-        add("Center", canvas);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Chinese Checker");
-        setLocationRelativeTo(null);
-        setVisible(true);
+    HumanAgainstAI(CheckerState startState, int max_depth) {
+        m_max_depth = max_depth;
+        m_state = startState;
     }
-
-
-    private class GameCanvas extends JPanel {
-        @Override
-        public void paint(Graphics g) {
-//            Image board = new ImageIcon("checkerboard.gif").getImage();
-//            g.drawImage(board, 10,10,435,500,null);
-            checkerboard_buf.printBoardOnGraphics(g);
-        }
-
-    }
-    private GameCanvas canvas = new GameCanvas();
 
     public void startGame() {
         // For human choice input
         Scanner in = new Scanner(System.in);
+
         // turn number 0,1,2,3...
         int turn = 0;
         // Let human play first
-        Algorithm alg = new Algorithm("ALPHABETA_STATE");
-        while(checkerboard.gameOver() == 0) {
-            System.out.printf("Turn %d, Player %d move\n", turn, checkerboard.m_turn+1);
+        Algorithm alg = new Algorithm("MINIMAX_STATE");
+        m_state.printBoardWithPosition();
+        while(m_state.gameOver() == 0) {
+            System.out.printf("Turn %d, Player %d move\n", turn, m_state.m_turn+1);
             Move mv;
             int player_id = turn%2;
             if(player_id == 0) { // human turn
@@ -57,7 +41,7 @@ public class CanvasDemo extends JFrame{
                     IntPair p = new IntPair(x, y);
                     IntPair mp = new IntPair(mx, my);
                     mv = new Move(p, mp);
-                    ArrayList<IntPair> canReach = checkerboard.pieceCanMove(p);
+                    ArrayList<IntPair> canReach = m_state.pieceCanMove(p);
                     if(canReach.contains(mp)){
                         System.out.printf("Move Registered: %s\n", mv.toString());
                         break;
@@ -67,29 +51,21 @@ public class CanvasDemo extends JFrame{
                 }
             } else { // computer turn
                 int current_num_nodes_processed = alg.node_generated;
-                alg.execute_once(checkerboard, 6, player_id, (player_id + 1) % 2);
+                alg.execute_once(m_state, m_max_depth, player_id, (player_id + 1) % 2);
                 System.out.printf("%d more nodes generated\n", alg.node_generated - current_num_nodes_processed);
                 mv = alg.bestMove;
             }
-            checkerboard.movePieceTo(mv);
-            checkerboard_buf = new CheckerState(checkerboard);
+            m_state.movePieceTo(mv);
             // printing move info
-            repaint();
+            m_state.printBoardWithPosition();
             // increment turn
             turn++;
-            System.out.printf("Player two eval to %f!\n", alg.eval_func.eval_distance_and_goal(1, checkerboard));
+            System.out.printf("Player two eval to %f!\n", alg.eval_func.eval_distance_and_goal(1, m_state));
 //            System.out.print("Press enter key to continue\n");
 //            sc.nextLine();
         }
         System.out.printf("Number of nodes looked up: %d\n", alg.node_generated);
-        System.out.printf("Winner is player %d\n", checkerboard.gameOver());
+        System.out.printf("Winner is player %d\n", m_state.gameOver());
     }
-
-
-    public static void main(String[] args) {
-        CanvasDemo fr = new CanvasDemo();
-        fr.startGame();
-    }
-
 
 }

@@ -8,7 +8,7 @@ public class IntPair {
 
     @Override
     public String toString() {
-        return "("+x+" ,"+y+")";
+        return String.format("(%02d,%02d)", x, y);
     }
 
     @Override
