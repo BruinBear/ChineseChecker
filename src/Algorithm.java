@@ -13,7 +13,7 @@ public class Algorithm {
         ALPHABETA_STATE
     }
 
-    protected int node_generated = 0;
+    protected int node_expanded = 0;
     protected static Evaluation eval_func = new Evaluation();
     protected String m_name;
 
@@ -81,7 +81,7 @@ public class Algorithm {
         }
         ArrayList<CheckerState> checkerNextStates = node.nextStates();
         CheckerState bestNextState = checkerNextStates.get(0);
-        node_generated += checkerNextStates.size();
+        node_expanded += checkerNextStates.size();
         Double val;
         if(maximizing) {
             double bestValue = Double.NEGATIVE_INFINITY;
@@ -132,7 +132,7 @@ public class Algorithm {
                 }
                 bestValue = Math.max(bestValue, val);
                 alpha = Math.max(alpha, bestValue);
-                node_generated++;
+                node_expanded++;
                 if(beta <= alpha) {
                     break;
                 }
@@ -151,7 +151,7 @@ public class Algorithm {
                 }
                 bestValue = Math.min(bestValue, val);
                 beta = Math.min(beta, bestValue);
-                node_generated++;
+                node_expanded++;
                 if(beta <= alpha) {
                     break;
                 }
@@ -179,7 +179,7 @@ public class Algorithm {
             for(Move move : nextMoves) {
                 node.movePieceTo(move);
                 // commit one move and do further evaluation
-                node_generated++;
+                node_expanded++;
                 val = minimax_state(node, depth - 1, false, max_player_id, min_player_id).getKey();
                 //System.out.printf("New value found in max node: %d\n", val);
                 if(val > bestValue){
@@ -198,7 +198,7 @@ public class Algorithm {
             for(Move move : nextMoves) {
                 node.movePieceTo(move);
                 // commit one move and do further evaluation
-                node_generated++;
+                node_expanded++;
                 val = minimax_state(node, depth - 1, true, max_player_id, min_player_id).getKey();
                 //System.out.printf("New value found in min node: %d\n", val);
                 if(val < bestValue){
@@ -233,10 +233,10 @@ public class Algorithm {
             bestValue = Double.NEGATIVE_INFINITY;
             for(Move move : nextMoves) {
                 node.movePieceTo(move);
-                if(node_generated == 432){
+                if(node_expanded == 432){
                     System.out.printf("haha");
                 }
-                node_generated++;
+                node_expanded++;
                 val = alphabeta_state(node, depth - 1, false, max_player_id, min_player_id, alpha, beta).getKey();
                 //System.out.printf("New value found in max node: %d\n", val);
                 if(val > bestValue){
@@ -255,10 +255,10 @@ public class Algorithm {
             bestValue = Double.POSITIVE_INFINITY;
             for(Move move : nextMoves) {
                 node.movePieceTo(move);
-                if(node_generated == 432){
+                if(node_expanded == 432){
                     System.out.printf("haha");
                 }
-                node_generated++;
+                node_expanded++;
                 val = alphabeta_state(node, depth - 1, true, max_player_id, min_player_id, alpha, beta).getKey();
                 //System.out.printf("New value found in max node: %d\n", val);
                 // update next best move

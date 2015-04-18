@@ -20,4 +20,10 @@ public class CheckerGameJFrame extends JFrame{
         frame.setVisible(true);
     }
 
+    public static void main(String[] args) {
+        CheckerState checker = new CheckerState();
+        Algorithm alg = new Algorithm("ALPHABETA_STATE");
+        CheckerGameJFrame fr = new CheckerGameJFrame(checker,alg);
+    }
+
 }

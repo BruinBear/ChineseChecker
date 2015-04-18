@@ -1,11 +1,11 @@
+import java.applet.Applet;
 
-public class Main{
+public class Main extends Applet{
 
-    public static void main(String[] args) {
+    public static void main() {
         System.out.println("Welcome to Chinese Checker!\n");
-        CheckerState checker = new CheckerState();
-        Algorithm alg = new Algorithm("ALPHABETA_STATE");
-        CheckerGameJFrame checker_gui = new CheckerGameJFrame(checker, alg);
+
+
     }
 
 

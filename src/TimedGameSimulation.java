@@ -24,7 +24,7 @@ public class TimedGameSimulation {
         while(m_state.gameOver() == 0) {
             System.out.printf("Turn %d, Player %d move\n", turn, m_state.m_turn+1);
             Algorithm alg_to_use =  algorithms.get(turn%2);
-            int current_num_nodes_processed = alg_to_use.node_generated;
+            int current_num_nodes_processed = alg_to_use.node_expanded;
             ExecutorService executor = Executors.newSingleThreadExecutor();
             Future<Integer> future = executor.submit(new GetBestNextMoveTask(alg_to_use, m_state, m_max_depth, turn%2, (turn+1)%2));
             try {
@@ -40,7 +40,7 @@ public class TimedGameSimulation {
                 e.printStackTrace();
             }
             System.out.printf("%d out of %d levels searched.\n", algorithms.get(turn%2).current_depth,algorithms.get(turn%2).max_depth);
-            System.out.printf("%d more nodes generated\n", algorithms.get(turn%2).node_generated - current_num_nodes_processed);
+            System.out.printf("%d more nodes generated\n", algorithms.get(turn%2).node_expanded - current_num_nodes_processed);
             executor.shutdownNow();
 
             // commit move
@@ -54,8 +54,8 @@ public class TimedGameSimulation {
 //            System.out.print("Press enter key to continue\n");
 //            sc.nextLine();
         }
-        System.out.printf("Number of nodes looked up: %d\n", algorithms.get(0).node_generated);
-        System.out.printf("Number of nodes looked up: %d\n", algorithms.get(1).node_generated);
+        System.out.printf("Number of nodes looked up: %d\n", algorithms.get(0).node_expanded);
+        System.out.printf("Number of nodes looked up: %d\n", algorithms.get(1).node_expanded);
         System.out.printf("Winner is player %d\n", m_state.gameOver());
 
     }

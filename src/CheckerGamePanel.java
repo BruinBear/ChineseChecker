@@ -16,19 +16,15 @@ public class CheckerGamePanel extends JPanel {
     private CheckerState state;
     private IntPair prevClicked = null;
     private Algorithm alg;
-
-
-    /**
-     * Game Info
-     */
-    private int turn = 0;
-
+    private GameInfoLabel gameInfo;
     /**
      *
      * @param p_map
      * @param s
      */
     public CheckerGamePanel(HashMap<IntPair, PieceShape> p_map, CheckerState s, Algorithm a) {
+        gameInfo = new GameInfoLabel(s.m_turn_played, s.m_turn+1, a.node_expanded);
+        this.add(gameInfo);
         this.alg = a;
         state = s;
         this.piece_map = p_map;
@@ -144,16 +140,16 @@ public class CheckerGamePanel extends JPanel {
 
 
     public void computer_turn() {
-        System.out.printf("Turn %d, Player %d move\n", state.m_turn_played, state.m_turn+1);
+        gameInfo = new GameInfoLabel(state.m_turn_played, state.m_turn+1, alg.node_expanded);
         // give turn info
         if(state.gameOver() != 0) {
             System.out.printf("Winner is player %d\n", state.gameOver());
             return;
         }
         Move mv;
-        int current_num_nodes_processed = alg.node_generated;
+        int current_num_nodes_processed = alg.node_expanded;
         alg.execute_once(state, 4, 1, 0);
-        System.out.printf("%d more nodes generated\n", alg.node_generated - current_num_nodes_processed);
+        System.out.printf("%d more nodes generated\n", alg.node_expanded - current_num_nodes_processed);
 
         // Apply best move with graphics
         mv = alg.bestMove;
@@ -162,6 +158,7 @@ public class CheckerGamePanel extends JPanel {
 
         System.out.printf("Player two eval to %f!\n", alg.eval_func.eval_distance_and_goal(1, state));
 
-        System.out.printf("Number of nodes looked up: %d\n", alg.node_generated);
+        System.out.printf("Number of nodes looked up: %d\n", alg.node_expanded);
+        gameInfo = new GameInfoLabel(state.m_turn_played, state.m_turn+1, alg.node_expanded);
     }
 }
