@@ -393,6 +393,52 @@ public class CheckerState {
     }
 
 
+    public HashMap<IntPair, PieceShape> getGraphicsConfiguration() {
+        HashMap<IntPair, PieceShape> board_conf = new HashMap<IntPair, PieceShape>();
+        // top half
+        int x, y;
+        int gxStep = 30;
+        int gxSpace = 15;
+        int gyStep = 30;
+        int oval_size = 18;
+        int gy = 0;
+        for(int i = 8; i <= m_grid_size; i++) {
+            // print align spaces
+            int gx = 0;
+            for(int j = m_grid_size-i; j>0; j--) {
+                gx+=gxSpace;
+            }
+            // print chars total i chars to print
+            for(int k = 0; k < i; k++) {
+                // x, y sums to k
+                x = i-1-k;
+                y = k;
+                if(m_grid[x][y] != ' ')
+                    board_conf.put(new IntPair(x,y) , new PieceShape(gx,gy,oval_size,oval_size,m_grid[x][y]));
+                gx += gxStep;
+            }
+            gy += gyStep;
+        }
+        // lower half
+        for(int i = m_grid_size-1; i > 7; i--) {
+            int gx = 0;
+            // print align spaces
+            for(int j = m_grid_size-i; j>0; j--) {
+                gx += gxSpace;
+            }
+            // print chars total i chars to print
+            for(int k = 0; k < i; k++) {
+                x = m_grid_size - 1 - k;
+                y = k + m_grid_size - i;
+                if(m_grid[x][y] != ' ')
+                    board_conf.put(new IntPair(x, y), new PieceShape(gx, gy, oval_size, oval_size, m_grid[x][y]));
+                gx += gxStep;
+            }
+            gy += gyStep;
+        }
+        return board_conf;
+    }
+
     public void printBoardOnGraphics(Graphics g) {
         // top half
         int x, y;
