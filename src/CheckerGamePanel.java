@@ -10,7 +10,7 @@ import java.util.HashMap;
 /**
  * Created by JingyuLiu on 4/16/2015.
  */
-public class PiecePanel extends JPanel {
+public class CheckerGamePanel extends JPanel {
     private HashMap<IntPair, PieceShape> piece_map;
     private Dimension dim = new Dimension(600, 600);
     private CheckerState state;
@@ -28,7 +28,7 @@ public class PiecePanel extends JPanel {
      * @param p_map
      * @param s
      */
-    public PiecePanel(HashMap<IntPair, PieceShape> p_map, CheckerState s, Algorithm a) {
+    public CheckerGamePanel(HashMap<IntPair, PieceShape> p_map, CheckerState s, Algorithm a) {
         this.alg = a;
         state = s;
         this.piece_map = p_map;
@@ -36,7 +36,7 @@ public class PiecePanel extends JPanel {
             @Override
             public void propertyChange(PropertyChangeEvent evt) {
                 System.out.println("A click is catched");
-                ((PiecePanel) evt.getSource()).repaint();
+                ((CheckerGamePanel) evt.getSource()).repaint();
             }
         });
         this.addMouseListener(new MouseAdapter() {
@@ -117,7 +117,7 @@ public class PiecePanel extends JPanel {
         ArrayList<IntPair> canMove = state.pieceCanMove(from);
         for (IntPair pp : canMove) {
             System.out.println("Can go to " + pp.toString());
-            PieceShape move_shape = PiecePanel.this.piece_map.get(pp);
+            PieceShape move_shape = CheckerGamePanel.this.piece_map.get(pp);
             if(tomark) {
                 move_shape.markDest();
             } else {
