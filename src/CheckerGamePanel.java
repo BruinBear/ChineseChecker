@@ -16,15 +16,13 @@ public class CheckerGamePanel extends JPanel {
     private CheckerState state;
     private IntPair prevClicked = null;
     private Algorithm alg;
-    private GameInfoLabel gameInfo;
+    private JLabel gameInfo;
     /**
      *
      * @param p_map
      * @param s
      */
     public CheckerGamePanel(HashMap<IntPair, PieceShape> p_map, CheckerState s, Algorithm a) {
-        gameInfo = new GameInfoLabel(s.m_turn_played, s.m_turn+1, a.node_expanded);
-        this.add(gameInfo);
         this.alg = a;
         state = s;
         this.piece_map = p_map;
@@ -94,6 +92,9 @@ public class CheckerGamePanel extends JPanel {
                 firePropertyChange("makingMove",false,true);
             }
         });
+
+        gameInfo = new JLabel(gameText(s.m_turn_played, s.m_turn+1, a.node_expanded));
+        this.add(gameInfo);
     }
 
 
@@ -140,7 +141,7 @@ public class CheckerGamePanel extends JPanel {
 
 
     public void computer_turn() {
-        gameInfo = new GameInfoLabel(state.m_turn_played, state.m_turn+1, alg.node_expanded);
+        gameInfo.setText(gameText(state.m_turn_played, state.m_turn + 1, alg.node_expanded));
         // give turn info
         if(state.gameOver() != 0) {
             System.out.printf("Winner is player %d\n", state.gameOver());
@@ -159,6 +160,19 @@ public class CheckerGamePanel extends JPanel {
         System.out.printf("Player two eval to %f!\n", alg.eval_func.eval_distance_and_goal(1, state));
 
         System.out.printf("Number of nodes looked up: %d\n", alg.node_expanded);
-        gameInfo = new GameInfoLabel(state.m_turn_played, state.m_turn+1, alg.node_expanded);
+        // give turn info
+        if(state.gameOver() != 0) {
+            System.out.printf("Winner is player %d\n", state.gameOver());
+            return;
+        }
+        gameInfo.setText(gameText(state.m_turn_played, state.m_turn + 1, alg.node_expanded));
+    }
+
+    private String gameText(int turn, int whose_turn, int nodes_expanded) {
+        String win = "";
+        if(state.gameOver()!=0) {
+            win = String.format("\nPlayer %c won", state.gameOver()+'1');
+        }
+        return String.format("Turn: %d, Player %d plays, Computer expanded %d nodes%s" , turn ,whose_turn, nodes_expanded, win);
     }
 }

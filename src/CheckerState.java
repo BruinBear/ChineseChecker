@@ -401,10 +401,10 @@ public class CheckerState {
         int gxSpace = 15;
         int gyStep = 30;
         int oval_size = 18;
-        int gy = 0;
+        int gy = 40;
         for(int i = 8; i <= m_grid_size; i++) {
             // print align spaces
-            int gx = 0;
+            int gx = 40;
             for(int j = m_grid_size-i; j>0; j--) {
                 gx+=gxSpace;
             }
@@ -421,7 +421,7 @@ public class CheckerState {
         }
         // lower half
         for(int i = m_grid_size-1; i > 7; i--) {
-            int gx = 0;
+            int gx = 40;
             // print align spaces
             for(int j = m_grid_size-i; j>0; j--) {
                 gx += gxSpace;
