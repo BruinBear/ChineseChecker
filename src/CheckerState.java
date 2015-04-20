@@ -638,6 +638,27 @@ public class CheckerState {
     }
 
 
+    public Move getRandomMove() {
+        ArrayList<Move> move_list = nextMoves();
+        if(move_list.size() == 0)
+            return null;
+        int random = (int) Math.random()*move_list.size();
+        return move_list.get(random);
+    }
+
+
+    /**
+     * Create a copy of the current state and apply move
+     * @param mv
+     * @return
+     */
+    public CheckerState newAndApply(Move mv) {
+        CheckerState newState = new CheckerState(this);
+        newState.movePieceTo(mv);
+        return newState;
+    }
+
+
     /**
      *    Commit a move that increases turn number
      *    Also important make inverse possible, to pop a move action off stack
@@ -662,6 +683,14 @@ public class CheckerState {
     }
 
 
+    public double[] getReward() {
+        double[] re = new double[m_num_players];
+        re[gameOver()] = 1.0;
+        return re;
+    }
+
+
+
     @Override
     public String toString() {
         StringBuffer b = new StringBuffer();
@@ -673,4 +702,21 @@ public class CheckerState {
         }
         return b.toString();
     }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        }
+
+        if (!(o instanceof CheckerState)) {
+            return false;
+        }
+
+        CheckerState c = (CheckerState) o;
+
+        return c.toString() == this.toString() && c.m_turn == this.m_turn;
+    }
+
 }
