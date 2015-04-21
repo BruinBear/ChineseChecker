@@ -149,7 +149,7 @@ public class CheckerGamePanel extends JPanel {
         }
         Move mv;
         int current_num_nodes_processed = alg.node_expanded;
-        alg.execute_once(state, 4, 1, 0);
+        alg.execute_once(state, 5, 1, 0);
         System.out.printf("%d more nodes generated\n", alg.node_expanded - current_num_nodes_processed);
 
         // Apply best move with graphics
@@ -167,6 +167,7 @@ public class CheckerGamePanel extends JPanel {
         }
         gameInfo.setText(gameText(state.m_turn_played, state.m_turn + 1, alg.node_expanded));
     }
+
 
     private String gameText(int turn, int whose_turn, int nodes_expanded) {
         String win = "";

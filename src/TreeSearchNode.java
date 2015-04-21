@@ -1,3 +1,5 @@
+import sun.reflect.generics.tree.Tree;
+
 import java.util.ArrayList;
 
 /**
@@ -9,7 +11,7 @@ public class TreeSearchNode {
     ArrayList<TreeSearchNode> children;
     TreeSearchNode parent;
     int visit_times; // searches that passed this node
-    double[] total_util_list;
+    double[] util_arr;
     boolean is_terminal = false;
 
     TreeSearchNode(CheckerState s, TreeSearchNode p) {
@@ -18,14 +20,20 @@ public class TreeSearchNode {
         children = null;
         visit_times = 0;
         // total utility for each player
-        total_util_list = new Double[s.m_num_players];
+        util_arr = new double[s.m_num_players];
         // expandable if there are children
         parent = p;
-        if(s.gameOver() == 0 && expandable()) {
+        if(s.gameOver() != 0 && expandable()) {
             is_terminal = true;
         }
     }
 
+    public void appendChild(TreeSearchNode child) {
+        if(children == null) {
+            children = new ArrayList<TreeSearchNode>();
+        }
+        children.add(child);
+    }
 
     public boolean expandable() {
         return expandAction.size() != 0;
@@ -48,8 +56,8 @@ public class TreeSearchNode {
 
 
     public void addUtility(double[] utils) {
-        for(int i = 0; i < total_util_list.length; i++) {
-            total_util_list[i] += utils[i];
+        for(int i = 0; i < util_arr.length; i++) {
+            util_arr[i] += utils[i];
         }
     }
 

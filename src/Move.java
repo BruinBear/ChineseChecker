@@ -30,4 +30,5 @@ public class Move {
     public String toString(){
         return String.format("(%d, %d) -> (%d, %d)", piece.x, piece.y, dest.x, dest.y);
     }
+
 }
