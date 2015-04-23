@@ -1,23 +1,54 @@
 import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.concurrent.*;
 
 public class Main{
 
     public static void main(String[] args) {
         System.out.println("Welcome to Chinese Checker!\n");
-        CheckerState b = new CheckerState();
+//
+//        IntPair a = new IntPair(10,10);
+//        IntPair b = new IntPair(13,4);
+//        System.out.printf("Distance %d\n", a.minPathDistance(b));
 
-        MCTS_UCT mcts = new MCTS_UCT(0.2);
-        mcts.uctSearch(b);
-
+//        CheckerState board = new CheckerState();
+//
+//        MCTS_UCT mcts = new MCTS_UCT(0.5);
+//        Move mv = mcts.uctSearch(board);
+        alphaVSmcts();
     }
 
 
-    public static void simulation () {
+    public static void alphaVSminimax() {
         CheckerState b = new CheckerState();
-        TimedGameSimulation simulation1 = new TimedGameSimulation(b, 5000, 4);
-        simulation1.startGame();
+        ArrayList<SearchAlgorithm> alg_pool= new ArrayList<SearchAlgorithm>(2);
+        Minimax alphabeta = new Minimax("ALPHABETA", 5);
+        Minimax minimax = new Minimax("MINIMAX", 4);
+        alg_pool.add(alphabeta);
+        alg_pool.add(minimax);
+        b.printBoard();
+        while(b.gameOver()==0) {
+            SearchAlgorithm alg = alg_pool.get(b.m_turn);
+            b.applyMove(alg.nextMove(b));
+            b.printBoard();
+        }
+        System.out.printf("player %d won.", b.gameOver());
+        return;
+    }
+
+
+    public static void alphaVSmcts() {
+        CheckerState b = new CheckerState();
+        ArrayList<SearchAlgorithm> alg_pool= new ArrayList<SearchAlgorithm>(2);
+        Minimax alphabeta = new Minimax("ALPHABETA", 5);
+        MCTS_UCT mcts = new MCTS_UCT(0.5);
+        alg_pool.add(alphabeta);
+        alg_pool.add(mcts);
+        b.printBoard();
+        while(b.gameOver()==0) {
+            SearchAlgorithm alg = alg_pool.get(b.m_turn);
+            b.applyMove(alg.nextMove(b));
+            b.printBoard();
+        }
+        System.out.printf("player %c won.", b.gameOver()+'1');
         return;
     }
 }

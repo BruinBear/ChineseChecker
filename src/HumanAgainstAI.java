@@ -21,14 +21,14 @@ public class HumanAgainstAI {
         // turn number 0,1,2,3...
         int turn = 0;
         // Let human play first
-        Algorithm alg = new Algorithm("MINIMAX_STATE");
+        Minimax alg = new Minimax("MINIMAX", 5);
         m_state.printBoardWithPosition();
         while(m_state.gameOver() == 0) {
             System.out.printf("Turn %d, Player %d move\n", turn, m_state.m_turn+1);
             Move mv;
             int player_id = turn%2;
             if(player_id == 0) { // human turn
-//                ArrayList<Move> human_moves = m_state.nextMoves();
+//                ArrayList<Move> human_moves = m_state.nextUnorderedMoves();
 //                for(int move_id = 0; move_id < human_moves.size(); move_id++) {
 //                    System.out.printf("%d. %s", move_id,human_moves.get(move_id).toString());
 //                }
@@ -51,11 +51,11 @@ public class HumanAgainstAI {
                 }
             } else { // computer turn
                 int current_num_nodes_processed = alg.node_expanded;
-                alg.execute_once(m_state, m_max_depth, player_id, (player_id + 1) % 2);
+                alg.execute_once(m_state);
                 System.out.printf("%d more nodes generated\n", alg.node_expanded - current_num_nodes_processed);
                 mv = alg.bestMove;
             }
-            m_state.movePieceTo(mv);
+            m_state.applyMove(mv);
             // printing move info
             m_state.printBoardWithPosition();
             // increment turn

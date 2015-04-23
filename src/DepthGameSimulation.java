@@ -15,15 +15,15 @@ public class DepthGameSimulation {
     public void startGame() {
         // turn number 0,1,2,3...
         int turn = 0;
-        ArrayList<Algorithm> algorithms = new ArrayList<Algorithm>();
-        algorithms.add(new Algorithm("MINIMAX_STATE"));
-        algorithms.add(new Algorithm("alphabeta_state"));
+        ArrayList<Minimax> algorithms = new ArrayList<Minimax>();
+        algorithms.add(new Minimax("MINIMAX",4));
+        algorithms.add(new Minimax("alphabeta", 4));
         while(m_state.gameOver() == 0) {
             System.out.printf("Turn %d, Player %d move\n", turn, m_state.m_turn+1);
             int player_id = turn%2;
-            Algorithm alg_to_use = algorithms.get(player_id);
+            Minimax alg_to_use = algorithms.get(player_id);
             int current_num_nodes_processed = alg_to_use.node_expanded;
-            alg_to_use.execute_once(m_state, m_max_depth, player_id, (player_id + 1) % 2);
+            alg_to_use.execute_once(m_state);
             System.out.printf("%d more nodes generated\n", algorithms.get(turn%2).node_expanded - current_num_nodes_processed);
             // printing move info
             m_state.printBoard();

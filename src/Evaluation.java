@@ -20,8 +20,6 @@ public class Evaluation {
             }
         }
 
-        IntPair goal_c = b.m_players_goal_center.get(player_id);
-        int farthest_piece_dist = 0;
         int piece_dist = 0;
         for(IntPair p : b.m_players_pieces.get(player_id))
         {
@@ -30,7 +28,6 @@ public class Evaluation {
             }
 
             // farthest piece distance to goal center
-            farthest_piece_dist = Math.max(farthest_piece_dist,  Math.abs(p.x - goal_c.x) + Math.abs(p.y - goal_c.y));
             int min_to_goal = Integer.MAX_VALUE;
             for(IntPair g: goal_queue) {
                 min_to_goal = Math.min(min_to_goal, Math.abs(p.x - g.x) + Math.abs(p.y - g.y));

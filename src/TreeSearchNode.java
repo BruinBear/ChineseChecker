@@ -1,5 +1,3 @@
-import sun.reflect.generics.tree.Tree;
-
 import java.util.ArrayList;
 
 /**
@@ -12,26 +10,26 @@ public class TreeSearchNode {
     TreeSearchNode parent;
     int visit_times; // searches that passed this node
     double[] util_arr;
-    boolean is_terminal = false;
 
     TreeSearchNode(CheckerState s, TreeSearchNode p) {
         state = s;
-        expandAction = s.nextMoves();
-        children = null;
+        expandAction = s.nextOrderedMoves(true);
+        children = new ArrayList<TreeSearchNode>();
         visit_times = 0;
         // total utility for each player
         util_arr = new double[s.m_num_players];
         // expandable if there are children
         parent = p;
-        if(s.gameOver() != 0 && expandable()) {
-            is_terminal = true;
-        }
+
     }
 
+
+    public boolean isTerminal() {
+        return (state.gameOver() != 0);
+    }
+
+
     public void appendChild(TreeSearchNode child) {
-        if(children == null) {
-            children = new ArrayList<TreeSearchNode>();
-        }
         children.add(child);
     }
 

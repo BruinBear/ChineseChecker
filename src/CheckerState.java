@@ -61,7 +61,9 @@ public class CheckerState {
         }
         m_num_players = 2;
         m_players_goals = b.m_players_goals;
-        m_players_goal_center = b.m_players_goal_center;
+        m_players_far_goal = b.m_players_far_goal;
+        m_players_pieces = new ArrayList<ArrayList<IntPair>>();
+        rescanPieces();
     }
 
     public static char[][] empty_grid = new char[][]{
@@ -170,16 +172,16 @@ public class CheckerState {
     protected ArrayList<ArrayList<IntPair>> m_players_goals = new ArrayList<ArrayList<IntPair>>();
     protected ArrayList<ArrayList<IntPair>> m_players_pieces = new ArrayList<ArrayList<IntPair>>();
 
-    public static ArrayList<IntPair> m_players_goal_center;
+    public static ArrayList<IntPair> m_players_far_goal;
 
     private void setupGoals (int board_num) {
-        m_players_goal_center = new ArrayList<IntPair>();
+        m_players_far_goal = new ArrayList<IntPair>();
         switch(board_num) {
             case 1:
                 // goal for player 1
-                m_players_goal_center.add(new IntPair(10,10));
+                m_players_far_goal.add(new IntPair(10, 10));
                 // goal for player 2
-                m_players_goal_center.add(new IntPair(4,4));
+                m_players_far_goal.add(new IntPair(4, 4));
                 break;
         }
     }
@@ -229,20 +231,24 @@ public class CheckerState {
     // returns who wins, 0 if none wins
     public int gameOver() {
         // we only need to check if player the m_turn before has won
-        int player_index = (m_turn +m_num_players-1)%m_num_players;
-        boolean finished_one_piece = false;
-        for(IntPair piece : m_players_goals.get(player_index)) {
-            if(m_grid[piece.x][piece.y] == ('1'+ player_index)) {
-                finished_one_piece = true;
+        int player_index = 0;
+        while(player_index < m_num_players) {
+            boolean finished = false;
+            for (IntPair piece : m_players_goals.get(player_index)) {
+                if (m_grid[piece.x][piece.y] == ('1' + player_index)) {
+                    finished = true;
+                }
+                if (m_grid[piece.x][piece.y] == '0') {
+                    finished = false;
+                    break;
+                }
             }
-            if(m_grid[piece.x][piece.y] == '0') {
-                return 0;
-            }
+            if (finished)
+                return player_index + 1;
+            else
+                player_index++;
         }
-        if (finished_one_piece)
-            return player_index+1;
-        else
-            return 0;
+        return 0;
     }
 
 
@@ -580,15 +586,39 @@ public class CheckerState {
      * we can potentially sort the moves based on some score
      * and we will
      */
-    public ArrayList<Move> nextMoves() {
+    public ArrayList<Move> nextUnorderedMoves() {
         ArrayList<Move> nextMoves = new ArrayList<Move> ();
+        if(gameOver() != 0) {return nextMoves;}
         for (IntPair piece : m_players_pieces.get(m_turn)) {
             for (IntPair dest : pieceCanMove(piece)) {
                 nextMoves.add(new Move(piece,dest));
             }
         }
+        Collections.shuffle(nextMoves);
         return nextMoves;
     }
+
+
+    public ArrayList<Move> nextOrderedMoves(boolean nonnegative) {
+        ArrayList<Move> nextMoves = new ArrayList<Move> ();
+        if(gameOver() != 0) {return nextMoves;}
+        for (IntPair piece : m_players_pieces.get(m_turn)) {
+            for (IntPair dest : pieceCanMove(piece)) {
+                Move new_move = new Move(new Move(piece,dest), m_players_far_goal.get(m_turn));
+                if(!nonnegative || new_move.improvement>=0) {
+                    nextMoves.add(new_move);
+                }
+            }
+        }
+        Collections.sort(nextMoves, new Comparator<Move>() {
+            @Override
+            public int compare(Move o1, Move o2) {
+                return Integer.valueOf(o2.improvement).compareTo(o1.improvement);
+            }
+        });
+        return nextMoves;
+    }
+
 
     public ArrayList<CheckerState> nextStates() {
         ArrayList<CheckerState> nextStates = new ArrayList<CheckerState>();
@@ -617,7 +647,7 @@ public class CheckerState {
      *    Commit a move that increases turn number
      *    Also important make inverse possible, to pop a move action off stack
      */
-    public boolean movePieceTo(Move mv) {
+    public boolean applyMove(Move mv) {
         IntPair piece = mv.piece;
         IntPair dest = mv.dest;
         if ('0' < m_grid[piece.x][piece.y] &&
@@ -639,11 +669,60 @@ public class CheckerState {
 
 
     public Move getRandomMove() {
-        ArrayList<Move> move_list = nextMoves();
-        if(move_list.size() == 0)
+        ArrayList<Move> moves = nextOrderedMoves(true);
+        if(moves.size() == 0)
             return null;
-        int random = (int) (Math.random()*move_list.size());
-        return move_list.get(random);
+        int random = (int) (Math.random()*moves.size());
+        return moves.get(random);
+    }
+
+
+    public Move getRandomMoveWeighted() {
+        ArrayList<Move> moves = nextOrderedMoves(true);
+        if(moves.size() == 0)
+            return null;
+        double[] prob = epsilonGreedyProbability(moves);
+        double rand = Math.random();
+        double cum = 0.0;
+        for(int i=0; i<moves.size(); i++) {
+            cum = cum+prob[i];
+            if(cum>=rand) {
+                return moves.get(i);
+            }
+        }
+        return moves.get(0);
+    }
+    
+    private double[] mapImprovementToProbability(ArrayList<Move> moves) {
+        double total_weight = 0;
+        for(Move m : moves) {
+            total_weight += m.improvement+1;
+        }
+        double[] prob = new double[moves.size()];
+        double last = 1.0;
+        for(int i=0; i<moves.size(); i++) {
+            prob[i] = (moves.get(i).improvement+1) / total_weight;
+            last = 1 - prob[i];
+        }
+        prob[moves.size()-1] = last;
+        return prob;
+    }
+
+
+    private double[] epsilonGreedyProbability(ArrayList<Move> moves) {
+        double total_weight = 0;
+        for(Move m : moves) {
+            total_weight += m.improvement+1;
+        }
+        double[] prob = new double[moves.size()];
+        prob[0] = 0.95;
+        double last = 1.0;
+        for(int i=1; i<moves.size(); i++) {
+            prob[i] = 0.05 / (moves.size()-1);
+            last = 1 - prob[i];
+        }
+        prob[moves.size()-1] = last;
+        return prob;
     }
 
 
@@ -654,7 +733,7 @@ public class CheckerState {
      */
     public CheckerState newAndApply(Move mv) {
         CheckerState newState = new CheckerState(this);
-        newState.movePieceTo(mv);
+        newState.applyMove(mv);
         return newState;
     }
 
@@ -689,7 +768,8 @@ public class CheckerState {
 
     public double[] getReward() {
         double[] re = new double[m_num_players];
-        re[gameOver()] = 1.0;
+        if(gameOver()!= 0)
+            re[gameOver()-1] = 1.0;
         return re;
     }
 

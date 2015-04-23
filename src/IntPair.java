@@ -30,4 +30,18 @@ public class IntPair {
     public int hashCode() {
         return 100*x+y;
     }
+
+
+    /**
+     * given the board, calculate the min distance given one-step moves can be made in 6 directions
+     * @param b IntPair
+     */
+    public int minPathDistance(IntPair b) {
+        if((this.x<b.x && this.y<b.y) || (this.x>=b.x && this.y>=b.y)) {
+            return Math.abs(this.y-b.y)+Math.abs(this.x-b.x);
+        } else {
+            int duplicate = Math.min(Math.abs(this.x-b.x), Math.abs(this.y-b.y));
+            return Math.abs(this.y-b.y)+Math.abs(this.x-b.x) - duplicate;
+        }
+    }
 }

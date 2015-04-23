@@ -20,7 +20,7 @@ public interface MCTS {
     public TreeSearchNode bestChild(TreeSearchNode v, double exploration_constant);
 
 
-    public double[] defaultPolicy(CheckerState s);
+    public double[] defaultPlayoutPolicy(CheckerState s);
 
 
     public void backUp(TreeSearchNode v, double[] delta);

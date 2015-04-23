@@ -3,9 +3,9 @@ import javax.swing.*;
 public class CheckerGameJFrame extends JFrame{
 
     private CheckerState checkerboard ;
-    private Algorithm alg;
+    private Minimax alg;
 
-    public CheckerGameJFrame(CheckerState ck, Algorithm al) {
+    public CheckerGameJFrame(CheckerState ck, Minimax al) {
         checkerboard = ck;
         alg = al;
         JFrame frame = new JFrame();
@@ -22,7 +22,7 @@ public class CheckerGameJFrame extends JFrame{
 
     public static void main(String[] args) {
         CheckerState checker = new CheckerState();
-        Algorithm alg = new Algorithm("ALPHABETA_STATE");
+        Minimax alg = new Minimax("ALPHABETA", 4);
         CheckerGameJFrame fr = new CheckerGameJFrame(checker,alg);
     }
 

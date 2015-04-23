@@ -15,14 +15,14 @@ public class CheckerGamePanel extends JPanel {
     private Dimension dim = new Dimension(600, 600);
     private CheckerState state;
     private IntPair prevClicked = null;
-    private Algorithm alg;
+    private Minimax alg;
     private JLabel gameInfo;
     /**
      *
      * @param p_map
      * @param s
      */
-    public CheckerGamePanel(HashMap<IntPair, PieceShape> p_map, CheckerState s, Algorithm a) {
+    public CheckerGamePanel(HashMap<IntPair, PieceShape> p_map, CheckerState s, Minimax a) {
         this.alg = a;
         state = s;
         this.piece_map = p_map;
@@ -69,7 +69,7 @@ public class CheckerGamePanel extends JPanel {
                     if(shape.isDest()) { // previous clicked piece can move to this dest
                         Move validMove = new Move(prevClicked, clicked);
                         markNextMove(prevClicked, false);
-                        state.movePieceTo(validMove);
+                        state.applyMove(validMove);
                         switchType(prevClicked, clicked);
                         prevClicked = null;
                         // Computer Turn Now
@@ -149,12 +149,12 @@ public class CheckerGamePanel extends JPanel {
         }
         Move mv;
         int current_num_nodes_processed = alg.node_expanded;
-        alg.execute_once(state, 5, 1, 0);
+        alg.execute_once(state);
         System.out.printf("%d more nodes generated\n", alg.node_expanded - current_num_nodes_processed);
 
         // Apply best move with graphics
         mv = alg.bestMove;
-        state.movePieceTo(mv);
+        state.applyMove(mv);
         switchType(mv);
 
         System.out.printf("Player two eval to %f!\n", alg.eval_func.eval_distance_and_goal(1, state));
