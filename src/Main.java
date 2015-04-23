@@ -13,7 +13,7 @@ public class Main{
 //
 //        MCTS_UCT mcts = new MCTS_UCT(0.5);
 //        Move mv = mcts.uctSearch(board);
-        alphaVSmcts();
+        threePlayers();
     }
 
 
@@ -48,7 +48,25 @@ public class Main{
             b.applyMove(alg.nextMove(b));
             b.printBoard();
         }
-        System.out.printf("player %c won.", b.gameOver()+'1');
+        System.out.printf("player %d won.", b.gameOver());
+        return;
+    }
+
+
+    public static void threePlayers() {
+        CheckerState b = new CheckerState(3);
+        ArrayList<SearchAlgorithm> alg_pool= new ArrayList<SearchAlgorithm>(2);
+        alg_pool.add(new Maxn(3));
+        alg_pool.add(new Maxn(3));
+        alg_pool.add(new Maxn(3));
+        b.printBoard();
+        while(b.gameOver()==0) {
+            System.out.printf("player %d turn.", b.m_turn+1);
+            SearchAlgorithm alg = alg_pool.get(b.m_turn);
+            b.applyMove(alg.nextMove(b));
+            b.printBoard();
+        }
+        System.out.printf("player %d won.", b.gameOver());
         return;
     }
 }

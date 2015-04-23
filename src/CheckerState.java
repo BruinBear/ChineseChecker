@@ -17,7 +17,7 @@ public class CheckerState {
 
     protected char[][] m_grid;
     private int m_grid_size;
-
+    private BoardConfiguration board_config = new BoardConfiguration();
     // next player to play, e.g. 0 means player 1 plays next
     int m_turn = 0;
     // total turns info
@@ -38,10 +38,10 @@ public class CheckerState {
      */
     CheckerState() {
         // clone a copy of 2 player game
-        m_grid_size = grid_2_s.length;
+        m_grid_size = board_config.grid_2_s.length;
         m_grid = new char[m_grid_size][m_grid_size];
         for(int i = 0; i< m_grid_size; i++) {
-            m_grid[i] = this.grid_2_s[i].clone();
+            m_grid[i] = board_config.grid_2_s[i].clone();
         }
         // add player pieces to pool and the goal states to pool
         m_num_players = 2;
@@ -49,6 +49,18 @@ public class CheckerState {
         this.scanForPlayerPiecesGoals();
     }
 
+    CheckerState(int number_of_player) {
+        // clone a copy of 2 player game
+        m_grid_size = board_config.grid_3_s.length;
+        m_grid = new char[m_grid_size][m_grid_size];
+        for(int i = 0; i< m_grid_size; i++) {
+            m_grid[i] = board_config.grid_3_s[i].clone();
+        }
+        // add player pieces to pool and the goal states to pool
+        m_num_players = 3;
+        this.setupGoals(2);
+        this.scanForPlayerPiecesGoals();
+    }
 
     /* copy constructor */
     CheckerState(CheckerState b) {
@@ -128,6 +140,25 @@ public class CheckerState {
 /*14*/      {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
     };
 
+    public static char[][] grid_3_s = new char[][]{
+//            0    1    2    3    4    5    6    7    8    9    10   11   12   13   14
+/*0*/       {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+/*1*/       {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' '},
+/*2*/       {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', '0', ' ', ' ', ' ', ' '},
+/*3*/       {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', '0', '0', ' ', ' ', ' ', ' '},
+/*4*/       {' ', ' ', ' ', ' ', '1', '1', '1', '0', '0', '0', '0', '2', '2', '2', ' '},
+/*5*/       {' ', ' ', ' ', ' ', '1', '1', '0', '0', '0', '0', '0', '2', '2', ' ', ' '},
+/*6*/       {' ', ' ', ' ', ' ', '1', '0', '0', '0', '0', '0', '0', '2', ' ', ' ', ' '},
+/*7*/       {' ', ' ', ' ', ' ', '0', '0', '0', '0', '0', '0', '0', ' ', ' ', ' ', ' '},
+/*8*/       {' ', ' ', ' ', '0', '0', '0', '0', '0', '0', '0', '0', ' ', ' ', ' ', ' '},
+/*9*/       {' ', ' ', '0', '0', '0', '0', '0', '0', '0', '0', '0', ' ', ' ', ' ', ' '},
+/*10*/      {' ', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', ' ', ' ', ' ', ' '},
+/*11*/      {' ', ' ', ' ', ' ', '3', '3', '3', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+/*12*/      {' ', ' ', ' ', ' ', '3', '3', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+/*13*/      {' ', ' ', ' ', ' ', '3', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+/*14*/      {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
+    };
+
     public static char[][] grid_2_s_goal = new char[][]{
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' '},
@@ -182,6 +213,14 @@ public class CheckerState {
                 m_players_far_goal.add(new IntPair(10, 10));
                 // goal for player 2
                 m_players_far_goal.add(new IntPair(4, 4));
+                break;
+            case 2:
+                // goal for player 1
+                m_players_far_goal.add(new IntPair(10, 10));
+                // goal for player 2
+                m_players_far_goal.add(new IntPair(10, 1));
+                // goal for player 3
+                m_players_far_goal.add(new IntPair(1, 10));
                 break;
         }
     }
@@ -634,7 +673,7 @@ public class CheckerState {
                 newState.m_grid[dest.x][dest.y] = newState.m_grid[piece.x][piece.y];
                 newState.m_grid[piece.x][piece.y] = '0';
                 newState.rescanPieces();
-                newState.m_turn = (newState.m_turn+1) % m_num_players;
+                newState.m_turn = (newState.m_turn + 1) % m_num_players;
                 newState.m_turn_played++;
                 nextStates.add(newState);
             }
