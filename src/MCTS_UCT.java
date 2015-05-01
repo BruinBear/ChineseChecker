@@ -4,10 +4,10 @@
 public class MCTS_UCT extends SearchAlgorithm implements MCTS{
 
     private double Cp;
-
-
-    public MCTS_UCT(double c) {
+    private int nodesPerIteration;
+    public MCTS_UCT(double c, int nodesPerIteration) {
         Cp = c;
+        this.nodesPerIteration = nodesPerIteration;
     }
 
 
@@ -22,10 +22,11 @@ public class MCTS_UCT extends SearchAlgorithm implements MCTS{
     public Move uctSearch(CheckerState s0){
         TreeSearchNode v0 = new TreeSearchNode(s0, null);
         int i = 0;
-        while(i++<10000) {
+        while(i++<this.nodesPerIteration) {
             TreeSearchNode vl = treePolicy(v0);
             double[] delta = defaultPlayoutPolicy(new CheckerState(vl.state));
             backUp(vl, delta);
+            nodes_generated++;
         }
         printChildrenStats(v0);
         return bestChild(v0, 0).state.getLastMove();

@@ -93,7 +93,7 @@ public class CheckerGamePanel extends JPanel {
             }
         });
 
-        gameInfo = new JLabel(gameText(s.m_turn_played, s.m_turn+1, a.node_expanded));
+        gameInfo = new JLabel(gameText(s.m_turn_played, s.m_turn+1, a.nodes_generated));
         this.add(gameInfo);
     }
 
@@ -141,16 +141,16 @@ public class CheckerGamePanel extends JPanel {
 
 
     public void computer_turn() {
-        gameInfo.setText(gameText(state.m_turn_played, state.m_turn + 1, alg.node_expanded));
+        gameInfo.setText(gameText(state.m_turn_played, state.m_turn + 1, alg.nodes_generated));
         // give turn info
         if(state.gameOver() != 0) {
             System.out.printf("Winner is player %d\n", state.gameOver());
             return;
         }
         Move mv;
-        int current_num_nodes_processed = alg.node_expanded;
+        int current_num_nodes_processed = alg.nodes_generated;
         alg.execute_once(state);
-        System.out.printf("%d more nodes generated\n", alg.node_expanded - current_num_nodes_processed);
+        System.out.printf("%d more nodes generated\n", alg.nodes_generated - current_num_nodes_processed);
 
         // Apply best move with graphics
         mv = alg.bestMove;
@@ -159,13 +159,13 @@ public class CheckerGamePanel extends JPanel {
 
         System.out.printf("Player two eval to %f!\n", alg.eval_func.eval_distance_and_goal(1, state));
 
-        System.out.printf("Number of nodes looked up: %d\n", alg.node_expanded);
+        System.out.printf("Number of nodes looked up: %d\n", alg.nodes_generated);
         // give turn info
         if(state.gameOver() != 0) {
             System.out.printf("Winner is player %d\n", state.gameOver());
             return;
         }
-        gameInfo.setText(gameText(state.m_turn_played, state.m_turn + 1, alg.node_expanded));
+        gameInfo.setText(gameText(state.m_turn_played, state.m_turn + 1, alg.nodes_generated));
     }
 
 

@@ -71,7 +71,7 @@ public class CheckerState {
         for (int i = 0; i < m_grid_size; i++) {
             m_grid[i] = b.getGrid()[i].clone();
         }
-        m_num_players = 2;
+        m_num_players = 3;
         m_players_goals = b.m_players_goals;
         m_players_far_goal = b.m_players_far_goal;
         m_players_pieces = new ArrayList<ArrayList<IntPair>>();
@@ -649,6 +649,7 @@ public class CheckerState {
                 }
             }
         }
+        Collections.shuffle(nextMoves);
         Collections.sort(nextMoves, new Comparator<Move>() {
             @Override
             public int compare(Move o1, Move o2) {

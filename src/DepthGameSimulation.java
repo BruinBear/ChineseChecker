@@ -22,9 +22,9 @@ public class DepthGameSimulation {
             System.out.printf("Turn %d, Player %d move\n", turn, m_state.m_turn+1);
             int player_id = turn%2;
             Minimax alg_to_use = algorithms.get(player_id);
-            int current_num_nodes_processed = alg_to_use.node_expanded;
+            int current_num_nodes_processed = alg_to_use.nodes_generated;
             alg_to_use.execute_once(m_state);
-            System.out.printf("%d more nodes generated\n", algorithms.get(turn%2).node_expanded - current_num_nodes_processed);
+            System.out.printf("%d more nodes generated\n", algorithms.get(turn%2).nodes_generated - current_num_nodes_processed);
             // printing move info
             m_state.printBoard();
             // increment turn
@@ -34,8 +34,8 @@ public class DepthGameSimulation {
 //            System.out.print("Press enter key to continue\n");
 //            sc.nextLine();
         }
-        System.out.printf("Number of nodes looked up: %d\n", algorithms.get(0).node_expanded);
-        System.out.printf("Number of nodes looked up: %d\n", algorithms.get(1).node_expanded);
+        System.out.printf("Number of nodes looked up: %d\n", algorithms.get(0).nodes_generated);
+        System.out.printf("Number of nodes looked up: %d\n", algorithms.get(1).nodes_generated);
         System.out.printf("Winner is player %d\n", m_state.gameOver());
 
     }

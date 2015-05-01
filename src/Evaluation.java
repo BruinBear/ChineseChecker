@@ -13,36 +13,52 @@ public class Evaluation {
     public double eval_distance_and_goal(int player_id, CheckerState b) {
 
         // Static goal distance evaluation
-        LinkedList<IntPair> goal_queue = new LinkedList<IntPair>();
-        for(IntPair p : b.m_players_goals.get(player_id)) {
-            if (b.m_grid[p.x][p.y] != '1' + player_id) {
-                goal_queue.add(p);
-            }
-        }
+        IntPair far_goal = b.m_players_far_goal.get(player_id);
 
+        int max_to_goal = 0;
         int piece_dist = 0;
-        for(IntPair p : b.m_players_pieces.get(player_id))
-        {
-            if(b.grid_2_s_goal[p.x][p.y] == '1'+player_id) {
-                continue;
-            }
-
-            // farthest piece distance to goal center
-            int min_to_goal = Integer.MAX_VALUE;
-            for(IntPair g: goal_queue) {
-                min_to_goal = Math.min(min_to_goal, Math.abs(p.x - g.x) + Math.abs(p.y - g.y));
-            }
-            piece_dist += min_to_goal;
+        int completion = 0;
+        for (IntPair p : b.m_players_pieces.get(player_id)) {
+            int dis = far_goal.minPathDistance(p);
+            piece_dist += dis;
+            max_to_goal = Math.max(max_to_goal, dis);
         }
+
+        for (IntPair g : b.m_players_goals.get(player_id)) {
+            if(b.m_grid[g.x][g.y] == '1'+player_id) {
+                completion += 3;
+            }
+        }
+
+//        for(IntPair p : b.m_players_pieces.get(player_id))
+//        {
+//            if(b.grid_2_s_goal[p.x][p.y] == '1'+player_id) {
+//                continue;
+//            }
+//
+//            // farthest piece distance to goal center
+//            int min_to_goal = Integer.MAX_VALUE;
+//            int goal_to_remove = 0;
+//            int i = 0;
+//            for(IntPair g: goal_queue) {
+//                if(g.minPathDistance(p)<min_to_goal){
+//                    min_to_goal = g.minPathDistance(p);
+//                    goal_to_remove = i;
+//                }
+//                i++;
+//            }
+//            piece_dist += min_to_goal;
+//            max_to_goal = Math.max(max_to_goal, min_to_goal);
+//        }
 
         double evaluation;
         // Winning reward
         if(b.gameOver() == player_id+1) {
-            evaluation = Double.POSITIVE_INFINITY;
+            evaluation = +100000;
         } else if(b.gameOver() != 0) {
-            evaluation = Double.NEGATIVE_INFINITY;
+            evaluation = -100000;
         } else{
-            evaluation = - piece_dist;
+            evaluation = - piece_dist + completion;
         }
 //        System.out.printf("One Step Sum: %d, Max Distance: %d\n", oneStepSum, farthest_piece_dist);
 //        System.out.printf("Goal bonus: %d\n", goalBonus);

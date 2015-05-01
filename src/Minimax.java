@@ -12,7 +12,6 @@ public class Minimax extends SearchAlgorithm{
         ALPHABETA
     }
 
-    protected int node_expanded = 0;
     protected static Evaluation eval_func = new Evaluation();
     protected String m_name;
 
@@ -33,9 +32,9 @@ public class Minimax extends SearchAlgorithm{
     public Move nextMove(CheckerState s) {
         max_player_id = s.m_turn;
         min_player_id = (s.m_turn+1)%2;
-        int current_num_nodes_processed = this.node_expanded;
+        int current_num_nodes_processed = this.nodes_generated;
         execute_once(s);
-        System.out.printf("%d more nodes generated\n", this.node_expanded - current_num_nodes_processed);
+        System.out.printf("%d more nodes generated\n", this.nodes_generated - current_num_nodes_processed);
         return bestMove;
     }
 
@@ -43,7 +42,7 @@ public class Minimax extends SearchAlgorithm{
     public Move nextMoveTimed(CheckerState s, int miliseconds) {
         max_player_id = s.m_turn;
         min_player_id = (s.m_turn+1)%2;
-        int current_num_nodes_processed = this.node_expanded;
+        int current_num_nodes_processed = this.nodes_generated;
         ExecutorService executor = Executors.newSingleThreadExecutor();
         Future<Integer> future = executor.submit(new GetBestNextMoveTask(this, s));
         try {
@@ -59,7 +58,7 @@ public class Minimax extends SearchAlgorithm{
             e.printStackTrace();
         }
         System.out.printf("%d out of %d levels searched.\n", this.current_depth, this.max_depth);
-        System.out.printf("%d more nodes generated\n", this.node_expanded - current_num_nodes_processed);
+        System.out.printf("%d more nodes generated\n", this.nodes_generated - current_num_nodes_processed);
         executor.shutdownNow();
         return this.bestMove;
     }
@@ -117,7 +116,7 @@ public class Minimax extends SearchAlgorithm{
             for(Move move : nextMoves) {
                 node.applyMove(move);
                 // commit one move and do further evaluation
-                node_expanded++;
+                nodes_generated++;
                 val = minimax(node, depth - 1, false, max_player_id, min_player_id).getKey();
                 //System.out.printf("New value found in max node: %d\n", val);
                 if(val > bestValue){
@@ -136,7 +135,7 @@ public class Minimax extends SearchAlgorithm{
             for(Move move : nextMoves) {
                 node.applyMove(move);
                 // commit one move and do further evaluation
-                node_expanded++;
+                nodes_generated++;
                 val = minimax(node, depth - 1, true, max_player_id, min_player_id).getKey();
                 //System.out.printf("New value found in min node: %d\n", val);
                 if(val < bestValue){
@@ -170,7 +169,7 @@ public class Minimax extends SearchAlgorithm{
             bestValue = Double.NEGATIVE_INFINITY;
             for(Move move : nextMoves) {
                 node.applyMove(move);
-                node_expanded++;
+                nodes_generated++;
                 val = alphabeta(node, depth - 1, false, max_player_id, min_player_id, alpha, beta).getKey();
                 //System.out.printf("New value found in max node: %d\n", val);
                 if(val > bestValue){
@@ -189,7 +188,7 @@ public class Minimax extends SearchAlgorithm{
             bestValue = Double.POSITIVE_INFINITY;
             for(Move move : nextMoves) {
                 node.applyMove(move);
-                node_expanded++;
+                nodes_generated++;
                 val = alphabeta(node, depth - 1, true, max_player_id, min_player_id, alpha, beta).getKey();
                 //System.out.printf("New value found in max node: %d\n", val);
                 // update next best move

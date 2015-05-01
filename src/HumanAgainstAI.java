@@ -50,9 +50,9 @@ public class HumanAgainstAI {
                     }
                 }
             } else { // computer turn
-                int current_num_nodes_processed = alg.node_expanded;
+                int current_num_nodes_processed = alg.nodes_generated;
                 alg.execute_once(m_state);
-                System.out.printf("%d more nodes generated\n", alg.node_expanded - current_num_nodes_processed);
+                System.out.printf("%d more nodes generated\n", alg.nodes_generated - current_num_nodes_processed);
                 mv = alg.bestMove;
             }
             m_state.applyMove(mv);
@@ -64,7 +64,7 @@ public class HumanAgainstAI {
 //            System.out.print("Press enter key to continue\n");
 //            sc.nextLine();
         }
-        System.out.printf("Number of nodes looked up: %d\n", alg.node_expanded);
+        System.out.printf("Number of nodes looked up: %d\n", alg.nodes_generated);
         System.out.printf("Winner is player %d\n", m_state.gameOver());
     }
 

@@ -1,36 +1,46 @@
+
 import javafx.util.Pair;
 
 import java.util.ArrayList;
 
 /**
- * Created by JingyuLiu on 4/23/2015.
+ * Created by JingyuLiu on 4/30/2015.
  */
-public class Maxn extends SearchAlgorithm {
-    protected static Evaluation eval_func = new Evaluation();
+public class SOS extends SearchAlgorithm{
     protected int max_depth;
+    protected double[][] social_orientation;
 
-    Maxn(int depth) {
+    SOS(int depth , double[][] so) {
         max_depth = depth;
+        social_orientation = so;
     }
 
     public Move nextMove(CheckerState state) {
-        return maxn(state, this.max_depth).getValue();
+        return sos(state, this.max_depth).getValue();
     }
 
-    protected double[] getTuple(CheckerState s) {
-        double[] n_tuple = new double[s.m_num_players];
-        for(int i=0; i<s.m_num_players; i++) {
-            n_tuple[i] = eval_func.eval_distance_and_goal(i, s);
+    /**
+     * Compute the transformed utility value from Social Orientation Matrix
+     * @param tuple
+     * @return
+     */
+    private double[] multiplySo(double[] tuple) {
+        double[] transformed = new double[tuple.length];
+        for(int i = 0; i<social_orientation.length; i++) {
+            for(int j = 0; j<social_orientation[0].length; j++) {
+                transformed[i] += social_orientation[i][j] * tuple[j];
+            }
         }
-        return n_tuple;
+        return transformed;
     }
 
 
-    public Pair<double[],Move> maxn(CheckerState node, int depth) {
+    public Pair<double[],Move> sos(CheckerState node, int depth) {
         int max_player_id = node.m_turn;
         ArrayList<Move> nextMoves = node.nextOrderedMoves(true);
         if(depth == 0 || node.gameOver()!=0 || nextMoves.isEmpty()) {
-            return new Pair(getTuple(node), null);
+            double[] perceived_util = multiplySo(getTuple(node));
+            return new Pair(perceived_util, null);
         }
         double[] tuple;
         // there is at least one move
@@ -43,7 +53,7 @@ public class Maxn extends SearchAlgorithm {
             node.applyMove(move);
             // commit one move and do further evaluation
             nodes_generated++;
-            tuple = maxn(node, depth - 1).getKey();
+            tuple = sos(node, depth - 1).getKey();
             //System.out.printf("New value found in max node: %d\n", val);
             if(tuple[max_player_id] > bestValue){
                 bestValue = tuple[max_player_id];
@@ -53,11 +63,12 @@ public class Maxn extends SearchAlgorithm {
             node.reverseMove();
 
             // early termination when a winning move is found
-            if(bestValue > 10000) {
+            if(bestValue >= 10000) {
                 break;
             }
         }
 
         return new Pair(bestTuple, localBestMove);
     }
+
 }
