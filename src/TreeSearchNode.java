@@ -24,6 +24,10 @@ public class TreeSearchNode {
     }
 
 
+    public boolean isMaxNode(int max_player) {
+        return state.m_turn == max_player;
+    }
+
     public boolean isTerminal() {
         return (state.gameOver() != 0);
     }

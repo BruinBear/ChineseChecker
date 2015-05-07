@@ -3,9 +3,9 @@
  */
 public class MCTS_UCT extends SearchAlgorithm implements MCTS{
 
-    private double Cp;
-    private int nodesPerIteration;
-    public MCTS_UCT(double c, int nodesPerIteration) {
+    protected double Cp;
+    protected int nodesPerIteration;
+    MCTS_UCT(double c, int nodesPerIteration) {
         Cp = c;
         this.nodesPerIteration = nodesPerIteration;
     }
@@ -84,7 +84,6 @@ public class MCTS_UCT extends SearchAlgorithm implements MCTS{
 
 
     /**
-     * TODO
      * find the best child which yields maximum UCT
      * UCT = Xj + c * sqrt (2* ln(parent visit counts) / child visit counts)
      * @param v

@@ -19,27 +19,13 @@ public class SOS extends SearchAlgorithm{
         return sos(state, this.max_depth).getValue();
     }
 
-    /**
-     * Compute the transformed utility value from Social Orientation Matrix
-     * @param tuple
-     * @return
-     */
-    private double[] multiplySo(double[] tuple) {
-        double[] transformed = new double[tuple.length];
-        for(int i = 0; i<social_orientation.length; i++) {
-            for(int j = 0; j<social_orientation[0].length; j++) {
-                transformed[i] += social_orientation[i][j] * tuple[j];
-            }
-        }
-        return transformed;
-    }
 
 
     public Pair<double[],Move> sos(CheckerState node, int depth) {
         int max_player_id = node.m_turn;
         ArrayList<Move> nextMoves = node.nextOrderedMoves(true);
         if(depth == 0 || node.gameOver()!=0 || nextMoves.isEmpty()) {
-            double[] perceived_util = multiplySo(getTuple(node));
+            double[] perceived_util = multiplySo(getTuple(node), social_orientation);
             return new Pair(perceived_util, null);
         }
         double[] tuple;

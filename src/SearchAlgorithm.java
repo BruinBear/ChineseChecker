@@ -20,4 +20,20 @@ public abstract class SearchAlgorithm {
         }
         return n_tuple;
     }
+
+
+    /**
+     * Compute the transformed utility value from Social Orientation Matrix
+     * @param tuple
+     * @return
+     */
+    protected double[] multiplySo(double[] tuple, double[][] social_orientation) {
+        double[] transformed = new double[tuple.length];
+        for(int i = 0; i<social_orientation.length; i++) {
+            for(int j = 0; j<social_orientation[0].length; j++) {
+                transformed[i] += social_orientation[i][j] * tuple[j];
+            }
+        }
+        return transformed;
+    }
 }

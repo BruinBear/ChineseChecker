@@ -33,9 +33,9 @@ public class CheckerGameJFrame extends JFrame{
     public static void main(String[] args) {
         CheckerState checker = new CheckerState(3);
         ArrayList<SearchAlgorithm> pool= new ArrayList<SearchAlgorithm>(3);
-        pool.add(new Maxn(4));
-        pool.add(new MCTS_UCT(0.5, 5000));
-        pool.add(new MCTS_UCT(0.5, 5000));
+        pool.add(new MCTS_UCT(0.5, 20000));
+        pool.add(new MCTS_UCT(0.5, 20000));
+        pool.add(new MCTS_UCT_PARANOID(0.5, 20000, 2));
 //        pool.add(new SOS(4, new double[][]{
 //                {1,      0,        0},
 //                {-1,     1,      0.5},
