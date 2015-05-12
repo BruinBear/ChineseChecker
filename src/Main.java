@@ -13,8 +13,9 @@ public class Main{
 //
 //        MCTS_UCT mcts = new MCTS_UCT(0.5);
 //        Move mv = mcts.uctSearch(board);
-        threePlayers();
+//        threePlayers();
 
+        getAB(3);
     }
 
     public static void alphaVSminimax() {
@@ -65,8 +66,6 @@ public class Main{
         pool.add(new MCTS_UCT_SOS(0.2, 5000, so));
         pool.add(new MCTS_UCT_SOS(0.2, 5000, so));
 
-        MCTS_UCT_SOS a = new MCTS_UCT_SOS(0.2, 5000, null);
-        double[][] doubles = a.computeSocialOrientation(new double[]{9, 6, 20});
 
 //
 //        b.m_grid =  new char[][]{
@@ -98,5 +97,11 @@ public class Main{
         }
         System.out.printf("player %d won.", b.gameOver());
         return;
+    }
+
+
+    public static void getAB(double b) {
+        for(double i = 1; i <11 ;i++)
+        System.out.printf("%f depth: %f leaves\n", i, Math.pow(b,Math.ceil(i / 2)) + Math.pow(b,Math.floor(i/2))-1);
     }
 }

@@ -46,7 +46,7 @@ public class MCTS_UCT_SOS extends MCTS_UCT {
             } else {
                 social = social_orientation;
             }
-            double Xj = this.multiplySo(child.util_arr, social_orientation)[player_id_to_max] / child.visit_times;
+            double Xj = this.multiplySo(child.util_arr, social)[player_id_to_max] / child.visit_times;
             double uct = Xj + Cp*Math.sqrt(2*explore_numerator/child.visit_times);
 
             if(best_uct < uct){

@@ -13,7 +13,7 @@ import java.util.HashMap;
 */
 public class AlgorithmGamePanel extends JPanel {
     private HashMap<IntPair, PieceShape> piece_map;
-    private Dimension dim = new Dimension(600, 600);
+    private Dimension dim = new Dimension(1200, 600);
     protected CheckerState state;
     private ArrayList<SearchAlgorithm> algPool;
     private JLabel gameInfo;
