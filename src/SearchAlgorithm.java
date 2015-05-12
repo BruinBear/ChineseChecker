@@ -13,6 +13,10 @@ public abstract class SearchAlgorithm {
     };
 
 
+    public void reset() {
+        nodes_generated = 0;
+    }
+
     protected double[] getTuple(CheckerState s) {
         double[] n_tuple = new double[s.m_num_players];
         for(int i=0; i<s.m_num_players; i++) {

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.logging.*;
 
 public class Main{
 
@@ -15,7 +16,29 @@ public class Main{
 //        Move mv = mcts.uctSearch(board);
 //        threePlayers();
 
-        getAB(3);
+        try {
+            LogManager lm = LogManager.getLogManager();
+            Logger logger;
+            FileHandler fh = new FileHandler("log_test.txt");
+
+            logger = Logger.getLogger("MCTS");
+
+            lm.addLogger(logger);
+            logger.setLevel(Level.INFO);
+            fh.setFormatter(new XMLFormatter());
+
+            logger.addHandler(fh);
+
+            for(int i = 0; i<5; i++) {
+                CheckerState b = new CheckerState(3);
+                threePlayers(b, logger);
+            }
+            fh.close();
+        } catch (Exception e) {
+            System.out.println("Exception thrown: " + e);
+            e.printStackTrace();
+        }
+
     }
 
     public static void alphaVSminimax() {
@@ -54,49 +77,22 @@ public class Main{
     }
 
 
-    public static void threePlayers() {
-        CheckerState b = new CheckerState(3);
+    public static void threePlayers(CheckerState b, Logger logger) {
         ArrayList<SearchAlgorithm> pool= new ArrayList<SearchAlgorithm>(3);
         double[][] so = new double[][]{
                 {1,     -1,     -1},
                 {-1,     1,      1},
                 {-1,     1,      1}};
 
-        pool.add(new MCTS_UCT(0.2, 5000));
-        pool.add(new MCTS_UCT_SOS(0.2, 5000, so));
-        pool.add(new MCTS_UCT_SOS(0.2, 5000, so));
+        pool.add(new MCTS_UCT(0.2, 200));
+        pool.add(new MCTS_UCT_SOS(0.2, 200, null));
+        pool.add(new MCTS_UCT_SOS(0.2, 200, null));
 
-
-//
-//        b.m_grid =  new char[][]{
-////            0    1    2    3    4    5    6    7    8    9    10   11   12   13   14
-///*0*/       {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-///*1*/       {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' '},
-///*2*/       {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', '0', ' ', ' ', ' ', ' '},
-///*3*/       {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '0', '0', '0', ' ', ' ', ' ', ' '},
-///*4*/       {' ', ' ', ' ', ' ', '0', '0', '0', '0', '0', '0', '0', '3', '3', '3', ' '},
-///*5*/       {' ', ' ', ' ', ' ', '0', '0', '0', '0', '0', '0', '0', '0', '3', ' ', ' '},
-///*6*/       {' ', ' ', ' ', ' ', '0', '0', '0', '0', '0', '0', '0', '3', ' ', ' ', ' '},
-///*7*/       {' ', ' ', ' ', ' ', '0', '0', '0', '0', '0', '0', '3', ' ', ' ', ' ', ' '},
-///*8*/       {' ', ' ', ' ', '2', '2', '0', '0', '0', '0', '0', '1', ' ', ' ', ' ', ' '},
-///*9*/       {' ', ' ', '2', '0', '0', '0', '0', '0', '0', '1', '1', ' ', ' ', ' ', ' '},
-///*10*/      {' ', '2', '2', '2', '0', '0', '1', '0', '0', '1', '1', ' ', ' ', ' ', ' '},
-///*11*/      {' ', ' ', ' ', ' ', '0', '0', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-///*12*/      {' ', ' ', ' ', ' ', '0', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-///*13*/      {' ', ' ', ' ', ' ', '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-///*14*/      {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
-//        };
-//        b.rescanPieces();
-//        b.m_turn = 1;
-        b.printBoard();
         while(b.gameOver()==0) {
-            System.out.printf("player %d turn.", b.m_turn+1);
             SearchAlgorithm alg = pool.get(b.m_turn);
             b.applyMove(alg.nextMove(b));
-            b.printBoard();
         }
-        System.out.printf("player %d won.", b.gameOver());
-        return;
+        logger.log(Level.INFO, "player "+b.gameOver()+" won.");
     }
 
 

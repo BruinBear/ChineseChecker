@@ -1,81 +1,135 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.logging.*;
 
 public class CheckerGameJFrame extends JFrame{
+    protected CheckerState gameOrigin;
+    protected CheckerState gameInstance;
+    protected AlgorithmGamePanel gamePanel;
+    protected JPanel statsPanel;
+    protected ArrayList<SearchAlgorithm> algPool;
+    protected ArrayList<Label> labels = new ArrayList<Label>();
+    protected JFrame frame;
+    protected boolean reset = false;
 
-    private AlgorithmGamePanel gamePanel;
-    private JLabel labelUsername = new JLabel("Enter username: ");
-    private JLabel labelPassword = new JLabel("Enter password: ");
-    private JTextField textUsername = new JTextField(20);
-    private JPasswordField fieldPassword = new JPasswordField(20);
-    private JButton buttonLogin = new JButton("Login");
 
-
+    // Frame has two panels
     public CheckerGameJFrame(CheckerState ck, ArrayList<SearchAlgorithm> pool) {
-        JFrame frame = new JFrame();
+        this.gameOrigin = ck;
+        this.algPool = pool;
+        this.gameInstance = new CheckerState(ck);
+        setupFrame();
+        setupGamePanel();
+        setupStatsPanel();
+        addPlayButton();
+
+        frame.setVisible(true);
+        run();
+    }
+
+
+    private JFrame setupFrame() {
+        frame = new JFrame();
         frame.setTitle("Chinese Checker");
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setResizable(true);
         frame.setSize(1200, 600);
         GridLayout myLayout = new GridLayout(1,2);
         frame.setLayout(myLayout);
+        return frame;
+    }
 
-        // Call to create game gamePanel
-        gamePanel = new AlgorithmGamePanel(ck.getGraphicsConfiguration(), ck, pool);
 
-        JPanel newPanel = new JPanel(new GridBagLayout());
+    public JPanel setupGamePanel() {
+        gamePanel = new AlgorithmGamePanel(gameInstance.getGraphicsConfiguration(), gameInstance, algPool);
+        frame.add(gamePanel, 0);
+        return gamePanel;
+    }
 
+
+    public JPanel setupStatsPanel() {
+        statsPanel = new JPanel(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
         constraints.anchor = GridBagConstraints.WEST;
         constraints.insets = new Insets(10, 10, 10, 10);
+        constraints.gridx = 0;
 
+        labels.clear();
         // add components to the gamePanel
-        constraints.gridx = 0;
-        constraints.gridy = 0;
-        newPanel.add(labelUsername, constraints);
-
-        constraints.gridx = 1;
-        newPanel.add(textUsername, constraints);
-
-        constraints.gridx = 0;
-        constraints.gridy = 1;
-        newPanel.add(labelPassword, constraints);
-
-        constraints.gridx = 1;
-        newPanel.add(fieldPassword, constraints);
-
-        constraints.gridx = 0;
-        constraints.gridy = 2;
-        constraints.gridwidth = 2;
-        constraints.anchor = GridBagConstraints.CENTER;
-        newPanel.add(buttonLogin, constraints);
-
-        // set border for the gamePanel
-        newPanel.setBorder(BorderFactory.createTitledBorder(
-                BorderFactory.createEtchedBorder(), "Login Panel"));
-
-        // add the gamePanel to this frame
-        frame.add(gamePanel);
-        frame.add(newPanel);
-
-        frame.setVisible(true);
-        run();
-
+        for(int i = 0; i<algPool.size();i++) {
+            Label l = new Label(String.format("<%s> Player %d expanded %d nodes", algPool.get(i).getClass().getName(), i + 1, algPool.get(i).nodes_generated));
+            labels.add(l);
+            constraints.gridy = i;
+            statsPanel.add(l, constraints);
+        }
+        statsPanel.setBorder(BorderFactory.createTitledBorder(
+                BorderFactory.createEtchedBorder(), "Statistics Panel"));
+        frame.add(statsPanel, 1);
+        return statsPanel;
     }
 
+    public void addPlayButton() {
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.gridy = 5;
+
+        JButton playButton = new JButton("Play");
+
+//        playButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e){
+//                reset = true;
+//
+//            }
+//        });
+        statsPanel.add(playButton, constraints);
+    }
+
+
+
+
+//    private void preRestart() {
+//        // clear stats
+//        gameInstance = new CheckerState(gameOrigin);
+//        for (SearchAlgorithm a : algPool) {
+//            a.reset();
+//        }
+//        frame.removeAll();
+//        setupGamePanel();
+//        setupStatsPanel();
+//        addPlayButton();
+//        frame.add(gamePanel, 0);
+//        frame.add(statsPanel, 1);
+//        frame.setVisible(true);
+//        reset = false;
+//    }
+//
+
     public void run() {
-        while(gamePanel.state.gameOver() ==0){
+        while(gamePanel.state.gameOver() == 0 || reset){
             gamePanel.computer_turn();
+//            if(reset) {
+//                preRestart();
+//            }
+            updateLabels();
+        }
+    }
+
+
+    private void updateLabels() {
+        for(int i = 0; i<labels.size(); i++) {
+            labels.get(i).setText(String.format("<%s> Player %d expanded %d nodes", algPool.get(i).getClass().getName(), i + 1, algPool.get(i).nodes_generated));
         }
     }
 
     public static void main(String[] args) {
         CheckerState checker = new CheckerState(3);
         ArrayList<SearchAlgorithm> pool= new ArrayList<SearchAlgorithm>(3);
-        pool.add(new MCTS_UCT(0.2, 5000));
-        pool.add(new MCTS_UCT_SOS(0.2, 5000, null));
-        pool.add(new MCTS_UCT_SOS(0.2, 5000, null));
+        pool.add(new MCTS_UCT(0.2, 300));
+        pool.add(new MCTS_UCT_SOS(0.2, 1000, null));
+        pool.add(new MCTS_UCT_SOS(0.2, 300, null));
 //        pool.add(new SOS(4, new double[][]{
 //                {1,      0,        0},
 //                {-1,     1,      0.5},
@@ -86,6 +140,8 @@ public class CheckerGameJFrame extends JFrame{
 //                {-1,     1,      0.5},
 //                {-1,     0.5,      1}
 //        }));
+
         CheckerGameJFrame fr = new CheckerGameJFrame(checker,pool);
+
     }
 }

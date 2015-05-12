@@ -28,7 +28,7 @@ public class MCTS_UCT extends SearchAlgorithm implements MCTS{
             backUp(vl, delta);
             nodes_generated++;
         }
-        printChildrenStats(v0);
+//        printChildrenStats(v0);
         return bestChild(v0, 0).state.getLastMove();
     }
 
