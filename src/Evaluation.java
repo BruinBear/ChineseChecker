@@ -58,7 +58,7 @@ public class Evaluation {
         } else if(b.gameOver() != 0) {
             evaluation = -100000;
         } else{
-            evaluation = - piece_dist + completion;
+            evaluation = - piece_dist - 0.5 * max_to_goal + completion;
         }
 //        System.out.printf("One Step Sum: %d, Max Distance: %d\n", oneStepSum, farthest_piece_dist);
 //        System.out.printf("Goal bonus: %d\n", goalBonus);

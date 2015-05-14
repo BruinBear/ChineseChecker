@@ -12,7 +12,7 @@ public class TreeSearchNode {
     double[] util_arr;
 
     TreeSearchNode(CheckerState s, TreeSearchNode p) {
-        state = s;
+        state = new CheckerState(s);
         expandAction = s.nextOrderedMoves(true);
         children = new ArrayList<TreeSearchNode>();
         visit_times = 0;

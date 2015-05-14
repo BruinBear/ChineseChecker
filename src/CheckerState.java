@@ -75,6 +75,8 @@ public class CheckerState {
         m_players_goals = b.m_players_goals;
         m_players_far_goal = b.m_players_far_goal;
         m_players_pieces = new ArrayList<ArrayList<IntPair>>();
+        m_move_stack = new Stack<Move>();
+        m_move_stack.addAll(b.m_move_stack);
         rescanPieces();
     }
 
@@ -361,34 +363,34 @@ public class CheckerState {
     }
 
     public void printBoard() {
-//        // top half
-//        for(int i = 1; i <= m_grid_size; i++) {
-//            // print align spaces
-//            for(int j = m_grid_size-i; j >=0; j--) {
-//                System.out.print(" ");
-//            }
-//            // print chars total i chars to print
-//            for(int k = 0; k < i; k++) {
-//                // x, y sums to k
-//                int x = i-1-k;
-//                int y = k;
-//                printPiece(m_grid[x][y]);
-//            }
-//            System.out.println();
-//        }
-//        // lower half
-//        for(int i = m_grid_size-1; i > 0; i--) {
-//            // print align spaces
-//            for(int j = m_grid_size-i; j >=0; j--) {
-//                System.out.print(" ");
-//            }
-//            // print chars total i chars to print
-//            for(int k = 0; k < i; k++) {
-//                // x, y sums to k
-//                printPiece(m_grid[m_grid_size - 1 - k][k + m_grid_size - i]);
-//            }
-//            System.out.println();
-//        }
+        // top half
+        for(int i = 1; i <= m_grid_size; i++) {
+            // print align spaces
+            for(int j = m_grid_size-i; j >=0; j--) {
+                System.out.print(" ");
+            }
+            // print chars total i chars to print
+            for(int k = 0; k < i; k++) {
+                // x, y sums to k
+                int x = i-1-k;
+                int y = k;
+                printPiece(m_grid[x][y]);
+            }
+            System.out.println();
+        }
+        // lower half
+        for(int i = m_grid_size-1; i > 0; i--) {
+            // print align spaces
+            for(int j = m_grid_size-i; j >=0; j--) {
+                System.out.print(" ");
+            }
+            // print chars total i chars to print
+            for(int k = 0; k < i; k++) {
+                // x, y sums to k
+                printPiece(m_grid[m_grid_size - 1 - k][k + m_grid_size - i]);
+            }
+            System.out.println();
+        }
     }
 
 

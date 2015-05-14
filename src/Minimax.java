@@ -15,9 +15,6 @@ public class Minimax extends SearchAlgorithm{
     protected static Evaluation eval_func = new Evaluation();
     protected String m_name;
 
-    // will be set once we start expansion
-    protected Move bestMove = null;
-
     int current_depth;
     int max_depth;
 
@@ -44,7 +41,7 @@ public class Minimax extends SearchAlgorithm{
         min_player_id = (s.m_turn+1)%2;
         int current_num_nodes_processed = this.nodes_generated;
         ExecutorService executor = Executors.newSingleThreadExecutor();
-        Future<Integer> future = executor.submit(new GetBestNextMoveTask(this, s));
+        Future<Integer> future = executor.submit(new TimedNextBestMove(this, s));
         try {
             System.out.println("Started..");
             // Force return the best move so far

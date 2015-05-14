@@ -19,7 +19,15 @@ public class SOS extends SearchAlgorithm{
         return sos(state, this.max_depth).getValue();
     }
 
-
+    // For timed task Iteratively increament level. if timer expires, early termination is possible
+    public void execute_iteratively(CheckerState s) {
+        CheckerState tmp = new CheckerState(s);
+        current_depth = 1;
+        while(current_depth<max_depth) {
+            this.bestMove = sos(s, current_depth).getValue();
+            current_depth++;
+        }
+    }
 
     public Pair<double[],Move> sos(CheckerState node, int depth) {
         int max_player_id = node.m_turn;

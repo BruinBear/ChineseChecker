@@ -17,6 +17,18 @@ public class Maxn extends SearchAlgorithm {
         return maxn(state, this.max_depth).getValue();
     }
 
+
+    // For timed task Iteratively increament level. if timer expires, early termination is possible
+    public void execute_iteratively(CheckerState s) {
+        CheckerState tmp = new CheckerState(s);
+        current_depth = 1;
+        while(current_depth<max_depth) {
+            this.bestMove = maxn(s, this.current_depth).getValue();
+            current_depth++;
+        }
+    }
+
+
     protected double[] getTuple(CheckerState s) {
         double[] n_tuple = new double[s.m_num_players];
         for(int i=0; i<s.m_num_players; i++) {

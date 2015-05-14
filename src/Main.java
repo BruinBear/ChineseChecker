@@ -84,15 +84,17 @@ public class Main{
                 {-1,     1,      1},
                 {-1,     1,      1}};
 
-        pool.add(new MCTS_UCT(0.2, 200));
-        pool.add(new MCTS_UCT_SOS(0.2, 200, null));
-        pool.add(new MCTS_UCT_SOS(0.2, 200, null));
+        pool.add(new Maxn(10));
+        pool.add(new MCTS_UCT_SOS(0.2, 5000, null));
+        pool.add(new MCTS_UCT_PARANOID(0.2, 5000, 2));
 
         while(b.gameOver()==0) {
             SearchAlgorithm alg = pool.get(b.m_turn);
-            b.applyMove(alg.nextMove(b));
+            Move nextTimedMove = alg.nextMoveTimed(b,3000);
+            b.applyMove(nextTimedMove);
+            b.printBoard();
         }
-        logger.log(Level.INFO, "player "+b.gameOver()+" won.");
+        logger.log(Level.INFO, "player "+b.gameOver()+" won.\n"+"board:\n "+b.toString());
     }
 
 

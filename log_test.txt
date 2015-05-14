@@ -2,58 +2,31 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2015-05-12T16:34:17</date>
-  <millis>1431473657995</millis>
+  <date>2015-05-13T17:44:07</date>
+  <millis>1431564247923</millis>
   <sequence>0</sequence>
   <logger>MCTS</logger>
   <level>INFO</level>
   <class>Main</class>
   <method>threePlayers</method>
   <thread>1</thread>
-  <message>player 2 won.</message>
-</record>
-<record>
-  <date>2015-05-12T16:34:25</date>
-  <millis>1431473665163</millis>
-  <sequence>1</sequence>
-  <logger>MCTS</logger>
-  <level>INFO</level>
-  <class>Main</class>
-  <method>threePlayers</method>
-  <thread>1</thread>
-  <message>player 3 won.</message>
-</record>
-<record>
-  <date>2015-05-12T16:34:31</date>
-  <millis>1431473671619</millis>
-  <sequence>2</sequence>
-  <logger>MCTS</logger>
-  <level>INFO</level>
-  <class>Main</class>
-  <method>threePlayers</method>
-  <thread>1</thread>
-  <message>player 2 won.</message>
-</record>
-<record>
-  <date>2015-05-12T16:34:36</date>
-  <millis>1431473676752</millis>
-  <sequence>3</sequence>
-  <logger>MCTS</logger>
-  <level>INFO</level>
-  <class>Main</class>
-  <method>threePlayers</method>
-  <thread>1</thread>
-  <message>player 3 won.</message>
-</record>
-<record>
-  <date>2015-05-12T16:34:43</date>
-  <millis>1431473683758</millis>
-  <sequence>4</sequence>
-  <logger>MCTS</logger>
-  <level>INFO</level>
-  <class>Main</class>
-  <method>threePlayers</method>
-  <thread>1</thread>
-  <message>player 2 won.</message>
+  <message>player 2 won.
+board:
+                
+          0    
+         30    
+        000    
+    0000000000 
+    000000000  
+    00303000   
+    0000000    
+   20003001    
+  220303101    
+ 2220000111    
+    000        
+    00         
+    0          
+               
+</message>
 </record>
 </log>

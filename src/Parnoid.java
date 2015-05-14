@@ -16,6 +16,16 @@ public class Parnoid extends SearchAlgorithm {
         return paranoid(state, this.max_depth, state.m_turn).getValue();
     }
 
+    // For timed task Iteratively increament level. if timer expires, early termination is possible
+    public void execute_iteratively(CheckerState s) {
+        CheckerState tmp = new CheckerState(s);
+        current_depth = 1;
+        while(current_depth<max_depth) {
+            this.bestMove = paranoid(s, this.current_depth, s.m_turn).getValue();
+            current_depth++;
+        }
+    }
+
 
     public Pair<double[],Move> paranoid(CheckerState node, int depth, int max_player) {
         ArrayList<Move> nextMoves = node.nextOrderedMoves(true);

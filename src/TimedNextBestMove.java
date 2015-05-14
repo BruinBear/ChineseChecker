@@ -1,10 +1,10 @@
 import java.util.concurrent.Callable;
 
-public class GetBestNextMoveTask implements Callable<Integer> {
-    private Minimax m_alg;
+public class TimedNextBestMove implements Callable<Integer> {
+    private SearchAlgorithm m_alg;
     private CheckerState m_state;
 
-    GetBestNextMoveTask(Minimax alg, CheckerState state) {
+    TimedNextBestMove(SearchAlgorithm alg, CheckerState state) {
         m_alg = alg;
         m_state = state;
     }

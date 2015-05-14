@@ -1,11 +1,41 @@
+import java.util.concurrent.*;
+
 /**
  * Created by JingyuLiu on 4/23/2015.
  */
 public abstract class SearchAlgorithm {
     protected int nodes_generated = 0;
     protected static Evaluation eval_func = new Evaluation();
+    protected Move bestMove;
+    protected int current_depth;
 
     public abstract Move nextMove(CheckerState state);
+
+    public abstract void execute_iteratively(CheckerState s);
+
+    public Move getTimedBestMove() {
+        return bestMove;
+    }
+
+
+    public Move nextMoveTimed(CheckerState s, int miliseconds) {
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        Future<Integer> future = executor.submit(new TimedNextBestMove(this, new CheckerState(s)));
+        try {
+            System.out.println("Started..");
+            // Force return the best move so far
+            System.out.println(future.get(miliseconds, TimeUnit.MILLISECONDS));
+            System.out.println("Finished!");
+        } catch (TimeoutException e) {
+            System.out.println("Terminated!");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        executor.shutdownNow();
+        return this.getTimedBestMove();
+    }
 
 
     public int numNodesGenertaed(){

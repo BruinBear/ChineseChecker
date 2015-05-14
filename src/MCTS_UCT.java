@@ -2,6 +2,7 @@
  * Created by JingyuLiu on 4/19/2015.
  */
 public class MCTS_UCT extends SearchAlgorithm implements MCTS{
+    private TreeSearchNode v0;
 
     protected double Cp;
     protected int nodesPerIteration;
@@ -14,6 +15,25 @@ public class MCTS_UCT extends SearchAlgorithm implements MCTS{
     public Move nextMove(CheckerState state) {
         return uctSearch(state);
     }
+
+
+    // For timed task Iteratively increament level. if timer expires, early termination is possible
+    public void execute_iteratively(CheckerState s) {
+        v0 = new TreeSearchNode(s, null);
+        while(true) {
+            TreeSearchNode vl = treePolicy(v0);
+            double[] delta = defaultPlayoutPolicy(new CheckerState(vl.state));
+            backUp(vl, delta);
+            nodes_generated++;
+        }
+    }
+
+
+    @Override
+    public Move getTimedBestMove() {
+        return bestChild(v0, 0).state.getLastMove();
+    }
+
 
     /**
      * Given a root node, select the next node for expansion based on UCT

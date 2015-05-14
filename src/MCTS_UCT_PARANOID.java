@@ -14,7 +14,6 @@ public class MCTS_UCT_PARANOID extends MCTS_UCT {
     @Override
     public TreeSearchNode bestChild(TreeSearchNode v, double const_explore) {
         // we want to maximize the player's win rate
-        int player_id_to_max = v.state.m_turn;
         TreeSearchNode best_child = null;
         double explore_numerator = 2*Math.log(v.visit_times);
         double best_uct = Double.NEGATIVE_INFINITY;
@@ -22,7 +21,7 @@ public class MCTS_UCT_PARANOID extends MCTS_UCT {
             if(best_child == null) {
                 best_child = child;
             }
-            double Xj = child.util_arr[player_id_to_max] / child.visit_times;
+            double Xj = child.util_arr[max] / child.visit_times;
             if(!v.isMaxNode(max)) {
                 Xj = 1;
             }
