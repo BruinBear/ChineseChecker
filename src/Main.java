@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.logging.*;
 
 public class Main{
@@ -19,7 +21,7 @@ public class Main{
         try {
             LogManager lm = LogManager.getLogManager();
             Logger logger;
-            FileHandler fh = new FileHandler("log_test.txt");
+            FileHandler fh = new FileHandler("longtest.txt");
 
             logger = Logger.getLogger("MCTS");
 
@@ -28,10 +30,24 @@ public class Main{
             fh.setFormatter(new XMLFormatter());
 
             logger.addHandler(fh);
-
-            for(int i = 0; i<5; i++) {
-                CheckerState b = new CheckerState(3);
-                threePlayers(b, logger);
+            ArrayList<Integer> sizes = new ArrayList<Integer>();
+            sizes.add(100000);
+            int games_to_play = 300;
+            for(Integer n: sizes) {
+                HashMap<String, Integer> res = new HashMap<String, Integer>();
+                res.put("Maxn", 0);
+                res.put("Paranoid", 0);
+                res.put("MCTS_UCT_SOS", 0);
+                logger.log(Level.INFO, String.format("Current size %d.", n));
+                for(int i = 0; i<games_to_play; i++) {
+                    logger.log(Level.INFO, String.format("Game %d starts.", i+1));
+                    CheckerState b = new CheckerState(3);
+                    String winner = threePlayers(b, logger, n);
+                    res.put(winner, res.get(winner)+1) ;
+                }
+                for(String key: res.keySet()){
+                    logger.log(Level.INFO, String.format("%s wins %d games(%f).",key, res.get(key), (double)res.get(key)/ games_to_play));
+                }
             }
             fh.close();
         } catch (Exception e) {
@@ -77,29 +93,39 @@ public class Main{
     }
 
 
-    public static void threePlayers(CheckerState b, Logger logger) {
+    public static String threePlayers(CheckerState b, Logger logger, int limit) {
         ArrayList<SearchAlgorithm> pool= new ArrayList<SearchAlgorithm>(3);
         double[][] so = new double[][]{
                 {1,     -1,     -1},
                 {-1,     1,      1},
                 {-1,     1,      1}};
 
-        pool.add(new Maxn(10));
+        pool.add(new Maxn(9));
         pool.add(new MCTS_UCT_SOS(0.2, 5000, null));
-        pool.add(new MCTS_UCT_PARANOID(0.2, 5000, 2));
-
+        pool.add(new Paranoid(9));
+        Collections.shuffle(pool);
         while(b.gameOver()==0) {
             SearchAlgorithm alg = pool.get(b.m_turn);
-            Move nextTimedMove = alg.nextMoveTimed(b,3000);
-            b.applyMove(nextTimedMove);
+//            Move nextTimedMove = alg.nextMoveTimed(b,2000);
+//            b.applyMove(nextTimedMove);
+            Move nextNodeLimitedMove = alg.nextNodeLimitedMove(b, limit);
+            b.applyMove(nextNodeLimitedMove);
             b.printBoard();
         }
-        logger.log(Level.INFO, "player "+b.gameOver()+" won.\n"+"board:\n "+b.toString());
+        logger.log(Level.INFO, String.format("player(%s) %d won.\nboard:\n %s",pool.get(b.gameOver()-1).getClass().getName(), b.gameOver(), b.toString()));
+        return pool.get(b.gameOver()-1).getClass().getName();
     }
 
 
     public static void getAB(double b) {
         for(double i = 1; i <11 ;i++)
         System.out.printf("%f depth: %f leaves\n", i, Math.pow(b,Math.ceil(i / 2)) + Math.pow(b,Math.floor(i/2))-1);
+    }
+
+
+    public static  int maxrec(int b, int d){
+        if(d == 1) return b;
+        if(d == 0) return 1;
+        else return maxrec(b,d-1) + (b-1)*maxrec(b,d-2);
     }
 }

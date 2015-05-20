@@ -5,7 +5,7 @@ public class IntPair {
     final int x;
     final int y;
     IntPair(int x, int y) {this.x=x;this.y=y;}
-
+    IntPair(IntPair p) {this(p.x, p.y);}
     @Override
     public String toString() {
         return String.format("(%02d,%02d)", x, y);

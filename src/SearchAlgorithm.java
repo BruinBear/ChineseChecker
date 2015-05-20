@@ -8,6 +8,9 @@ public abstract class SearchAlgorithm {
     protected static Evaluation eval_func = new Evaluation();
     protected Move bestMove;
     protected int current_depth;
+    protected int current_num_nodes = 0;
+    protected int max_nodes_per_iteration;
+    protected boolean nodes_limiting = false;
 
     public abstract Move nextMove(CheckerState state);
 
@@ -16,6 +19,9 @@ public abstract class SearchAlgorithm {
     public Move getTimedBestMove() {
         return bestMove;
     }
+
+    public abstract Move nextNodeLimitedMove(CheckerState s, int node_limit);
+
 
 
     public Move nextMoveTimed(CheckerState s, int miliseconds) {
@@ -29,9 +35,9 @@ public abstract class SearchAlgorithm {
         } catch (TimeoutException e) {
             System.out.println("Terminated!");
         } catch (InterruptedException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
         } catch (ExecutionException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
         }
         executor.shutdownNow();
         return this.getTimedBestMove();

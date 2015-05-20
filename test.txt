@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-05-20T01:06:56</date>
+  <millis>1432109216674</millis>
+  <sequence>0</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 1 starts.</message>
+</record>
+<record>
+  <date>2015-05-20T01:07:10</date>
+  <millis>1432109230570</millis>
+  <sequence>1</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Winner is: Paranoid</message>
+</record>
+<record>
+  <date>2015-05-20T01:07:11</date>
+  <millis>1432109231590</millis>
+  <sequence>2</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 2 starts.</message>
+</record>
+<record>
+  <date>2015-05-20T01:07:23</date>
+  <millis>1432109243049</millis>
+  <sequence>3</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Winner is: Paranoid</message>
+</record>
+<record>
+  <date>2015-05-20T01:07:24</date>
+  <millis>1432109244055</millis>
+  <sequence>4</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 3 starts.</message>
+</record>
+<record>
+  <date>2015-05-20T01:07:36</date>
+  <millis>1432109256389</millis>
+  <sequence>5</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Winner is: MCTS_UCT_SOS</message>
+</record>
+<record>
+  <date>2015-05-20T01:07:37</date>
+  <millis>1432109257402</millis>
+  <sequence>6</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>MCTS_UCT_SOS wins 1 games(0.333333).</message>
+</record>
+<record>
+  <date>2015-05-20T01:07:37</date>
+  <millis>1432109257405</millis>
+  <sequence>7</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Paranoid wins 2 games(0.666667).</message>
+</record>
+<record>
+  <date>2015-05-20T01:07:37</date>
+  <millis>1432109257407</millis>
+  <sequence>8</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Maxn wins 0 games(0.000000).</message>
+</record>
+</log>

@@ -2,10 +2,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.logging.*;
 
-public class CheckerGameJFrame extends JFrame{
+public class CheckerGameJFrame{
     protected CheckerState gameOrigin;
     protected CheckerState gameInstance;
     protected AlgorithmGamePanel gamePanel;
@@ -27,7 +30,6 @@ public class CheckerGameJFrame extends JFrame{
         addPlayButton();
 
         frame.setVisible(true);
-        run();
     }
 
 
@@ -49,6 +51,23 @@ public class CheckerGameJFrame extends JFrame{
         return gamePanel;
     }
 
+    private String getColor(int i) {
+        String color;
+        switch(i){
+            case 0:
+                color = "RED";
+                break;
+            case 1:
+                color = "GREEN";
+                break;
+            case 2:
+                color = "YELLOW";
+                break;
+            default:
+                color = "No idea";
+        }
+        return color;
+    }
 
     public JPanel setupStatsPanel() {
         statsPanel = new JPanel(new GridBagLayout());
@@ -60,7 +79,12 @@ public class CheckerGameJFrame extends JFrame{
         labels.clear();
         // add components to the gamePanel
         for(int i = 0; i<algPool.size();i++) {
-            Label l = new Label(String.format("<%s> Player %d expanded %d nodes", algPool.get(i).getClass().getName(), i + 1, algPool.get(i).nodes_generated));
+            String color = getColor(i);
+            Label l = new Label(String.format("<%s> <%s>Player %d expanded %d nodes",
+                    algPool.get(i).getClass().getName(),
+                    color,
+                    i + 1,
+                    algPool.get(i).nodes_generated));
             labels.add(l);
             constraints.gridy = i;
             statsPanel.add(l, constraints);
@@ -107,41 +131,93 @@ public class CheckerGameJFrame extends JFrame{
 //    }
 //
 
-    public void run() {
+    public String run() {
         while(gamePanel.state.gameOver() == 0 || reset){
+//            gameInstance = gamePanel.computer_timed_turn();
             gamePanel.computer_turn();
 //            if(reset) {
 //                preRestart();
 //            }
             updateLabels();
         }
+        return this.algPool.get(gamePanel.state.gameOver()-1).getClass().getName();
     }
 
 
     private void updateLabels() {
         for(int i = 0; i<labels.size(); i++) {
-            labels.get(i).setText(String.format("<%s> Player %d expanded %d nodes", algPool.get(i).getClass().getName(), i + 1, algPool.get(i).nodes_generated));
+            labels.get(i).setText(String.format("<%s> <%s> Player %d expanded %d nodes",
+                    algPool.get(i).getClass().getName(),
+                    getColor(i),
+                    i + 1,
+                    algPool.get(i).nodes_generated));
         }
     }
 
     public static void main(String[] args) {
-        CheckerState checker = new CheckerState(3);
-        ArrayList<SearchAlgorithm> pool= new ArrayList<SearchAlgorithm>(3);
-        pool.add(new Maxn(5));
-        pool.add(new MCTS_UCT_SOS(0.2, 50000, null));
-        pool.add(new MCTS_UCT_PARANOID(0.2, 50000, 2));
-//        pool.add(new SOS(4, new double[][]{
-//                {1,      0,        0},
-//                {-1,     1,      0.5},
-//                {-1,     0.5,      1}
-//        }));
-//        pool.add(new SOS(4, new double[][]{
-//                {1,      0,        0},
-//                {-1,     1,      0.5},
-//                {-1,     0.5,      1}
-//        }));
+        try {
+            LogManager lm = LogManager.getLogManager();
+            Logger logger;
+            FileHandler fh = new FileHandler("test.txt");
 
-        CheckerGameJFrame fr = new CheckerGameJFrame(checker,pool);
+            logger = Logger.getLogger("MCTS");
+
+            lm.addLogger(logger);
+            logger.setLevel(Level.INFO);
+            fh.setFormatter(new XMLFormatter());
+
+            logger.addHandler(fh);
+            ArrayList<Integer> sizes = new ArrayList<Integer>();
+            sizes.add(100000);
+            int games_to_play = 3;
+
+            HashMap<String, Integer> res = new HashMap<String, Integer>();
+            res.put("Maxn", 0);
+            res.put("Paranoid", 0);
+            res.put("MCTS_UCT_SOS", 0);
+            for (int i = 0; i < games_to_play; i++) {
+                logger.log(Level.INFO, String.format("Game %d starts.", i+1));
+                CheckerState checker = new CheckerState(3);
+                ArrayList<SearchAlgorithm> pool = new ArrayList<SearchAlgorithm>(3);
+                pool.add(new Maxn(3));
+                pool.add(new Paranoid(3));
+                pool.add(new MCTS_UCT_SOS(0.2, 1000, null));
+
+                //        pool.add(new SOS(4, new double[][]{
+                //                {1,      0,        0},
+                //                {-1,     1,      0.5},
+                //                {-1,     0.5,      1}
+                //        }));
+                //        pool.add(new SOS(4, new double[][]{
+                //                {1,      0,        0},
+                //                {-1,     1,      0.5},
+                //                {-1,     0.5,      1}
+                //        }));
+
+                CheckerGameJFrame fr = new CheckerGameJFrame(checker, pool);
+
+                // Run game
+                String winner = fr.run();
+                logger.log(Level.INFO, "Winner is: "+winner);
+
+                // Update result set
+                res.put(winner, res.get(winner) + 1);
+                try {
+                    Thread.sleep(1000);                 //1000 milliseconds is one second.
+                } catch (InterruptedException ex) {
+                    Thread.currentThread().interrupt();
+                }
+                fr.frame.dispose();
+            }
+            // Log all the games played in this node setting
+
+            for (String key : res.keySet()) {
+                logger.log(Level.INFO, String.format("%s wins %d games(%f).", key, res.get(key), (double) res.get(key) / games_to_play));
+            }
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+
 
     }
 }

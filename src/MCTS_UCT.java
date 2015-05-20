@@ -17,6 +17,12 @@ public class MCTS_UCT extends SearchAlgorithm implements MCTS{
     }
 
 
+    public Move nextNodeLimitedMove(CheckerState s, int node_limit) {
+        nodesPerIteration = node_limit;
+        return uctSearch(s);
+    }
+
+
     // For timed task Iteratively increament level. if timer expires, early termination is possible
     public void execute_iteratively(CheckerState s) {
         v0 = new TreeSearchNode(s, null);
@@ -25,6 +31,7 @@ public class MCTS_UCT extends SearchAlgorithm implements MCTS{
             double[] delta = defaultPlayoutPolicy(new CheckerState(vl.state));
             backUp(vl, delta);
             nodes_generated++;
+            current_num_nodes++;
         }
     }
 
@@ -47,6 +54,7 @@ public class MCTS_UCT extends SearchAlgorithm implements MCTS{
             double[] delta = defaultPlayoutPolicy(new CheckerState(vl.state));
             backUp(vl, delta);
             nodes_generated++;
+            current_num_nodes++;
         }
 //        printChildrenStats(v0);
         return bestChild(v0, 0).state.getLastMove();

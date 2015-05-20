@@ -19,6 +19,20 @@ public class SOS extends SearchAlgorithm{
         return sos(state, this.max_depth).getValue();
     }
 
+
+    public Move nextNodeLimitedMove(CheckerState s, int node_limit) {
+        current_num_nodes = 0;
+        CheckerState tmp = new CheckerState(s);
+        current_depth = 1;
+        while (current_num_nodes < node_limit) {
+            this.bestMove = sos(s, this.current_depth).getValue();
+            current_depth++;
+        }
+        current_num_nodes = 0;
+        return bestMove;
+    }
+
+
     // For timed task Iteratively increament level. if timer expires, early termination is possible
     public void execute_iteratively(CheckerState s) {
         CheckerState tmp = new CheckerState(s);
@@ -47,6 +61,7 @@ public class SOS extends SearchAlgorithm{
             node.applyMove(move);
             // commit one move and do further evaluation
             nodes_generated++;
+            current_num_nodes++;
             tuple = sos(node, depth - 1).getKey();
             //System.out.printf("New value found in max node: %d\n", val);
             if(tuple[max_player_id] > bestValue){

@@ -568,7 +568,9 @@ public class CheckerState {
     public ArrayList<IntPair> pieceJumpCanReach(IntPair root) {
         Set<IntPair> visited = new HashSet<IntPair>();
         Queue<IntPair> frontier = new LinkedList<IntPair>();
+        IntPair tmp = new IntPair(root);
         frontier.add(root);
+        visited.add(root);
         while (!frontier.isEmpty()) {
             IntPair toExpand = frontier.remove();
             if (toExpand != root) {
@@ -608,6 +610,7 @@ public class CheckerState {
                 frontier.add(new IntPair(x - 2, y + 2));
             }
         }
+        visited.remove(root);
         return new ArrayList<IntPair>(visited);
     }
 
@@ -642,7 +645,9 @@ public class CheckerState {
 
     public ArrayList<Move> nextOrderedMoves(boolean nonnegative) {
         ArrayList<Move> nextMoves = new ArrayList<Move> ();
-        if(gameOver() != 0) {return nextMoves;}
+        if(gameOver() != 0) {
+            return nextMoves;
+        }
         for (IntPair piece : m_players_pieces.get(m_turn)) {
             for (IntPair dest : pieceCanMove(piece)) {
                 Move new_move = new Move(new Move(piece,dest), m_players_far_goal.get(m_turn));

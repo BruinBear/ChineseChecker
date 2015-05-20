@@ -68,6 +68,24 @@ public class AlgorithmGamePanel extends JPanel {
     }
 
 
+    public CheckerState computer_timed_turn() {
+        SearchAlgorithm alg = algPool.get(state.m_turn);
+//
+        Move nextTimedMove = alg.nextMoveTimed(state,10000);
+        state.applyMove(nextTimedMove);
+
+//        Move nextNodeLimitedMove = alg.nextNodeLimitedMove(state,5000);
+        switchType(nextTimedMove);
+
+        gameInfo.setText(gameText());
+        algInfo.setText(evalText());
+        repaint();
+        if(state.gameOver() != 0) {
+            System.out.printf("Winner is player %d\n", state.gameOver());
+        }
+        return state;
+    }
+
     public void computer_turn() {
         SearchAlgorithm a = algPool.get(state.m_turn);
         Move mv = a.nextMove(state);
