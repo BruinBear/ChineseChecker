@@ -40,6 +40,11 @@ public class AlgorithmGamePanel extends JPanel {
     }
 
 
+    public void updatePiecePositions(HashMap<IntPair, PieceShape> p_map) {
+        this.piece_map = p_map;
+    }
+
+
     private void switchType(IntPair piece, IntPair dest) {
         PieceShape piece_s = piece_map.get(piece);
         PieceShape dest_s = piece_map.get(dest);
@@ -71,12 +76,11 @@ public class AlgorithmGamePanel extends JPanel {
     public CheckerState computer_timed_turn() {
         SearchAlgorithm alg = algPool.get(state.m_turn);
 //
-        Move nextTimedMove = alg.nextMoveTimed(state,10000);
+        Move nextTimedMove = alg.nextMoveTimed(state,4000);
         state.applyMove(nextTimedMove);
 
 //        Move nextNodeLimitedMove = alg.nextNodeLimitedMove(state,5000);
-        switchType(nextTimedMove);
-
+        updatePiecePositions(state.getGraphicsConfiguration());
         gameInfo.setText(gameText());
         algInfo.setText(evalText());
         repaint();

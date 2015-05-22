@@ -32,6 +32,9 @@ public class MCTS_UCT_SOS extends MCTS_UCT {
     @Override
     public TreeSearchNode bestChild(TreeSearchNode v, double const_explore) {
         // we want to maximize the player's win rate
+        if(v==null) {
+            int kk = 0;
+        }
         int player_id_to_max = v.state.m_turn;
         TreeSearchNode best_child = null;
         double explore_numerator = 2*Math.log(v.visit_times);

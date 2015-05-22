@@ -2,7 +2,7 @@
  * Created by JingyuLiu on 4/19/2015.
  */
 public class MCTS_UCT extends SearchAlgorithm implements MCTS{
-    private TreeSearchNode v0;
+    protected TreeSearchNode v0;
 
     protected double Cp;
     protected int nodesPerIteration;
@@ -38,7 +38,14 @@ public class MCTS_UCT extends SearchAlgorithm implements MCTS{
 
     @Override
     public Move getTimedBestMove() {
-        return bestChild(v0, 0).state.getLastMove();
+        Move bm;
+        if(v0 == null) {
+            return null;
+        } else {
+            bm = bestChild(v0, 0).state.getLastMove();
+            v0 = null;
+        }
+        return bm;
     }
 
 
@@ -47,7 +54,7 @@ public class MCTS_UCT extends SearchAlgorithm implements MCTS{
      * @return the move to reach the best child selected by UCT
      */
     public Move uctSearch(CheckerState s0){
-        TreeSearchNode v0 = new TreeSearchNode(s0, null);
+        v0 = new TreeSearchNode(s0, null);
         int i = 0;
         while(i++<this.nodesPerIteration) {
             TreeSearchNode vl = treePolicy(v0);

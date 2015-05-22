@@ -6,7 +6,6 @@ import java.util.ArrayList;
  * Created by JingyuLiu on 4/23/2015.
  */
 public class Paranoid extends SearchAlgorithm {
-    protected int max_depth;
 
     Paranoid(int depth) {
         max_depth = depth;

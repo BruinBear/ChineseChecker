@@ -7,7 +7,6 @@ import java.util.ArrayList;
  */
 public class Maxn extends SearchAlgorithm {
     protected static Evaluation eval_func = new Evaluation();
-    protected int max_depth;
     Maxn(int depth) {
         max_depth = depth;
     }

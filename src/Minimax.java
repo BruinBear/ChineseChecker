@@ -58,7 +58,7 @@ public class Minimax extends SearchAlgorithm{
     }
 
 
-    public Move nextMoveTimed(CheckerState s, int miliseconds) {
+    public Move nextMoveTimed(CheckerState s, int milliseconds) {
         max_player_id = s.m_turn;
         min_player_id = (s.m_turn+1)%2;
         int current_num_nodes_processed = this.nodes_generated;
@@ -67,7 +67,7 @@ public class Minimax extends SearchAlgorithm{
         try {
             System.out.println("Started..");
             // Force return the best move so far
-            System.out.println(future.get(miliseconds, TimeUnit.MILLISECONDS));
+            System.out.println(future.get(milliseconds, TimeUnit.MILLISECONDS));
             System.out.println("Finished!");
         } catch (TimeoutException e) {
             System.out.println("Terminated!");

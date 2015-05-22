@@ -21,19 +21,22 @@ public class Main{
         try {
             LogManager lm = LogManager.getLogManager();
             Logger logger;
-            FileHandler fh = new FileHandler("longtest.txt");
+            FileHandler fh = new FileHandler("test/log.txt");
 
-            logger = Logger.getLogger("MCTS");
+            logger = Logger.getLogger("Chinese Checker AI");
 
             lm.addLogger(logger);
             logger.setLevel(Level.INFO);
             fh.setFormatter(new XMLFormatter());
 
             logger.addHandler(fh);
-            ArrayList<Integer> sizes = new ArrayList<Integer>();
-            sizes.add(100000);
-            int games_to_play = 300;
-            for(Integer n: sizes) {
+            ArrayList<Integer> millis = new ArrayList<Integer>();
+            millis.add(500);
+            millis.add(1000);
+            millis.add(2000);
+            millis.add(4000);
+            int games_to_play = 100;
+            for(Integer n: millis) {
                 HashMap<String, Integer> res = new HashMap<String, Integer>();
                 res.put("Maxn", 0);
                 res.put("Paranoid", 0);
@@ -44,6 +47,10 @@ public class Main{
                     CheckerState b = new CheckerState(3);
                     String winner = threePlayers(b, logger, n);
                     res.put(winner, res.get(winner)+1) ;
+
+                    logger.log(Level.INFO, String.format("player(%s) %d won.", winner, b.gameOver()));
+                    logger.log(Level.INFO, b.toString());
+                    logger.log(Level.INFO, "Turns played: "+b.m_turn_played);
                 }
                 for(String key: res.keySet()){
                     logger.log(Level.INFO, String.format("%s wins %d games(%f).",key, res.get(key), (double)res.get(key)/ games_to_play));
@@ -95,10 +102,6 @@ public class Main{
 
     public static String threePlayers(CheckerState b, Logger logger, int limit) {
         ArrayList<SearchAlgorithm> pool= new ArrayList<SearchAlgorithm>(3);
-        double[][] so = new double[][]{
-                {1,     -1,     -1},
-                {-1,     1,      1},
-                {-1,     1,      1}};
 
         pool.add(new Maxn(9));
         pool.add(new MCTS_UCT_SOS(0.2, 5000, null));
@@ -106,13 +109,17 @@ public class Main{
         Collections.shuffle(pool);
         while(b.gameOver()==0) {
             SearchAlgorithm alg = pool.get(b.m_turn);
-//            Move nextTimedMove = alg.nextMoveTimed(b,2000);
+            Move nextTimedMove = alg.nextMoveTimed(b,limit);
 //            b.applyMove(nextTimedMove);
-            Move nextNodeLimitedMove = alg.nextNodeLimitedMove(b, limit);
-            b.applyMove(nextNodeLimitedMove);
+//            Move nextNodeLimitedMove = alg.nextNodeLimitedMove(b, limit);
+            b.applyMove(nextTimedMove);
             b.printBoard();
         }
-        logger.log(Level.INFO, String.format("player(%s) %d won.\nboard:\n %s",pool.get(b.gameOver()-1).getClass().getName(), b.gameOver(), b.toString()));
+
+
+        for(SearchAlgorithm g : pool) {
+            logger.log(Level.INFO, "<"+g.getClass().getName()+"> generated "+g.nodes_generated+" nodes");
+        }
         return pool.get(b.gameOver()-1).getClass().getName();
     }
 
