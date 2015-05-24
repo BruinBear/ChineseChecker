@@ -21,7 +21,7 @@ public class Main{
         try {
             LogManager lm = LogManager.getLogManager();
             Logger logger;
-            FileHandler fh = new FileHandler("test/log.txt");
+            FileHandler fh = new FileHandler("test/20-40-80k.txt");
 
             logger = Logger.getLogger("Chinese Checker AI");
 
@@ -31,17 +31,20 @@ public class Main{
 
             logger.addHandler(fh);
             ArrayList<Integer> millis = new ArrayList<Integer>();
-            millis.add(500);
-            millis.add(1000);
-            millis.add(2000);
-            millis.add(4000);
+//            millis.add(2000);
+//            millis.add(5000);
+//            millis.add(10000);
+//            millis.add(20000);
+//            millis.add(40000);
+            millis.add(160000);
+
             int games_to_play = 100;
             for(Integer n: millis) {
                 HashMap<String, Integer> res = new HashMap<String, Integer>();
                 res.put("Maxn", 0);
                 res.put("Paranoid", 0);
                 res.put("MCTS_UCT_SOS", 0);
-                logger.log(Level.INFO, String.format("Current size %d.", n));
+                logger.log(Level.INFO, String.format("Current Node Limit: %d.", n));
                 for(int i = 0; i<games_to_play; i++) {
                     logger.log(Level.INFO, String.format("Game %d starts.", i+1));
                     CheckerState b = new CheckerState(3);
@@ -104,16 +107,18 @@ public class Main{
         ArrayList<SearchAlgorithm> pool= new ArrayList<SearchAlgorithm>(3);
 
         pool.add(new Maxn(9));
-        pool.add(new MCTS_UCT_SOS(0.2, 5000, null));
+        pool.add(new MCTS_UCT_SOS(0.2, 100000000, null));
         pool.add(new Paranoid(9));
         Collections.shuffle(pool);
         while(b.gameOver()==0) {
             SearchAlgorithm alg = pool.get(b.m_turn);
-            Move nextTimedMove = alg.nextMoveTimed(b,limit);
+            Move nextTimedMove = alg.nextNodeLimitedMove(b,limit);
+            System.out.println(alg.getClass().getName()+"Finished at depth " + alg.current_depth);
+
 //            b.applyMove(nextTimedMove);
 //            Move nextNodeLimitedMove = alg.nextNodeLimitedMove(b, limit);
             b.applyMove(nextTimedMove);
-            b.printBoard();
+//            b.printBoard();
         }
 
 

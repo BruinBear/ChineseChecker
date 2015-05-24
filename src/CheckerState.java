@@ -306,25 +306,25 @@ public class CheckerState {
     private void printPiece(char c) {
         switch(c) {
             case '1':
-                System.out.print(ANSI_RED+c+" "+ANSI_RESET);
+                System.out.print(ANSI_RED + c + " " + ANSI_RESET);
                 break;
             case '2':
-                System.out.print(ANSI_GREEN+c+" "+ANSI_RESET);
+                System.out.print(ANSI_GREEN + c + " " + ANSI_RESET);
                 break;
             case '3':
-                System.out.print(ANSI_YELLOW+c+" "+ANSI_RESET);
+                System.out.print(ANSI_YELLOW + c + " " + ANSI_RESET);
                 break;
             case '4':
-                System.out.print(ANSI_BLUE+c+" "+ANSI_RESET);
+                System.out.print(ANSI_BLUE + c + " " + ANSI_RESET);
                 break;
             case '5':
-                System.out.print(ANSI_PURPLE+c+" "+ANSI_RESET);
+                System.out.print(ANSI_PURPLE + c + " " + ANSI_RESET);
                 break;
             case '6':
-                System.out.print(ANSI_CYAN+c+" "+ANSI_RESET);
+                System.out.print(ANSI_CYAN + c + " " + ANSI_RESET);
                 break;
             default:
-                System.out.print(ANSI_WHITE+c+" "+ANSI_RESET);
+                System.out.print(ANSI_WHITE + c + " " + ANSI_RESET);
                 break;
         }
         return;
@@ -723,22 +723,22 @@ public class CheckerState {
         return moves.get(random);
     }
 
-
-    public Move getRandomMoveWeighted() {
+    /**
+     * epsilon greedy move selection
+     * 95% farthest move, 5% random moep  */
+    public Move epsilonMove() {
         ArrayList<Move> moves = nextOrderedMoves(true);
         if(moves.size() == 0)
             return null;
-        double[] prob = epsilonGreedyProbability(moves);
         double rand = Math.random();
-        double cum = 0.0;
-        for(int i=0; i<moves.size(); i++) {
-            cum = cum+prob[i];
-            if(cum>=rand) {
-                return moves.get(i);
-            }
+        if(rand<=0.95) {
+            return moves.remove(0);
+        } else {
+            int index = (int) Math.floor(Math.random()*moves.size());
+            return moves.get(index);
         }
-        return moves.get(0);
     }
+
     
     private double[] mapImprovementToProbability(ArrayList<Move> moves) {
         double total_weight = 0;
@@ -756,21 +756,6 @@ public class CheckerState {
     }
 
 
-    private double[] epsilonGreedyProbability(ArrayList<Move> moves) {
-        double total_weight = 0;
-        for(Move m : moves) {
-            total_weight += m.improvement+1;
-        }
-        double[] prob = new double[moves.size()];
-        prob[0] = 0.95;
-        double last = 1.0;
-        for(int i=1; i<moves.size(); i++) {
-            prob[i] = 0.05 / (moves.size()-1);
-            last = 1 - prob[i];
-        }
-        prob[moves.size()-1] = last;
-        return prob;
-    }
 
 
     /**

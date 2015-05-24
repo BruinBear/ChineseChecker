@@ -16,19 +16,14 @@ public class Paranoid extends SearchAlgorithm {
     }
 
     public Move nextNodeLimitedMove(CheckerState s, int node_limit) {
-        max_nodes_per_iteration = node_limit;
-        current_num_nodes = 0;
-        CheckerState tmp = new CheckerState(s);
         current_depth = 1;
-        while (current_num_nodes < node_limit) {
-            Pair<double[],Move> m = paranoidNodesLimited(s, this.current_depth, s.m_turn);
-            if(m != null) {
-                this.bestMove = m.getValue();
-            }
+        int nodes_prev;
+        do {
+            nodes_prev = nodes_generated;
+            this.bestMove = paranoid(s, this.current_depth, s.m_turn).getValue();
             current_depth++;
-        }
-        current_num_nodes = 0;
-        return bestMove;
+        } while ((current_depth<max_depth && nodes_generated-nodes_prev<node_limit));
+        return this.bestMove;
     }
 
 

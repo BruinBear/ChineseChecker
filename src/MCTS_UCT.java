@@ -42,8 +42,14 @@ public class MCTS_UCT extends SearchAlgorithm implements MCTS{
         if(v0 == null) {
             return null;
         } else {
-            bm = bestChild(v0, 0).state.getLastMove();
-            v0 = null;
+            try {
+                bm = bestChild(v0, 0).state.getLastMove();
+                v0 = null;
+            }catch (Exception e) {
+                e.printStackTrace();
+                v0 = null;
+                return null;
+            }
         }
         return bm;
     }
@@ -156,8 +162,9 @@ public class MCTS_UCT extends SearchAlgorithm implements MCTS{
      */
     public double[] defaultPlayoutPolicy(CheckerState s){
         Move mv;
-        while ((mv = s.getRandomMoveWeighted()) != null) {
+        while ((mv = s.epsilonMove()) != null) {
             s.applyMove(mv);
+//            s.printBoard();
         }
         if(0==s.gameOver()) {
             s.printBoard();

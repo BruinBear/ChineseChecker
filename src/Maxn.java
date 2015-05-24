@@ -17,17 +17,25 @@ public class Maxn extends SearchAlgorithm {
 
 
     public Move nextNodeLimitedMove(CheckerState s, int node_limit) {
-        max_nodes_per_iteration = node_limit;
-        CheckerState tmp = new CheckerState(s);
         current_depth = 1;
-        while (current_num_nodes < node_limit) {
-            Pair<double[],Move>  m = maxnNodesLimited(s, this.current_depth);
-            if(m != null)
-                this.bestMove = m.getValue();
+        int nodes_prev;
+        do {
+            nodes_prev = nodes_generated;
+            this.bestMove = maxn(s, this.current_depth).getValue();
             current_depth++;
-        }
-        current_num_nodes = 0;
-        return bestMove;
+        } while ((current_depth<max_depth && nodes_generated-nodes_prev<node_limit));
+        return this.bestMove;
+//        max_nodes_per_iteration = node_limit;
+//        CheckerState tmp = new CheckerState(s);
+//        current_depth = 1;
+//        while (current_num_nodes < node_limit) {
+//            Pair<double[],Move>  m = maxnNodesLimited(s, this.current_depth);
+//            if(m != null)
+//                this.bestMove = m.getValue();
+//            current_depth++;
+//        }
+//        current_num_nodes = 0;
+//        return bestMove;
     }
 
 

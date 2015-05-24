@@ -132,13 +132,18 @@ public class CheckerGameJFrame{
 //    }
 //
 
-    public String run() {
+    public String run(char mode, int limit) {
         while(gamePanel.state.gameOver() == 0 || reset){
-            gameInstance = gamePanel.computer_timed_turn();
-//            gamePanel.computer_turn();
-//            if(reset) {
-//                preRestart();
-//            }
+            switch(mode) {
+                case 't':
+                    gameInstance = gamePanel.computer_timed_turn(limit);
+                    break;
+                case 'n':
+                    gameInstance = gamePanel.computer_node_turn(limit);
+                    break;
+                default:
+                    gamePanel.computer_turn();
+            }
             updateLabels();
         }
         return this.algPool.get(gamePanel.state.gameOver()-1).getClass().getName();
@@ -159,7 +164,7 @@ public class CheckerGameJFrame{
         try {
             LogManager lm = LogManager.getLogManager();
             Logger logger;
-            FileHandler fh = new FileHandler("test/test.txt");
+            FileHandler fh = new FileHandler("test/1log.txt");
 
             logger = Logger.getLogger("MCTS");
 
@@ -170,7 +175,7 @@ public class CheckerGameJFrame{
             logger.addHandler(fh);
             ArrayList<Integer> sizes = new ArrayList<Integer>();
             sizes.add(100000);
-            int games_to_play = 50;
+            int games_to_play = 1;
 
             HashMap<String, Integer> res = new HashMap<String, Integer>();
             res.put("Maxn", 0);
@@ -180,9 +185,9 @@ public class CheckerGameJFrame{
                 logger.log(Level.INFO, String.format("Game %d starts.", i+1));
                 CheckerState checker = new CheckerState(3);
                 ArrayList<SearchAlgorithm> pool = new ArrayList<SearchAlgorithm>(3);
-                pool.add(new MCTS_UCT_SOS(0.2, 1000000, null));
-                pool.add(new Maxn(8));
-                pool.add(new Paranoid(8));
+                pool.add(new MCTS_UCT_SOS(0.2, 10000, null));
+                pool.add(new Maxn(10));
+                pool.add(new Paranoid(10));
                 Collections.shuffle(pool);
                 //        pool.add(new SOS(4, new double[][]{
                 //                {1,      0,        0},
@@ -198,7 +203,7 @@ public class CheckerGameJFrame{
                 CheckerGameJFrame fr = new CheckerGameJFrame(checker, pool);
 
                 // Run game
-                String winner = fr.run();
+                String winner = fr.run('n', 10000);
                 logger.log(Level.INFO, "Winner is: "+winner);
                 logger.log(Level.INFO, fr.gameInstance.toString());
                 logger.log(Level.INFO, "Turns played: "+fr.gameInstance.m_turn_played);

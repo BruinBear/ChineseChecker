@@ -41,6 +41,7 @@ public abstract class SearchAlgorithm {
         // increase time required to compute at least one best move.
         int i = 1;
         do {
+            int nodes_before = this.nodes_generated;
             ExecutorService executor = Executors.newSingleThreadExecutor();
             Future<Integer> future = executor.submit(new TimedNextBestMove(this, new CheckerState(s)));
             try {
@@ -49,12 +50,17 @@ public abstract class SearchAlgorithm {
 
             }
             try {
-                System.out.println(String.format("%s started with Max Depth %d in %f seconds", this.getClass().getName(), max_depth,i * (double)milliseconds / 1000));
+                System.out.println(String.format("<%s>started in %f seconds", this.getClass().getName(), i * (double)milliseconds / 1000));
                 // Force return the best move so far
                 System.out.println(future.get(i * milliseconds, TimeUnit.MILLISECONDS));
-                System.out.println("Finished at depth " + this.current_depth);
+//                System.out.println("Finished at depth " + this.current_depth);
+//                System.out.printf("generated %d nodes%n", this.nodes_generated - nodes_before);
+//                System.out.printf("total     %d nodes%n", this.nodes_generated);
             } catch (TimeoutException e) {
-                System.out.println("Terminated at depth " + this.current_depth);
+//                System.out.println("Terminated at depth " + this.current_depth);
+//                System.out.printf("generated %d nodes%n", this.nodes_generated - nodes_before);
+//                System.out.printf("total     %d nodes%n", this.nodes_generated);
+
             } catch (InterruptedException e) {
 //            e.printStackTrace();
             } catch (ExecutionException e) {

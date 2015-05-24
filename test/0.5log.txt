@@ -1,0 +1,7201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-05-21T23:54:41</date>
+  <millis>1432277681699</millis>
+  <sequence>0</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Current size 500.</message>
+</record>
+<record>
+  <date>2015-05-21T23:54:41</date>
+  <millis>1432277681725</millis>
+  <sequence>1</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 1 starts.</message>
+</record>
+<record>
+  <date>2015-05-21T23:56:01</date>
+  <millis>1432277761062</millis>
+  <sequence>2</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 9808376 nodes</message>
+</record>
+<record>
+  <date>2015-05-21T23:56:01</date>
+  <millis>1432277761064</millis>
+  <sequence>3</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 20396 nodes</message>
+</record>
+<record>
+  <date>2015-05-21T23:56:01</date>
+  <millis>1432277761065</millis>
+  <sequence>4</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 8742380 nodes</message>
+</record>
+<record>
+  <date>2015-05-21T23:56:01</date>
+  <millis>1432277761065</millis>
+  <sequence>5</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(MCTS_UCT_SOS) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-21T23:56:01</date>
+  <millis>1432277761099</millis>
+  <sequence>6</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        303    
+    0000003000 
+    000000000  
+    00000010   
+    0000000    
+   20000000    
+  220000001    
+ 2220001111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-21T23:56:01</date>
+  <millis>1432277761102</millis>
+  <sequence>7</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 71</message>
+</record>
+<record>
+  <date>2015-05-21T23:56:01</date>
+  <millis>1432277761119</millis>
+  <sequence>8</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 2 starts.</message>
+</record>
+<record>
+  <date>2015-05-21T23:57:47</date>
+  <millis>1432277867798</millis>
+  <sequence>9</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 6792496 nodes</message>
+</record>
+<record>
+  <date>2015-05-21T23:57:47</date>
+  <millis>1432277867800</millis>
+  <sequence>10</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 6503281 nodes</message>
+</record>
+<record>
+  <date>2015-05-21T23:57:47</date>
+  <millis>1432277867800</millis>
+  <sequence>11</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 5966 nodes</message>
+</record>
+<record>
+  <date>2015-05-21T23:57:47</date>
+  <millis>1432277867801</millis>
+  <sequence>12</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-21T23:57:48</date>
+  <millis>1432277868203</millis>
+  <sequence>13</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        330    
+    0030030000 
+    000000000  
+    00300000   
+    0000000    
+   22000001    
+  220300011    
+ 2200000111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-21T23:57:48</date>
+  <millis>1432277868204</millis>
+  <sequence>14</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 88</message>
+</record>
+<record>
+  <date>2015-05-21T23:57:48</date>
+  <millis>1432277868205</millis>
+  <sequence>15</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 3 starts.</message>
+</record>
+<record>
+  <date>2015-05-21T23:59:16</date>
+  <millis>1432277956179</millis>
+  <sequence>16</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 3422409 nodes</message>
+</record>
+<record>
+  <date>2015-05-21T23:59:16</date>
+  <millis>1432277956179</millis>
+  <sequence>17</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 3142721 nodes</message>
+</record>
+<record>
+  <date>2015-05-21T23:59:16</date>
+  <millis>1432277956180</millis>
+  <sequence>18</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3875 nodes</message>
+</record>
+<record>
+  <date>2015-05-21T23:59:16</date>
+  <millis>1432277956181</millis>
+  <sequence>19</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-21T23:59:16</date>
+  <millis>1432277956182</millis>
+  <sequence>20</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        003    
+    0003003000 
+    000000000  
+    02000000   
+    0200300    
+   00030001    
+  220000011    
+ 2200030111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-21T23:59:16</date>
+  <millis>1432277956182</millis>
+  <sequence>21</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 73</message>
+</record>
+<record>
+  <date>2015-05-21T23:59:16</date>
+  <millis>1432277956183</millis>
+  <sequence>22</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 4 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:01:04</date>
+  <millis>1432278064275</millis>
+  <sequence>23</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3570 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:01:04</date>
+  <millis>1432278064276</millis>
+  <sequence>24</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 4429386 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:01:04</date>
+  <millis>1432278064277</millis>
+  <sequence>25</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 3448206 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:01:04</date>
+  <millis>1432278064277</millis>
+  <sequence>26</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:01:04</date>
+  <millis>1432278064280</millis>
+  <sequence>27</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    0000100000 
+    000001000  
+    00100000   
+    1000000    
+   22000000    
+  220000100    
+ 2200000000    
+    001        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:01:04</date>
+  <millis>1432278064281</millis>
+  <sequence>28</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 84</message>
+</record>
+<record>
+  <date>2015-05-22T00:01:04</date>
+  <millis>1432278064394</millis>
+  <sequence>29</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 5 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:02:40</date>
+  <millis>1432278160554</millis>
+  <sequence>30</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 2506323 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:02:40</date>
+  <millis>1432278160555</millis>
+  <sequence>31</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2348 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:02:40</date>
+  <millis>1432278160556</millis>
+  <sequence>32</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 2491913 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:02:40</date>
+  <millis>1432278160556</millis>
+  <sequence>33</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:02:40</date>
+  <millis>1432278160557</millis>
+  <sequence>34</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        330    
+    0003000020 
+    000000000  
+    02000000   
+    0000200    
+   02000001    
+  000000211    
+ 0000020111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:02:41</date>
+  <millis>1432278161110</millis>
+  <sequence>35</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 79</message>
+</record>
+<record>
+  <date>2015-05-22T00:02:41</date>
+  <millis>1432278161110</millis>
+  <sequence>36</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 6 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:03:56</date>
+  <millis>1432278236346</millis>
+  <sequence>37</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1447444 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:03:56</date>
+  <millis>1432278236347</millis>
+  <sequence>38</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1671666 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:03:56</date>
+  <millis>1432278236347</millis>
+  <sequence>39</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1415 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:03:56</date>
+  <millis>1432278236348</millis>
+  <sequence>40</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:03:56</date>
+  <millis>1432278236348</millis>
+  <sequence>41</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0000000000 
+    000010000  
+    00000000   
+    0003300    
+   20000201    
+  320200011    
+ 2200330311    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:03:56</date>
+  <millis>1432278236349</millis>
+  <sequence>42</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 58</message>
+</record>
+<record>
+  <date>2015-05-22T00:03:56</date>
+  <millis>1432278236349</millis>
+  <sequence>43</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 7 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:05:49</date>
+  <millis>1432278349886</millis>
+  <sequence>44</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 2618095 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:05:49</date>
+  <millis>1432278349887</millis>
+  <sequence>45</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3600 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:05:49</date>
+  <millis>1432278349887</millis>
+  <sequence>46</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 2646473 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:05:49</date>
+  <millis>1432278349888</millis>
+  <sequence>47</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:05:50</date>
+  <millis>1432278350318</millis>
+  <sequence>48</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        323    
+    0003020000 
+    000200000  
+    00000000   
+    0000000    
+   00000001    
+  002000111    
+ 0200200011    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:05:50</date>
+  <millis>1432278350318</millis>
+  <sequence>49</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 84</message>
+</record>
+<record>
+  <date>2015-05-22T00:05:50</date>
+  <millis>1432278350319</millis>
+  <sequence>50</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 8 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:07:40</date>
+  <millis>1432278460846</millis>
+  <sequence>51</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3229 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:07:40</date>
+  <millis>1432278460847</millis>
+  <sequence>52</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 2068098 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:07:40</date>
+  <millis>1432278460847</millis>
+  <sequence>53</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1870051 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:07:40</date>
+  <millis>1432278460848</millis>
+  <sequence>54</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:07:40</date>
+  <millis>1432278460848</millis>
+  <sequence>55</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        033    
+    0003000000 
+    000000001  
+    00101100   
+    0000000    
+   20000100    
+  220000000    
+ 2220000000    
+    010        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:07:40</date>
+  <millis>1432278460849</millis>
+  <sequence>56</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 86</message>
+</record>
+<record>
+  <date>2015-05-22T00:07:40</date>
+  <millis>1432278460849</millis>
+  <sequence>57</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 9 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:09:31</date>
+  <millis>1432278571934</millis>
+  <sequence>58</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1804 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:09:31</date>
+  <millis>1432278571934</millis>
+  <sequence>59</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1982229 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:09:31</date>
+  <millis>1432278571935</millis>
+  <sequence>60</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1771766 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:09:31</date>
+  <millis>1432278571935</millis>
+  <sequence>61</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:09:31</date>
+  <millis>1432278571935</millis>
+  <sequence>62</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         03    
+        133    
+    0003003000 
+    000000000  
+    01001000   
+    0000010    
+   20000000    
+  220001000    
+ 2220000000    
+    001        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:09:31</date>
+  <millis>1432278571936</millis>
+  <sequence>63</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 80</message>
+</record>
+<record>
+  <date>2015-05-22T00:09:31</date>
+  <millis>1432278571936</millis>
+  <sequence>64</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 10 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:11:36</date>
+  <millis>1432278696522</millis>
+  <sequence>65</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2805 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:11:36</date>
+  <millis>1432278696523</millis>
+  <sequence>66</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1915358 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:11:36</date>
+  <millis>1432278696523</millis>
+  <sequence>67</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1840243 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:11:36</date>
+  <millis>1432278696523</millis>
+  <sequence>68</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:11:36</date>
+  <millis>1432278696524</millis>
+  <sequence>69</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    0000000000 
+    000000000  
+    00000000   
+    2000000    
+   01000100    
+  220100010    
+ 2212000010    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:11:36</date>
+  <millis>1432278696524</millis>
+  <sequence>70</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 93</message>
+</record>
+<record>
+  <date>2015-05-22T00:11:36</date>
+  <millis>1432278696550</millis>
+  <sequence>71</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 11 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:13:07</date>
+  <millis>1432278787837</millis>
+  <sequence>72</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1020 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:13:07</date>
+  <millis>1432278787838</millis>
+  <sequence>73</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1023710 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:13:07</date>
+  <millis>1432278787839</millis>
+  <sequence>74</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 962260 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:13:07</date>
+  <millis>1432278787839</millis>
+  <sequence>75</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:13:07</date>
+  <millis>1432278787839</millis>
+  <sequence>76</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    0000100000 
+    002000000  
+    02010000   
+    0000200    
+   00100000    
+  220100000    
+ 2000001100    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:13:07</date>
+  <millis>1432278787840</millis>
+  <sequence>77</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 72</message>
+</record>
+<record>
+  <date>2015-05-22T00:13:07</date>
+  <millis>1432278787840</millis>
+  <sequence>78</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 12 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:15:10</date>
+  <millis>1432278910602</millis>
+  <sequence>79</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1266913 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:15:10</date>
+  <millis>1432278910603</millis>
+  <sequence>80</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1934 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:15:10</date>
+  <millis>1432278910603</millis>
+  <sequence>81</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1345374 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:15:10</date>
+  <millis>1432278910604</millis>
+  <sequence>82</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:15:10</date>
+  <millis>1432278910604</millis>
+  <sequence>83</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        303    
+    0000003000 
+    000000000  
+    00000000   
+    2000000    
+   22200001    
+  200000011    
+ 0020000111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:15:10</date>
+  <millis>1432278910604</millis>
+  <sequence>84</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 85</message>
+</record>
+<record>
+  <date>2015-05-22T00:15:10</date>
+  <millis>1432278910616</millis>
+  <sequence>85</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 13 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:17:14</date>
+  <millis>1432279034400</millis>
+  <sequence>86</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1748847 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:17:14</date>
+  <millis>1432279034401</millis>
+  <sequence>87</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2689 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:17:14</date>
+  <millis>1432279034401</millis>
+  <sequence>88</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1532312 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:17:14</date>
+  <millis>1432279034402</millis>
+  <sequence>89</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:17:14</date>
+  <millis>1432279034402</millis>
+  <sequence>90</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         03    
+        203    
+    0000003000 
+    000000300  
+    03000002   
+    0000200    
+   00000001    
+  020002011    
+ 0002000111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:17:14</date>
+  <millis>1432279034402</millis>
+  <sequence>91</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 76</message>
+</record>
+<record>
+  <date>2015-05-22T00:17:14</date>
+  <millis>1432279034402</millis>
+  <sequence>92</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 14 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:19:33</date>
+  <millis>1432279173460</millis>
+  <sequence>93</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2108 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:19:33</date>
+  <millis>1432279173461</millis>
+  <sequence>94</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 2044794 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:19:33</date>
+  <millis>1432279173462</millis>
+  <sequence>95</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1821017 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:19:33</date>
+  <millis>1432279173462</millis>
+  <sequence>96</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:19:33</date>
+  <millis>1432279173462</millis>
+  <sequence>97</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        003    
+    0000000000 
+    003310000  
+    00001000   
+    0000000    
+   20010001    
+  221001000    
+ 2220000000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:19:33</date>
+  <millis>1432279173462</millis>
+  <sequence>98</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 83</message>
+</record>
+<record>
+  <date>2015-05-22T00:19:33</date>
+  <millis>1432279173463</millis>
+  <sequence>99</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 15 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:21:30</date>
+  <millis>1432279290706</millis>
+  <sequence>100</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1466 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:21:30</date>
+  <millis>1432279290707</millis>
+  <sequence>101</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1513120 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:21:30</date>
+  <millis>1432279290708</millis>
+  <sequence>102</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1309878 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:21:30</date>
+  <millis>1432279290708</millis>
+  <sequence>103</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:21:30</date>
+  <millis>1432279290708</millis>
+  <sequence>104</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         01    
+        030    
+    1000000000 
+    010001000  
+    00100030   
+    1000000    
+   20000030    
+  220003000    
+ 2223000000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:21:30</date>
+  <millis>1432279290708</millis>
+  <sequence>105</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 59</message>
+</record>
+<record>
+  <date>2015-05-22T00:21:30</date>
+  <millis>1432279290709</millis>
+  <sequence>106</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 16 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:23:35</date>
+  <millis>1432279415344</millis>
+  <sequence>107</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1663111 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:23:35</date>
+  <millis>1432279415344</millis>
+  <sequence>108</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2244 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:23:35</date>
+  <millis>1432279415344</millis>
+  <sequence>109</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1170350 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:23:35</date>
+  <millis>1432279415344</millis>
+  <sequence>110</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:23:35</date>
+  <millis>1432279415345</millis>
+  <sequence>111</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    2000000000 
+    000000000  
+    00000000   
+    2200022    
+   00002001    
+  000000111    
+ 0000000011    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:23:35</date>
+  <millis>1432279415345</millis>
+  <sequence>112</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 75</message>
+</record>
+<record>
+  <date>2015-05-22T00:23:35</date>
+  <millis>1432279415345</millis>
+  <sequence>113</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 17 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:26:11</date>
+  <millis>1432279571336</millis>
+  <sequence>114</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 2405177 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:26:11</date>
+  <millis>1432279571337</millis>
+  <sequence>115</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 5058 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:26:11</date>
+  <millis>1432279571337</millis>
+  <sequence>116</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1889876 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:26:11</date>
+  <millis>1432279571337</millis>
+  <sequence>117</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:26:11</date>
+  <millis>1432279571610</millis>
+  <sequence>118</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        330    
+    0000003000 
+    000000000  
+    00000020   
+    0000000    
+   20000201    
+  000000011    
+ 0022000111    
+    200        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:26:11</date>
+  <millis>1432279571610</millis>
+  <sequence>119</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 85</message>
+</record>
+<record>
+  <date>2015-05-22T00:26:11</date>
+  <millis>1432279571610</millis>
+  <sequence>120</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 18 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:28:40</date>
+  <millis>1432279720931</millis>
+  <sequence>121</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1750349 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:28:40</date>
+  <millis>1432279720932</millis>
+  <sequence>122</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1813847 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:28:40</date>
+  <millis>1432279720932</millis>
+  <sequence>123</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2730 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:28:40</date>
+  <millis>1432279720932</millis>
+  <sequence>124</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:28:40</date>
+  <millis>1432279720933</millis>
+  <sequence>125</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0000030000 
+    000000000  
+    00003000   
+    3003300    
+   20000001    
+  220000101    
+ 2220001011    
+    300        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:28:40</date>
+  <millis>1432279720933</millis>
+  <sequence>126</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 86</message>
+</record>
+<record>
+  <date>2015-05-22T00:28:40</date>
+  <millis>1432279720933</millis>
+  <sequence>127</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 19 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:31:03</date>
+  <millis>1432279863729</millis>
+  <sequence>128</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1660300 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:31:03</date>
+  <millis>1432279863729</millis>
+  <sequence>129</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1640638 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:31:03</date>
+  <millis>1432279863730</millis>
+  <sequence>130</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2876 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:31:03</date>
+  <millis>1432279863730</millis>
+  <sequence>131</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:31:03</date>
+  <millis>1432279863730</millis>
+  <sequence>132</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0030300000 
+    000000310  
+    00300000   
+    0000001    
+   20030001    
+  220000001    
+ 2220003011    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:31:03</date>
+  <millis>1432279863730</millis>
+  <sequence>133</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 77</message>
+</record>
+<record>
+  <date>2015-05-22T00:31:03</date>
+  <millis>1432279863730</millis>
+  <sequence>134</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 20 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:33:31</date>
+  <millis>1432280011984</millis>
+  <sequence>135</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1470093 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:33:31</date>
+  <millis>1432280011985</millis>
+  <sequence>136</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1534 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:33:31</date>
+  <millis>1432280011985</millis>
+  <sequence>137</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1583612 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:33:31</date>
+  <millis>1432280011985</millis>
+  <sequence>138</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:33:31</date>
+  <millis>1432280011986</millis>
+  <sequence>139</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    0000020000 
+    000000000  
+    00200001   
+    2020010    
+   00020000    
+  000001001    
+ 0200000011    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:33:31</date>
+  <millis>1432280011986</millis>
+  <sequence>140</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 75</message>
+</record>
+<record>
+  <date>2015-05-22T00:33:31</date>
+  <millis>1432280011987</millis>
+  <sequence>141</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 21 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:35:49</date>
+  <millis>1432280149794</millis>
+  <sequence>142</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1336842 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:35:49</date>
+  <millis>1432280149795</millis>
+  <sequence>143</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2075 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:35:49</date>
+  <millis>1432280149795</millis>
+  <sequence>144</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1088385 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:35:49</date>
+  <millis>1432280149798</millis>
+  <sequence>145</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:35:49</date>
+  <millis>1432280149798</millis>
+  <sequence>146</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    0000200000 
+    000000210  
+    00000000   
+    0000020    
+   00000010    
+  000220021    
+ 0000010011    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:35:49</date>
+  <millis>1432280149798</millis>
+  <sequence>147</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 72</message>
+</record>
+<record>
+  <date>2015-05-22T00:35:49</date>
+  <millis>1432280149799</millis>
+  <sequence>148</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 22 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:38:28</date>
+  <millis>1432280308786</millis>
+  <sequence>149</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1793612 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:38:28</date>
+  <millis>1432280308787</millis>
+  <sequence>150</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1441444 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:38:28</date>
+  <millis>1432280308787</millis>
+  <sequence>151</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2789 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:38:28</date>
+  <millis>1432280308787</millis>
+  <sequence>152</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:38:28</date>
+  <millis>1432280308787</millis>
+  <sequence>153</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0000000000 
+    000300000  
+    00003000   
+    2300000    
+   00000001    
+  200220113    
+ 2200330111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:38:28</date>
+  <millis>1432280308788</millis>
+  <sequence>154</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 73</message>
+</record>
+<record>
+  <date>2015-05-22T00:38:28</date>
+  <millis>1432280308788</millis>
+  <sequence>155</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 23 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:41:11</date>
+  <millis>1432280471082</millis>
+  <sequence>156</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1532362 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:41:11</date>
+  <millis>1432280471083</millis>
+  <sequence>157</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1635116 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:41:11</date>
+  <millis>1432280471083</millis>
+  <sequence>158</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2110 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:41:11</date>
+  <millis>1432280471083</millis>
+  <sequence>159</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:41:11</date>
+  <millis>1432280471083</millis>
+  <sequence>160</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0000000000 
+    003000300  
+    00003000   
+    0000000    
+   02000001    
+  220000311    
+ 2022030111    
+    000        
+    03         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:41:11</date>
+  <millis>1432280471083</millis>
+  <sequence>161</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 79</message>
+</record>
+<record>
+  <date>2015-05-22T00:41:11</date>
+  <millis>1432280471084</millis>
+  <sequence>162</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 24 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:44:13</date>
+  <millis>1432280653827</millis>
+  <sequence>163</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 4614 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:44:13</date>
+  <millis>1432280653827</millis>
+  <sequence>164</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1727881 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:44:13</date>
+  <millis>1432280653827</millis>
+  <sequence>165</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1587311 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:44:13</date>
+  <millis>1432280653828</millis>
+  <sequence>166</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:44:13</date>
+  <millis>1432280653828</millis>
+  <sequence>167</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    0000000000 
+    000000010  
+    00100000   
+    0000001    
+   21000000    
+  222010000    
+ 2200001000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:44:13</date>
+  <millis>1432280653828</millis>
+  <sequence>168</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 90</message>
+</record>
+<record>
+  <date>2015-05-22T00:44:13</date>
+  <millis>1432280653828</millis>
+  <sequence>169</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 25 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:46:54</date>
+  <millis>1432280814670</millis>
+  <sequence>170</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1284074 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:46:54</date>
+  <millis>1432280814678</millis>
+  <sequence>171</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2673 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:46:54</date>
+  <millis>1432280814678</millis>
+  <sequence>172</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1493487 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:46:54</date>
+  <millis>1432280814678</millis>
+  <sequence>173</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:46:54</date>
+  <millis>1432280814678</millis>
+  <sequence>174</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    0000000200 
+    000000000  
+    20020211   
+    0200001    
+   00020001    
+  000000001    
+ 0000000001    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:46:54</date>
+  <millis>1432280814679</millis>
+  <sequence>175</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 78</message>
+</record>
+<record>
+  <date>2015-05-22T00:46:54</date>
+  <millis>1432280814679</millis>
+  <sequence>176</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 26 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:49:44</date>
+  <millis>1432280984823</millis>
+  <sequence>177</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1483946 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:49:44</date>
+  <millis>1432280984823</millis>
+  <sequence>178</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3480 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:49:44</date>
+  <millis>1432280984823</millis>
+  <sequence>179</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 973002 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:49:44</date>
+  <millis>1432280984823</millis>
+  <sequence>180</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:49:44</date>
+  <millis>1432280984824</millis>
+  <sequence>181</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    0000000000 
+    020000000  
+    00020000   
+    0000220    
+   00002000    
+  000001011    
+ 0000020111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:49:44</date>
+  <millis>1432280984824</millis>
+  <sequence>182</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 75</message>
+</record>
+<record>
+  <date>2015-05-22T00:49:44</date>
+  <millis>1432280984824</millis>
+  <sequence>183</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 27 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:52:47</date>
+  <millis>1432281167191</millis>
+  <sequence>184</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3490 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:52:47</date>
+  <millis>1432281167192</millis>
+  <sequence>185</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1522235 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:52:47</date>
+  <millis>1432281167194</millis>
+  <sequence>186</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1374671 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:52:47</date>
+  <millis>1432281167195</millis>
+  <sequence>187</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:52:47</date>
+  <millis>1432281167195</millis>
+  <sequence>188</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    0000000000 
+    000100000  
+    00100010   
+    0001000    
+   22100001    
+  200000000    
+ 2200000000    
+    200        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:52:47</date>
+  <millis>1432281167196</millis>
+  <sequence>189</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 78</message>
+</record>
+<record>
+  <date>2015-05-22T00:52:47</date>
+  <millis>1432281167196</millis>
+  <sequence>190</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 28 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:55:32</date>
+  <millis>1432281332246</millis>
+  <sequence>191</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1238446 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:55:32</date>
+  <millis>1432281332247</millis>
+  <sequence>192</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 989549 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:55:32</date>
+  <millis>1432281332247</millis>
+  <sequence>193</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1909 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:55:32</date>
+  <millis>1432281332247</millis>
+  <sequence>194</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:55:32</date>
+  <millis>1432281332247</millis>
+  <sequence>195</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0000003000 
+    003000000  
+    00003000   
+    0000001    
+   20303100    
+  220000100    
+ 2220010100    
+    001        
+    30         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:55:32</date>
+  <millis>1432281332248</millis>
+  <sequence>196</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 74</message>
+</record>
+<record>
+  <date>2015-05-22T00:55:32</date>
+  <millis>1432281332248</millis>
+  <sequence>197</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 29 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T00:59:18</date>
+  <millis>1432281558162</millis>
+  <sequence>198</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 2327506 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:59:18</date>
+  <millis>1432281558163</millis>
+  <sequence>199</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 2063751 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:59:18</date>
+  <millis>1432281558163</millis>
+  <sequence>200</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 6378 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T00:59:18</date>
+  <millis>1432281558163</millis>
+  <sequence>201</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T00:59:18</date>
+  <millis>1432281558163</millis>
+  <sequence>202</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         03    
+        000    
+    0000000000 
+    000000000  
+    00030010   
+    0030300    
+   20030000    
+  220000011    
+ 2220000111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T00:59:18</date>
+  <millis>1432281558164</millis>
+  <sequence>203</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 92</message>
+</record>
+<record>
+  <date>2015-05-22T00:59:18</date>
+  <millis>1432281558164</millis>
+  <sequence>204</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 30 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:02:56</date>
+  <millis>1432281776606</millis>
+  <sequence>205</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1850043 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:02:56</date>
+  <millis>1432281776607</millis>
+  <sequence>206</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 7950 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:02:56</date>
+  <millis>1432281776607</millis>
+  <sequence>207</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1533474 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:02:56</date>
+  <millis>1432281776607</millis>
+  <sequence>208</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:02:56</date>
+  <millis>1432281776607</millis>
+  <sequence>209</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    0000000000 
+    002020000  
+    00020000   
+    0000020    
+   00000001    
+  000001001    
+ 0020020111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:02:56</date>
+  <millis>1432281776607</millis>
+  <sequence>210</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 87</message>
+</record>
+<record>
+  <date>2015-05-22T01:02:56</date>
+  <millis>1432281776608</millis>
+  <sequence>211</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 31 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:05:55</date>
+  <millis>1432281955750</millis>
+  <sequence>212</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1019861 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:05:55</date>
+  <millis>1432281955751</millis>
+  <sequence>213</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 4149 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:05:55</date>
+  <millis>1432281955751</millis>
+  <sequence>214</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 994272 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:05:55</date>
+  <millis>1432281955751</millis>
+  <sequence>215</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:05:55</date>
+  <millis>1432281955751</millis>
+  <sequence>216</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    0000001000 
+    000020020  
+    00002020   
+    0000000    
+   20000000    
+  000001001    
+ 0020100011    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:05:55</date>
+  <millis>1432281955752</millis>
+  <sequence>217</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 78</message>
+</record>
+<record>
+  <date>2015-05-22T01:05:55</date>
+  <millis>1432281955752</millis>
+  <sequence>218</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 32 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:09:07</date>
+  <millis>1432282147474</millis>
+  <sequence>219</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1511719 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:09:07</date>
+  <millis>1432282147475</millis>
+  <sequence>220</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1261091 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:09:07</date>
+  <millis>1432282147475</millis>
+  <sequence>221</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 4037 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:09:07</date>
+  <millis>1432282147475</millis>
+  <sequence>222</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:09:07</date>
+  <millis>1432282147475</millis>
+  <sequence>223</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0002000000 
+    000030000  
+    00003000   
+    0000030    
+   32300301    
+  200000011    
+ 2220000111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:09:07</date>
+  <millis>1432282147476</millis>
+  <sequence>224</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 85</message>
+</record>
+<record>
+  <date>2015-05-22T01:09:07</date>
+  <millis>1432282147476</millis>
+  <sequence>225</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 33 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:12:51</date>
+  <millis>1432282371593</millis>
+  <sequence>226</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1759225 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:12:51</date>
+  <millis>1432282371594</millis>
+  <sequence>227</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1322245 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:12:51</date>
+  <millis>1432282371594</millis>
+  <sequence>228</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2694 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:12:51</date>
+  <millis>1432282371594</millis>
+  <sequence>229</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:12:51</date>
+  <millis>1432282371595</millis>
+  <sequence>230</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0000030000 
+    003000000  
+    00000300   
+    0000000    
+   00000003    
+  023000311    
+ 2222201111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:12:51</date>
+  <millis>1432282371595</millis>
+  <sequence>231</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 85</message>
+</record>
+<record>
+  <date>2015-05-22T01:12:51</date>
+  <millis>1432282371595</millis>
+  <sequence>232</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 34 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:15:58</date>
+  <millis>1432282558887</millis>
+  <sequence>233</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1251347 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:15:58</date>
+  <millis>1432282558887</millis>
+  <sequence>234</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3847 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:15:58</date>
+  <millis>1432282558887</millis>
+  <sequence>235</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 971905 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:15:58</date>
+  <millis>1432282558888</millis>
+  <sequence>236</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:15:58</date>
+  <millis>1432282558888</millis>
+  <sequence>237</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    0000000000 
+    000020200  
+    00002000   
+    0200000    
+   02000201    
+  000000011    
+ 0000010011    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:15:58</date>
+  <millis>1432282558888</millis>
+  <sequence>238</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 78</message>
+</record>
+<record>
+  <date>2015-05-22T01:15:58</date>
+  <millis>1432282558888</millis>
+  <sequence>239</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 35 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:18:45</date>
+  <millis>1432282725454</millis>
+  <sequence>240</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2332 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:18:45</date>
+  <millis>1432282725455</millis>
+  <sequence>241</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 958547 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:18:45</date>
+  <millis>1432282725455</millis>
+  <sequence>242</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 757885 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:18:45</date>
+  <millis>1432282725455</millis>
+  <sequence>243</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:18:45</date>
+  <millis>1432282725455</millis>
+  <sequence>244</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    0000000000 
+    200001000  
+    00100000   
+    0000000    
+   00200011    
+  100020000    
+ 2220000000    
+    000        
+    01         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:18:45</date>
+  <millis>1432282725455</millis>
+  <sequence>245</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 69</message>
+</record>
+<record>
+  <date>2015-05-22T01:18:45</date>
+  <millis>1432282725456</millis>
+  <sequence>246</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 36 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:23:11</date>
+  <millis>1432282991486</millis>
+  <sequence>247</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 11424 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:23:11</date>
+  <millis>1432282991487</millis>
+  <sequence>248</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 2294779 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:23:11</date>
+  <millis>1432282991487</millis>
+  <sequence>249</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1934377 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:23:11</date>
+  <millis>1432282991487</millis>
+  <sequence>250</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(MCTS_UCT_SOS) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:23:11</date>
+  <millis>1432282991487</millis>
+  <sequence>251</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        330    
+    0000000000 
+    000000000  
+    00000030   
+    0000000    
+   20000001    
+  200000011    
+ 2222000111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:23:11</date>
+  <millis>1432282991487</millis>
+  <sequence>252</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 94</message>
+</record>
+<record>
+  <date>2015-05-22T01:23:11</date>
+  <millis>1432282991488</millis>
+  <sequence>253</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 37 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:25:51</date>
+  <millis>1432283151504</millis>
+  <sequence>254</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 796645 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:25:51</date>
+  <millis>1432283151504</millis>
+  <sequence>255</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1726 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:25:51</date>
+  <millis>1432283151504</millis>
+  <sequence>256</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 767077 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:25:51</date>
+  <millis>1432283151505</millis>
+  <sequence>257</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:25:51</date>
+  <millis>1432283151505</millis>
+  <sequence>258</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         32    
+        333    
+    0000000000 
+    000020000  
+    00002002   
+    0002100    
+   00000100    
+  000300012    
+ 0000010011    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:25:51</date>
+  <millis>1432283151505</millis>
+  <sequence>259</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 63</message>
+</record>
+<record>
+  <date>2015-05-22T01:25:51</date>
+  <millis>1432283151505</millis>
+  <sequence>260</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 38 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:29:30</date>
+  <millis>1432283370160</millis>
+  <sequence>261</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 7808 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:29:30</date>
+  <millis>1432283370160</millis>
+  <sequence>262</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1735421 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:29:30</date>
+  <millis>1432283370161</millis>
+  <sequence>263</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1322226 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:29:30</date>
+  <millis>1432283370161</millis>
+  <sequence>264</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:29:30</date>
+  <millis>1432283370161</millis>
+  <sequence>265</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        300    
+    0000033000 
+    001101000  
+    00010000   
+    0000000    
+   20010000    
+  220000001    
+ 2220000000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:29:30</date>
+  <millis>1432283370161</millis>
+  <sequence>266</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 83</message>
+</record>
+<record>
+  <date>2015-05-22T01:29:30</date>
+  <millis>1432283370161</millis>
+  <sequence>267</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 39 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:32:15</date>
+  <millis>1432283535606</millis>
+  <sequence>268</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2823 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:32:15</date>
+  <millis>1432283535606</millis>
+  <sequence>269</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 822045 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:32:15</date>
+  <millis>1432283535606</millis>
+  <sequence>270</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 728955 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:32:15</date>
+  <millis>1432283535606</millis>
+  <sequence>271</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:32:15</date>
+  <millis>1432283535607</millis>
+  <sequence>272</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        303    
+    0031001000 
+    000000000  
+    00100000   
+    0000000    
+   20110000    
+  220100000    
+ 2220000000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:32:15</date>
+  <millis>1432283535607</millis>
+  <sequence>273</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 77</message>
+</record>
+<record>
+  <date>2015-05-22T01:32:15</date>
+  <millis>1432283535607</millis>
+  <sequence>274</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 40 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:36:06</date>
+  <millis>1432283766006</millis>
+  <sequence>275</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1046685 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:36:06</date>
+  <millis>1432283766007</millis>
+  <sequence>276</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2627 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:36:06</date>
+  <millis>1432283766007</millis>
+  <sequence>277</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1218644 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:36:06</date>
+  <millis>1432283766007</millis>
+  <sequence>278</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:36:06</date>
+  <millis>1432283766007</millis>
+  <sequence>279</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          2    
+         33    
+        333    
+    0000032200 
+    000200000  
+    00000000   
+    0000001    
+   00000000    
+  000000011    
+ 0000002111    
+    000        
+    20         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:36:06</date>
+  <millis>1432283766007</millis>
+  <sequence>280</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 72</message>
+</record>
+<record>
+  <date>2015-05-22T01:36:06</date>
+  <millis>1432283766008</millis>
+  <sequence>281</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 41 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:39:16</date>
+  <millis>1432283956394</millis>
+  <sequence>282</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1187508 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:39:16</date>
+  <millis>1432283956395</millis>
+  <sequence>283</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 906626 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:39:16</date>
+  <millis>1432283956395</millis>
+  <sequence>284</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1741 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:39:16</date>
+  <millis>1432283956395</millis>
+  <sequence>285</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:39:16</date>
+  <millis>1432283956396</millis>
+  <sequence>286</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0000001100 
+    000000000  
+    03000000   
+    0000030    
+   20003001    
+  320200201    
+ 2320000011    
+    030        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:39:16</date>
+  <millis>1432283956396</millis>
+  <sequence>287</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 65</message>
+</record>
+<record>
+  <date>2015-05-22T01:39:16</date>
+  <millis>1432283956396</millis>
+  <sequence>288</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 42 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:43:06</date>
+  <millis>1432284186258</millis>
+  <sequence>289</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1252090 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:43:06</date>
+  <millis>1432284186259</millis>
+  <sequence>290</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1299394 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:43:06</date>
+  <millis>1432284186259</millis>
+  <sequence>291</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2509 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:43:06</date>
+  <millis>1432284186259</millis>
+  <sequence>292</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:43:06</date>
+  <millis>1432284186259</millis>
+  <sequence>293</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0000000000 
+    000300000  
+    02300003   
+    3003030    
+   00000001    
+  200000011    
+ 2220200111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:43:06</date>
+  <millis>1432284186259</millis>
+  <sequence>294</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 76</message>
+</record>
+<record>
+  <date>2015-05-22T01:43:06</date>
+  <millis>1432284186260</millis>
+  <sequence>295</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 43 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:46:05</date>
+  <millis>1432284365782</millis>
+  <sequence>296</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1189182 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:46:05</date>
+  <millis>1432284365783</millis>
+  <sequence>297</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 629199 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:46:05</date>
+  <millis>1432284365783</millis>
+  <sequence>298</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3476 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:46:05</date>
+  <millis>1432284365783</millis>
+  <sequence>299</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:46:05</date>
+  <millis>1432284365783</millis>
+  <sequence>300</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0000000000 
+    030000000  
+    02330000   
+    0000000    
+   20000031    
+  203000311    
+ 2220000111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:46:05</date>
+  <millis>1432284365783</millis>
+  <sequence>301</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 79</message>
+</record>
+<record>
+  <date>2015-05-22T01:46:05</date>
+  <millis>1432284365784</millis>
+  <sequence>302</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 44 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:49:18</date>
+  <millis>1432284558422</millis>
+  <sequence>303</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1031099 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:49:18</date>
+  <millis>1432284558423</millis>
+  <sequence>304</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 5179 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:49:18</date>
+  <millis>1432284558423</millis>
+  <sequence>305</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 832502 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:49:18</date>
+  <millis>1432284558423</millis>
+  <sequence>306</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:49:18</date>
+  <millis>1432284558423</millis>
+  <sequence>307</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        323    
+    0000020000 
+    000000300  
+    00000000   
+    0000000    
+   00002011    
+  002002011    
+ 0000020011    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:49:18</date>
+  <millis>1432284558423</millis>
+  <sequence>308</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 84</message>
+</record>
+<record>
+  <date>2015-05-22T01:49:18</date>
+  <millis>1432284558423</millis>
+  <sequence>309</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 45 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:53:54</date>
+  <millis>1432284834110</millis>
+  <sequence>310</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 4987 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:53:54</date>
+  <millis>1432284834111</millis>
+  <sequence>311</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1786809 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:53:54</date>
+  <millis>1432284834111</millis>
+  <sequence>312</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1906424 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:53:54</date>
+  <millis>1432284834111</millis>
+  <sequence>313</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:53:54</date>
+  <millis>1432284834111</millis>
+  <sequence>314</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        033    
+    0010030000 
+    000000000  
+    01000100   
+    0000000    
+   20000010    
+  220000000    
+ 2221010000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:53:54</date>
+  <millis>1432284834111</millis>
+  <sequence>315</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 89</message>
+</record>
+<record>
+  <date>2015-05-22T01:53:54</date>
+  <millis>1432284834111</millis>
+  <sequence>316</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 46 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T01:57:30</date>
+  <millis>1432285050743</millis>
+  <sequence>317</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1053469 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:57:30</date>
+  <millis>1432285050743</millis>
+  <sequence>318</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 928480 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:57:30</date>
+  <millis>1432285050743</millis>
+  <sequence>319</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3517 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T01:57:30</date>
+  <millis>1432285050743</millis>
+  <sequence>320</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T01:57:30</date>
+  <millis>1432285050743</millis>
+  <sequence>321</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0000000000 
+    003030000  
+    02300000   
+    3000000    
+   20000301    
+  220030011    
+ 2200000111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T01:57:30</date>
+  <millis>1432285050744</millis>
+  <sequence>322</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 76</message>
+</record>
+<record>
+  <date>2015-05-22T01:57:30</date>
+  <millis>1432285050744</millis>
+  <sequence>323</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 47 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T02:00:42</date>
+  <millis>1432285242082</millis>
+  <sequence>324</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 765043 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:00:42</date>
+  <millis>1432285242083</millis>
+  <sequence>325</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3072 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:00:42</date>
+  <millis>1432285242083</millis>
+  <sequence>326</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 824166 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:00:42</date>
+  <millis>1432285242083</millis>
+  <sequence>327</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T02:00:42</date>
+  <millis>1432285242083</millis>
+  <sequence>328</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        033    
+    0000003000 
+    000000020  
+    02000000   
+    0000000    
+   00000001    
+  000220211    
+ 0000002111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T02:00:42</date>
+  <millis>1432285242083</millis>
+  <sequence>329</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 73</message>
+</record>
+<record>
+  <date>2015-05-22T02:00:42</date>
+  <millis>1432285242084</millis>
+  <sequence>330</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 48 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T02:05:14</date>
+  <millis>1432285514730</millis>
+  <sequence>331</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 7063 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:05:14</date>
+  <millis>1432285514730</millis>
+  <sequence>332</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1454759 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:05:14</date>
+  <millis>1432285514731</millis>
+  <sequence>333</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1362554 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:05:14</date>
+  <millis>1432285514731</millis>
+  <sequence>334</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T02:05:14</date>
+  <millis>1432285514731</millis>
+  <sequence>335</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        303    
+    0000030000 
+    000000000  
+    01110000   
+    0000001    
+   20010000    
+  220000000    
+ 2220000000    
+    001        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T02:05:14</date>
+  <millis>1432285514731</millis>
+  <sequence>336</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 83</message>
+</record>
+<record>
+  <date>2015-05-22T02:05:14</date>
+  <millis>1432285514731</millis>
+  <sequence>337</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 49 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T02:09:24</date>
+  <millis>1432285764886</millis>
+  <sequence>338</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 5853 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:09:24</date>
+  <millis>1432285764887</millis>
+  <sequence>339</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1377275 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:09:24</date>
+  <millis>1432285764887</millis>
+  <sequence>340</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1270999 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:09:24</date>
+  <millis>1432285764887</millis>
+  <sequence>341</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T02:09:24</date>
+  <millis>1432285764887</millis>
+  <sequence>342</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        033    
+    0010000000 
+    100000000  
+    03000010   
+    0100010    
+   20000000    
+  220000010    
+ 2220000000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T02:09:24</date>
+  <millis>1432285764887</millis>
+  <sequence>343</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 89</message>
+</record>
+<record>
+  <date>2015-05-22T02:09:24</date>
+  <millis>1432285764888</millis>
+  <sequence>344</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 50 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T02:13:59</date>
+  <millis>1432286039243</millis>
+  <sequence>345</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1349904 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:13:59</date>
+  <millis>1432286039243</millis>
+  <sequence>346</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3480 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:13:59</date>
+  <millis>1432286039244</millis>
+  <sequence>347</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1286763 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:13:59</date>
+  <millis>1432286039244</millis>
+  <sequence>348</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T02:13:59</date>
+  <millis>1432286039244</millis>
+  <sequence>349</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         30    
+        330    
+    0003003000 
+    000000020  
+    00000002   
+    0002000    
+   20000001    
+  200000011    
+ 0002000111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T02:13:59</date>
+  <millis>1432286039244</millis>
+  <sequence>350</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 88</message>
+</record>
+<record>
+  <date>2015-05-22T02:13:59</date>
+  <millis>1432286039244</millis>
+  <sequence>351</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 51 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T02:17:10</date>
+  <millis>1432286230246</millis>
+  <sequence>352</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2041 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:17:10</date>
+  <millis>1432286230247</millis>
+  <sequence>353</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 734961 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:17:10</date>
+  <millis>1432286230247</millis>
+  <sequence>354</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 588784 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:17:10</date>
+  <millis>1432286230247</millis>
+  <sequence>355</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T02:17:10</date>
+  <millis>1432286230247</millis>
+  <sequence>356</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         03    
+        333    
+    0000003000 
+    001000300  
+    00000010   
+    0110000    
+   20000000    
+  220000000    
+ 2220101000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T02:17:10</date>
+  <millis>1432286230248</millis>
+  <sequence>357</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 74</message>
+</record>
+<record>
+  <date>2015-05-22T02:17:10</date>
+  <millis>1432286230248</millis>
+  <sequence>358</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 52 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T02:22:13</date>
+  <millis>1432286533886</millis>
+  <sequence>359</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 934862 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:22:13</date>
+  <millis>1432286533887</millis>
+  <sequence>360</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 5963 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:22:13</date>
+  <millis>1432286533887</millis>
+  <sequence>361</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1035153 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:22:13</date>
+  <millis>1432286533887</millis>
+  <sequence>362</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T02:22:13</date>
+  <millis>1432286533887</millis>
+  <sequence>363</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         32    
+        333    
+    0000200000 
+    003000200  
+    00020000   
+    0020001    
+   00000000    
+  000000011    
+ 0000200111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T02:22:13</date>
+  <millis>1432286533887</millis>
+  <sequence>364</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 72</message>
+</record>
+<record>
+  <date>2015-05-22T02:22:13</date>
+  <millis>1432286533888</millis>
+  <sequence>365</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 53 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T02:27:06</date>
+  <millis>1432286826798</millis>
+  <sequence>366</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1265587 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:27:06</date>
+  <millis>1432286826799</millis>
+  <sequence>367</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 6664 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:27:06</date>
+  <millis>1432286826799</millis>
+  <sequence>368</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1188553 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:27:06</date>
+  <millis>1432286826799</millis>
+  <sequence>369</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T02:27:06</date>
+  <millis>1432286826799</millis>
+  <sequence>370</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        033    
+    0000300200 
+    000000000  
+    00020000   
+    2000000    
+   00200001    
+  000000211    
+ 0000000111    
+    200        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T02:27:06</date>
+  <millis>1432286826799</millis>
+  <sequence>371</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 82</message>
+</record>
+<record>
+  <date>2015-05-22T02:27:06</date>
+  <millis>1432286826799</millis>
+  <sequence>372</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 54 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T02:32:12</date>
+  <millis>1432287132233</millis>
+  <sequence>373</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 4065 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:32:12</date>
+  <millis>1432287132234</millis>
+  <sequence>374</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1783200 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:32:12</date>
+  <millis>1432287132234</millis>
+  <sequence>375</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1221854 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:32:12</date>
+  <millis>1432287132234</millis>
+  <sequence>376</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T02:32:12</date>
+  <millis>1432287132234</millis>
+  <sequence>377</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        033    
+    0000300000 
+    011100100  
+    00000000   
+    0010000    
+   20000000    
+  220000000    
+ 2220000010    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T02:32:12</date>
+  <millis>1432287132234</millis>
+  <sequence>378</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 77</message>
+</record>
+<record>
+  <date>2015-05-22T02:32:12</date>
+  <millis>1432287132235</millis>
+  <sequence>379</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 55 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T02:37:01</date>
+  <millis>1432287421634</millis>
+  <sequence>380</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 4704 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:37:01</date>
+  <millis>1432287421635</millis>
+  <sequence>381</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 922927 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:37:01</date>
+  <millis>1432287421635</millis>
+  <sequence>382</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1459018 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:37:01</date>
+  <millis>1432287421635</millis>
+  <sequence>383</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T02:37:01</date>
+  <millis>1432287421635</millis>
+  <sequence>384</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        033    
+    0000000000 
+    001013000  
+    00010000   
+    0000000    
+   20000000    
+  220101000    
+ 2220010000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T02:37:01</date>
+  <millis>1432287421635</millis>
+  <sequence>385</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 89</message>
+</record>
+<record>
+  <date>2015-05-22T02:37:01</date>
+  <millis>1432287421635</millis>
+  <sequence>386</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 56 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T02:39:52</date>
+  <millis>1432287592406</millis>
+  <sequence>387</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1892 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:39:52</date>
+  <millis>1432287592407</millis>
+  <sequence>388</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 540279 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:39:52</date>
+  <millis>1432287592407</millis>
+  <sequence>389</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 536257 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:39:52</date>
+  <millis>1432287592407</millis>
+  <sequence>390</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T02:39:52</date>
+  <millis>1432287592407</millis>
+  <sequence>391</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         30    
+        030    
+    0030003000 
+    010001100  
+    10000300   
+    0010000    
+   20001000    
+  220000000    
+ 2220000000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T02:39:52</date>
+  <millis>1432287592408</millis>
+  <sequence>392</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 74</message>
+</record>
+<record>
+  <date>2015-05-22T02:39:52</date>
+  <millis>1432287592408</millis>
+  <sequence>393</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 57 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T02:44:42</date>
+  <millis>1432287882907</millis>
+  <sequence>394</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 888894 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:44:42</date>
+  <millis>1432287882907</millis>
+  <sequence>395</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 5617 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:44:42</date>
+  <millis>1432287882907</millis>
+  <sequence>396</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1175398 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:44:42</date>
+  <millis>1432287882908</millis>
+  <sequence>397</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T02:44:42</date>
+  <millis>1432287882908</millis>
+  <sequence>398</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        033    
+    0000003000 
+    000000000  
+    00002000   
+    2000200    
+   00200021    
+  000000011    
+ 0000200111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T02:44:42</date>
+  <millis>1432287882908</millis>
+  <sequence>399</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 88</message>
+</record>
+<record>
+  <date>2015-05-22T02:44:42</date>
+  <millis>1432287882908</millis>
+  <sequence>400</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 58 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T02:49:28</date>
+  <millis>1432288168110</millis>
+  <sequence>401</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1231258 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:49:28</date>
+  <millis>1432288168111</millis>
+  <sequence>402</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2931 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:49:28</date>
+  <millis>1432288168111</millis>
+  <sequence>403</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1243983 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:49:28</date>
+  <millis>1432288168111</millis>
+  <sequence>404</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T02:49:28</date>
+  <millis>1432288168111</millis>
+  <sequence>405</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    0002000000 
+    000020000  
+    00000000   
+    0000020    
+   02000001    
+  000000101    
+ 0020002111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T02:49:28</date>
+  <millis>1432288168111</millis>
+  <sequence>406</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 93</message>
+</record>
+<record>
+  <date>2015-05-22T02:49:28</date>
+  <millis>1432288168111</millis>
+  <sequence>407</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 59 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T02:53:47</date>
+  <millis>1432288427238</millis>
+  <sequence>408</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1315161 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:53:47</date>
+  <millis>1432288427239</millis>
+  <sequence>409</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 4457 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:53:47</date>
+  <millis>1432288427239</millis>
+  <sequence>410</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1043101 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:53:47</date>
+  <millis>1432288427239</millis>
+  <sequence>411</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T02:53:47</date>
+  <millis>1432288427239</millis>
+  <sequence>412</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        302    
+    0003000000 
+    000000000  
+    00022300   
+    2002000    
+   00000001    
+  000000011    
+ 0000200111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T02:53:47</date>
+  <millis>1432288427239</millis>
+  <sequence>413</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 82</message>
+</record>
+<record>
+  <date>2015-05-22T02:53:47</date>
+  <millis>1432288427239</millis>
+  <sequence>414</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 60 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T02:59:14</date>
+  <millis>1432288754450</millis>
+  <sequence>415</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 1103871 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:59:14</date>
+  <millis>1432288754451</millis>
+  <sequence>416</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3627 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:59:14</date>
+  <millis>1432288754452</millis>
+  <sequence>417</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 1219563 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T02:59:14</date>
+  <millis>1432288754453</millis>
+  <sequence>418</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T02:59:14</date>
+  <millis>1432288754453</millis>
+  <sequence>419</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        030    
+    0002000300 
+    003000000  
+    00000000   
+    0222000    
+   00000201    
+  000000011    
+ 0000001211    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T02:59:14</date>
+  <millis>1432288754453</millis>
+  <sequence>420</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 85</message>
+</record>
+<record>
+  <date>2015-05-22T02:59:14</date>
+  <millis>1432288754453</millis>
+  <sequence>421</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 61 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T03:16:52</date>
+  <millis>1432289812062</millis>
+  <sequence>422</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 408590 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T03:16:52</date>
+  <millis>1432289812063</millis>
+  <sequence>423</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 424248 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T03:16:52</date>
+  <millis>1432289812064</millis>
+  <sequence>424</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3421 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T03:16:52</date>
+  <millis>1432289812064</millis>
+  <sequence>425</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T03:16:52</date>
+  <millis>1432289812064</millis>
+  <sequence>426</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         03    
+        000    
+    0000000000 
+    000000000  
+    00000310   
+    2030000    
+   20300001    
+  230000011    
+ 2220003011    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T03:16:52</date>
+  <millis>1432289812064</millis>
+  <sequence>427</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 86</message>
+</record>
+<record>
+  <date>2015-05-22T03:16:52</date>
+  <millis>1432289812064</millis>
+  <sequence>428</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 62 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T03:30:03</date>
+  <millis>1432290603443</millis>
+  <sequence>429</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2435 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T03:30:03</date>
+  <millis>1432290603444</millis>
+  <sequence>430</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 263583 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T03:30:03</date>
+  <millis>1432290603444</millis>
+  <sequence>431</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 308912 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T03:30:03</date>
+  <millis>1432290603444</millis>
+  <sequence>432</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T03:30:03</date>
+  <millis>1432290603444</millis>
+  <sequence>433</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        003    
+    0000000000 
+    010030000  
+    00003100   
+    0100000    
+   20000000    
+  220001000    
+ 2220100000    
+    000        
+    10         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T03:30:03</date>
+  <millis>1432290603445</millis>
+  <sequence>434</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 80</message>
+</record>
+<record>
+  <date>2015-05-22T03:30:03</date>
+  <millis>1432290603445</millis>
+  <sequence>435</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 63 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T03:45:54</date>
+  <millis>1432291554543</millis>
+  <sequence>436</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 290358 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T03:45:54</date>
+  <millis>1432291554544</millis>
+  <sequence>437</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 250647 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T03:45:54</date>
+  <millis>1432291554544</millis>
+  <sequence>438</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3157 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T03:45:54</date>
+  <millis>1432291554544</millis>
+  <sequence>439</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T03:45:54</date>
+  <millis>1432291554544</millis>
+  <sequence>440</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0000000300 
+    003000000  
+    00000330   
+    0000001    
+   20000000    
+  220003011    
+ 2220300111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T03:45:54</date>
+  <millis>1432291554544</millis>
+  <sequence>441</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 86</message>
+</record>
+<record>
+  <date>2015-05-22T03:45:54</date>
+  <millis>1432291554545</millis>
+  <sequence>442</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 64 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T03:59:34</date>
+  <millis>1432292374058</millis>
+  <sequence>443</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1778 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T03:59:34</date>
+  <millis>1432292374059</millis>
+  <sequence>444</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 210773 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T03:59:34</date>
+  <millis>1432292374059</millis>
+  <sequence>445</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 161919 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T03:59:34</date>
+  <millis>1432292374059</millis>
+  <sequence>446</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T03:59:34</date>
+  <millis>1432292374059</millis>
+  <sequence>447</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         30    
+        030    
+    0000003000 
+    000000000  
+    03000000   
+    0010000    
+   20001000    
+  222110300    
+ 2210010000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T03:59:34</date>
+  <millis>1432292374060</millis>
+  <sequence>448</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 68</message>
+</record>
+<record>
+  <date>2015-05-22T03:59:34</date>
+  <millis>1432292374060</millis>
+  <sequence>449</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 65 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T04:10:17</date>
+  <millis>1432293017038</millis>
+  <sequence>450</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 129082 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T04:10:17</date>
+  <millis>1432293017039</millis>
+  <sequence>451</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 110861 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T04:10:17</date>
+  <millis>1432293017039</millis>
+  <sequence>452</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1320 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T04:10:17</date>
+  <millis>1432293017039</millis>
+  <sequence>453</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T04:10:17</date>
+  <millis>1432293017039</millis>
+  <sequence>454</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0000000000 
+    300000300  
+    00000300   
+    0000000    
+   20003100    
+  220000011    
+ 2220030111    
+    030        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T04:10:17</date>
+  <millis>1432293017039</millis>
+  <sequence>455</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 65</message>
+</record>
+<record>
+  <date>2015-05-22T04:10:17</date>
+  <millis>1432293017039</millis>
+  <sequence>456</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 66 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T04:22:53</date>
+  <millis>1432293773349</millis>
+  <sequence>457</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3089 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T04:22:53</date>
+  <millis>1432293773350</millis>
+  <sequence>458</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 144427 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T04:22:53</date>
+  <millis>1432293773362</millis>
+  <sequence>459</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 171658 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T04:22:53</date>
+  <millis>1432293773362</millis>
+  <sequence>460</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T04:22:53</date>
+  <millis>1432293773362</millis>
+  <sequence>461</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        330    
+    0000013000 
+    000000000  
+    01000100   
+    1000100    
+   20000000    
+  220000000    
+ 2220001000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T04:22:53</date>
+  <millis>1432293773362</millis>
+  <sequence>462</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 77</message>
+</record>
+<record>
+  <date>2015-05-22T04:22:53</date>
+  <millis>1432293773362</millis>
+  <sequence>463</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 67 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T04:39:43</date>
+  <millis>1432294783217</millis>
+  <sequence>464</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2439 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T04:39:43</date>
+  <millis>1432294783226</millis>
+  <sequence>465</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 200915 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T04:39:43</date>
+  <millis>1432294783226</millis>
+  <sequence>466</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 170086 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T04:39:43</date>
+  <millis>1432294783227</millis>
+  <sequence>467</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T04:39:43</date>
+  <millis>1432294783227</millis>
+  <sequence>468</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        330    
+    0000130100 
+    000001000  
+    01000000   
+    0010000    
+   20000010    
+  220000000    
+ 2220000000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T04:39:43</date>
+  <millis>1432294783227</millis>
+  <sequence>469</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 89</message>
+</record>
+<record>
+  <date>2015-05-22T04:39:43</date>
+  <millis>1432294783227</millis>
+  <sequence>470</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 68 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T04:57:55</date>
+  <millis>1432295875810</millis>
+  <sequence>471</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 186457 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T04:57:55</date>
+  <millis>1432295875811</millis>
+  <sequence>472</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2573 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T04:57:55</date>
+  <millis>1432295875811</millis>
+  <sequence>473</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 206981 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T04:57:55</date>
+  <millis>1432295875812</millis>
+  <sequence>474</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T04:57:55</date>
+  <millis>1432295875812</millis>
+  <sequence>475</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        332    
+    0000000000 
+    000300000  
+    00020020   
+    0000000    
+   00000021    
+  000000101    
+ 0200200111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T04:57:55</date>
+  <millis>1432295875812</millis>
+  <sequence>476</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 87</message>
+</record>
+<record>
+  <date>2015-05-22T04:57:55</date>
+  <millis>1432295875812</millis>
+  <sequence>477</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 69 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T05:09:19</date>
+  <millis>1432296559837</millis>
+  <sequence>478</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1936 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T05:09:19</date>
+  <millis>1432296559838</millis>
+  <sequence>479</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 95520 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T05:09:19</date>
+  <millis>1432296559838</millis>
+  <sequence>480</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 108713 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T05:09:19</date>
+  <millis>1432296559838</millis>
+  <sequence>481</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T05:09:19</date>
+  <millis>1432296559839</millis>
+  <sequence>482</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        030    
+    0000030000 
+    001000300  
+    01001000   
+    0001000    
+   20000000    
+  220010010    
+ 2220000000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T05:09:19</date>
+  <millis>1432296559839</millis>
+  <sequence>483</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 80</message>
+</record>
+<record>
+  <date>2015-05-22T05:09:19</date>
+  <millis>1432296559839</millis>
+  <sequence>484</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 70 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T05:24:03</date>
+  <millis>1432297443863</millis>
+  <sequence>485</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2684 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T05:24:03</date>
+  <millis>1432297443864</millis>
+  <sequence>486</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 106981 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T05:24:03</date>
+  <millis>1432297443864</millis>
+  <sequence>487</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 84543 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T05:24:03</date>
+  <millis>1432297443864</millis>
+  <sequence>488</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T05:24:03</date>
+  <millis>1432297443864</millis>
+  <sequence>489</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        300    
+    0001010000 
+    003000000  
+    03000010   
+    0000110    
+   20000000    
+  220000000    
+ 2220010000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T05:24:03</date>
+  <millis>1432297443865</millis>
+  <sequence>490</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 65</message>
+</record>
+<record>
+  <date>2015-05-22T05:24:03</date>
+  <millis>1432297443865</millis>
+  <sequence>491</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 71 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T05:37:49</date>
+  <millis>1432298269504</millis>
+  <sequence>492</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 79913 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T05:37:49</date>
+  <millis>1432298269505</millis>
+  <sequence>493</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 90825 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T05:37:49</date>
+  <millis>1432298269505</millis>
+  <sequence>494</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 881 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T05:37:49</date>
+  <millis>1432298269505</millis>
+  <sequence>495</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T05:37:49</date>
+  <millis>1432298269510</millis>
+  <sequence>496</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0000000000 
+    000100000  
+    00002000   
+    0300030    
+   00020031    
+  223000011    
+ 2000000211    
+    030        
+    30         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T05:37:49</date>
+  <millis>1432298269510</millis>
+  <sequence>497</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 58</message>
+</record>
+<record>
+  <date>2015-05-22T05:37:49</date>
+  <millis>1432298269510</millis>
+  <sequence>498</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 72 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T05:48:14</date>
+  <millis>1432298894618</millis>
+  <sequence>499</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 102747 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T05:48:14</date>
+  <millis>1432298894619</millis>
+  <sequence>500</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 95653 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T05:48:14</date>
+  <millis>1432298894620</millis>
+  <sequence>501</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1301 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T05:48:14</date>
+  <millis>1432298894620</millis>
+  <sequence>502</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T05:48:14</date>
+  <millis>1432298894620</millis>
+  <sequence>503</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        300    
+    0000000000 
+    000200000  
+    00000030   
+    0003003    
+   00000001    
+  220020011    
+ 2230000111    
+    000        
+    00         
+    3          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T05:48:14</date>
+  <millis>1432298894620</millis>
+  <sequence>504</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 76</message>
+</record>
+<record>
+  <date>2015-05-22T05:48:14</date>
+  <millis>1432298894620</millis>
+  <sequence>505</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 73 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T06:08:03</date>
+  <millis>1432300083132</millis>
+  <sequence>506</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1442 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T06:08:03</date>
+  <millis>1432300083133</millis>
+  <sequence>507</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 156788 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T06:08:03</date>
+  <millis>1432300083133</millis>
+  <sequence>508</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 146229 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T06:08:03</date>
+  <millis>1432300083133</millis>
+  <sequence>509</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T06:08:03</date>
+  <millis>1432300083133</millis>
+  <sequence>510</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         03    
+        300    
+    0000300000 
+    000003300  
+    00011000   
+    0001000    
+   21300000    
+  220010000    
+ 2220010000    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T06:08:03</date>
+  <millis>1432300083137</millis>
+  <sequence>511</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 77</message>
+</record>
+<record>
+  <date>2015-05-22T06:08:03</date>
+  <millis>1432300083138</millis>
+  <sequence>512</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 74 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T06:33:31</date>
+  <millis>1432301611394</millis>
+  <sequence>513</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 115851 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T06:41:31</date>
+  <millis>1432302091506</millis>
+  <sequence>514</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 147979 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T06:41:31</date>
+  <millis>1432302091506</millis>
+  <sequence>515</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 3404 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T06:41:31</date>
+  <millis>1432302091506</millis>
+  <sequence>516</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T06:41:31</date>
+  <millis>1432302091507</millis>
+  <sequence>517</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        003    
+    0000000000 
+    033000300  
+    00000030   
+    0000000    
+   20000001    
+  222003011    
+ 2200000111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T06:41:31</date>
+  <millis>1432302091507</millis>
+  <sequence>518</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 88</message>
+</record>
+<record>
+  <date>2015-05-22T06:41:31</date>
+  <millis>1432302091507</millis>
+  <sequence>519</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 75 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T06:59:51</date>
+  <millis>1432303191334</millis>
+  <sequence>520</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 111525 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T06:59:54</date>
+  <millis>1432303194401</millis>
+  <sequence>521</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 86688 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T07:00:58</date>
+  <millis>1432303258120</millis>
+  <sequence>522</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1203 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T07:00:58</date>
+  <millis>1432303258120</millis>
+  <sequence>523</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T07:00:58</date>
+  <millis>1432303258120</millis>
+  <sequence>524</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        000    
+    0000000000 
+    000000003  
+    03000010   
+    0200000    
+   20000001    
+  023230031    
+ 2020001311    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T07:00:58</date>
+  <millis>1432303258120</millis>
+  <sequence>525</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 73</message>
+</record>
+<record>
+  <date>2015-05-22T07:00:58</date>
+  <millis>1432303258121</millis>
+  <sequence>526</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 76 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T07:11:08</date>
+  <millis>1432303868318</millis>
+  <sequence>527</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 50665 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T07:11:08</date>
+  <millis>1432303868319</millis>
+  <sequence>528</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 1640 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T07:11:08</date>
+  <millis>1432303868319</millis>
+  <sequence>529</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 63072 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T07:11:08</date>
+  <millis>1432303868319</millis>
+  <sequence>530</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Paranoid) 3 won.</message>
+</record>
+<record>
+  <date>2015-05-22T07:11:08</date>
+  <millis>1432303868320</millis>
+  <sequence>531</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        332    
+    0000020000 
+    000200300  
+    00000000   
+    0200000    
+   00000012    
+  000000201    
+ 0000010011    
+    001        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T07:11:08</date>
+  <millis>1432303868320</millis>
+  <sequence>532</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 75</message>
+</record>
+<record>
+  <date>2015-05-22T07:11:08</date>
+  <millis>1432303868320</millis>
+  <sequence>533</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 77 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T07:22:38</date>
+  <millis>1432304558072</millis>
+  <sequence>534</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 58845 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T07:22:38</date>
+  <millis>1432304558073</millis>
+  <sequence>535</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 49479 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T07:22:38</date>
+  <millis>1432304558073</millis>
+  <sequence>536</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2501 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T07:22:38</date>
+  <millis>1432304558074</millis>
+  <sequence>537</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 2 won.</message>
+</record>
+<record>
+  <date>2015-05-22T07:22:38</date>
+  <millis>1432304558074</millis>
+  <sequence>538</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         30    
+        003    
+    0000000000 
+    000000000  
+    00000000   
+    0000003    
+   20000001    
+  220330011    
+ 2220001011    
+    300        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T07:22:38</date>
+  <millis>1432304558074</millis>
+  <sequence>539</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 77</message>
+</record>
+<record>
+  <date>2015-05-22T07:22:38</date>
+  <millis>1432304558074</millis>
+  <sequence>540</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 78 starts.</message>
+</record>
+<record>
+  <date>2015-05-22T07:44:56</date>
+  <millis>1432305896721</millis>
+  <sequence>541</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Maxn&gt; generated 50871 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T07:44:56</date>
+  <millis>1432305896722</millis>
+  <sequence>542</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;Paranoid&gt; generated 29705 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T07:44:56</date>
+  <millis>1432305896722</millis>
+  <sequence>543</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>threePlayers</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 528 nodes</message>
+</record>
+<record>
+  <date>2015-05-22T07:44:56</date>
+  <millis>1432305896722</millis>
+  <sequence>544</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>player(Maxn) 1 won.</message>
+</record>
+<record>
+  <date>2015-05-22T07:44:56</date>
+  <millis>1432305896722</millis>
+  <sequence>545</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         00    
+        003    
+    0000000010 
+    000020000  
+    02000000   
+    0000300    
+   20000003    
+  000030211    
+ 0020003111    
+    200        
+    30         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-05-22T07:44:56</date>
+  <millis>1432305896723</millis>
+  <sequence>546</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 64</message>
+</record>
+<record>
+  <date>2015-05-22T07:44:56</date>
+  <millis>1432305896723</millis>
+  <sequence>547</sequence>
+  <logger>Chinese Checker AI</logger>
+  <level>INFO</level>
+  <class>Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 79 starts.</message>
+</record>
