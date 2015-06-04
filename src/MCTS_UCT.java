@@ -70,7 +70,7 @@ public class MCTS_UCT extends SearchAlgorithm implements MCTS{
             current_num_nodes++;
         }
 //        printChildrenStats(v0);
-        return bestChild(v0, 0).state.getLastMove();
+        return bestChildEnd(v0).state.getLastMove();
     }
 
 
@@ -150,6 +150,32 @@ public class MCTS_UCT extends SearchAlgorithm implements MCTS{
         }
         if(best_child == null) {
             int a =1;
+        }
+        return best_child;
+    }
+
+    /**
+     * find the best child which yields maximum UCT
+     * UCT = Xj + c * sqrt (2* ln(parent visit counts) / child visit counts)
+     * @param v
+     * @return TreeSearchNode best_child obtained with UCT
+     */
+    public TreeSearchNode bestChildEnd(TreeSearchNode v){
+        // we want to maximize the player's win rate
+        int player_id_to_max = v.state.m_turn;
+        TreeSearchNode best_child = null;
+        double best_uct = Double.NEGATIVE_INFINITY;
+        for(TreeSearchNode child : v.children) {
+            if(best_child == null) {
+                best_child = child;
+            }
+            double Xj = child.util_arr[player_id_to_max] / child.visit_times;
+            double uct = Xj;
+
+            if(best_uct < uct){
+                best_uct = uct;
+                best_child = child;
+            }
         }
         return best_child;
     }

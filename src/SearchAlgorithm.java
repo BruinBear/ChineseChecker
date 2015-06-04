@@ -12,6 +12,7 @@ public abstract class SearchAlgorithm {
     protected int current_num_nodes = 0;
     protected int max_nodes_per_iteration;
     protected boolean nodes_limiting = false;
+    protected int player_id;
 
     public abstract Move nextMove(CheckerState state);
 

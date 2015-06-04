@@ -17,12 +17,26 @@ public class MCTS_UCT_SOS extends MCTS_UCT {
         }
 
         double[][] so = new double[utils.length][utils.length];
+//        for(int i = 0; i<utils.length; i++) {
+//            so[i][i] = 1;
+//        }
+
         for(int i = 0; i<utils.length; i++) {
-            for(int j = 0; j<utils.length; j++) {
-                if(i == j) {
-                    so[i][j] = 1;
-                } else {
-                    so[i][j] = -utils[j]/sum;
+            if (i != player_id) {
+                for (int j = 0; j < utils.length; j++) {
+                    if (i == j) {
+                        so[i][j] = 1;
+                    } else {
+                        so[i][j] = -utils[j] / sum/1000;
+                    }
+                }
+            } else {
+                for (int j = 0; j < utils.length; j++) {
+                    if (i == j) {
+                        so[i][j] = 1;
+                    } else {
+                        so[i][j] = 0;
+                    }
                 }
             }
         }

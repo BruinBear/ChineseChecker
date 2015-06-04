@@ -2,8 +2,8 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2015-06-04T12:03:45</date>
-  <millis>1433444625669</millis>
+  <date>2015-06-04T14:38:42</date>
+  <millis>1433453922490</millis>
   <sequence>0</sequence>
   <logger>MCTS</logger>
   <level>INFO</level>

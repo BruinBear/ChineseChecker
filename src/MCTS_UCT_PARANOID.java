@@ -5,10 +5,8 @@
  */
 public class MCTS_UCT_PARANOID extends MCTS_UCT {
     // this is the player we maximize win rate
-    private int max;
-    MCTS_UCT_PARANOID(double c, int nodesPerIteration, int max_player){
+    MCTS_UCT_PARANOID(double c, int nodesPerIteration){
         super(c, nodesPerIteration);
-        max = max_player;
     }
 
     @Override
@@ -21,8 +19,8 @@ public class MCTS_UCT_PARANOID extends MCTS_UCT {
             if(best_child == null) {
                 best_child = child;
             }
-            double Xj = child.util_arr[max] / child.visit_times;
-            if(!v.isMaxNode(max)) {
+            double Xj = child.util_arr[player_id] / child.visit_times;
+            if(!v.isMaxNode(player_id)) {
                 Xj = 1;
             }
             double uct = Xj + Cp*Math.sqrt(2*explore_numerator/child.visit_times);

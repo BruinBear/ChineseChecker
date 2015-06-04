@@ -164,7 +164,7 @@ public class CheckerGameJFrame{
         try {
             LogManager lm = LogManager.getLogManager();
             Logger logger;
-            FileHandler fh = new FileHandler("test/1log.txt");
+            FileHandler fh = new FileHandler("test/500stp10.txt");
 
             logger = Logger.getLogger("MCTS");
 
@@ -174,56 +174,60 @@ public class CheckerGameJFrame{
 
             logger.addHandler(fh);
             ArrayList<Integer> sizes = new ArrayList<Integer>();
-            sizes.add(100000);
-            int games_to_play = 1;
+            sizes.add(5000);
+            int games_to_play = 10;
+            for(int size : sizes) {
+                HashMap<String, Integer> res = new HashMap<String, Integer>();
+                res.put("MCTS_UCT_SOS", 0);
+                res.put("MCTS_UCT_PARANOID", 0);
+                res.put("MCTS_UCT", 0);
+                for (int i = 0; i < games_to_play; i++) {
+                    logger.log(Level.INFO, String.format("Game %d starts.", i + 1));
+                    CheckerState checker = new CheckerState(3);
+                    ArrayList<SearchAlgorithm> pool = new ArrayList<SearchAlgorithm>(3);
+                    pool.add(new MCTS_UCT_SOS(0.3, 1000000, null));
+                    pool.add(new MCTS_UCT(0.3, 1000000));
+                    pool.add(new MCTS_UCT_PARANOID(0.3, 1000000));
+//                    Collections.shuffle(pool);
+                    for (int j = 0; j < pool.size(); j++) {
+                        pool.get(j).player_id = j;
+                    }
+                    //        pool.add(new SOS(4, new double[][]{
+                    //                {1,      0,        0},
+                    //                {-1,     1,      0.5},
+                    //                {-1,     0.5,      1}
+                    //        }));
+                    //        pool.add(new SOS(4, new double[][]{
+                    //                {1,      0,        0},
+                    //                {-1,     1,      0.5},
+                    //                {-1,     0.5,      1}
+                    //        }));
 
-            HashMap<String, Integer> res = new HashMap<String, Integer>();
-            res.put("Maxn", 0);
-            res.put("Paranoid", 0);
-            res.put("MCTS_UCT_SOS", 0);
-            for (int i = 0; i < games_to_play; i++) {
-                logger.log(Level.INFO, String.format("Game %d starts.", i+1));
-                CheckerState checker = new CheckerState(3);
-                ArrayList<SearchAlgorithm> pool = new ArrayList<SearchAlgorithm>(3);
-                pool.add(new MCTS_UCT_SOS(0.2, 10000, null));
-                pool.add(new Maxn(10));
-                pool.add(new Paranoid(10));
-                Collections.shuffle(pool);
-                //        pool.add(new SOS(4, new double[][]{
-                //                {1,      0,        0},
-                //                {-1,     1,      0.5},
-                //                {-1,     0.5,      1}
-                //        }));
-                //        pool.add(new SOS(4, new double[][]{
-                //                {1,      0,        0},
-                //                {-1,     1,      0.5},
-                //                {-1,     0.5,      1}
-                //        }));
+                    CheckerGameJFrame fr = new CheckerGameJFrame(checker, pool);
 
-                CheckerGameJFrame fr = new CheckerGameJFrame(checker, pool);
+                    // Run game
+                    String winner = fr.run('t', size);
+                    logger.log(Level.INFO, "Winner is: " + winner);
+                    logger.log(Level.INFO, fr.gameInstance.toString());
+                    logger.log(Level.INFO, "Turns played: " + fr.gameInstance.m_turn_played);
 
-                // Run game
-                String winner = fr.run('n', 10000);
-                logger.log(Level.INFO, "Winner is: "+winner);
-                logger.log(Level.INFO, fr.gameInstance.toString());
-                logger.log(Level.INFO, "Turns played: "+fr.gameInstance.m_turn_played);
-
-                for(SearchAlgorithm g : pool) {
-                    logger.log(Level.INFO, "<"+g.getClass().getName()+"> generated "+g.nodes_generated+" nodes");
+                    for (SearchAlgorithm g : pool) {
+                        logger.log(Level.INFO, "<" + g.getClass().getName() + "> generated " + g.nodes_generated + " nodes");
+                    }
+                    // Update result set
+                    res.put(winner, res.get(winner) + 1);
+                    try {
+                        Thread.sleep(1000);                 //1000 milliseconds is one second.
+                    } catch (InterruptedException ex) {
+                        Thread.currentThread().interrupt();
+                    }
+                    fr.frame.dispose();
                 }
-                // Update result set
-                res.put(winner, res.get(winner) + 1);
-                try {
-                    Thread.sleep(1000);                 //1000 milliseconds is one second.
-                } catch (InterruptedException ex) {
-                    Thread.currentThread().interrupt();
-                }
-                fr.frame.dispose();
-            }
-            // Log all the games played in this node setting
+                // Log all the games played in this node setting
 
-            for (String key : res.keySet()) {
-                logger.log(Level.INFO, String.format("%s wins %d games(%f).", key, res.get(key), (double) res.get(key) / games_to_play));
+                for (String key : res.keySet()) {
+                    logger.log(Level.INFO, String.format("%s wins %d games(%f).", key, res.get(key), (double) res.get(key) / games_to_play));
+                }
             }
             fh.close();
         } catch (IOException e1) {

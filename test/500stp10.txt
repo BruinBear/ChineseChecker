@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-04T15:01:33</date>
+  <millis>1433455293360</millis>
+  <sequence>0</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 1 starts.</message>
+</record>
+<record>
+  <date>2015-06-04T15:12:44</date>
+  <millis>1433455964827</millis>
+  <sequence>1</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Winner is: MCTS_UCT_SOS</message>
+</record>
+<record>
+  <date>2015-06-04T15:12:44</date>
+  <millis>1433455964829</millis>
+  <sequence>2</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        033    
+    0003000000 
+    000000000  
+    00000000   
+    0000000    
+   22000001    
+  200000011    
+ 2200200111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-06-04T15:12:44</date>
+  <millis>1433455964831</millis>
+  <sequence>3</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 67</message>
+</record>
+<record>
+  <date>2015-06-04T15:12:44</date>
+  <millis>1433455964832</millis>
+  <sequence>4</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 8038442 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T15:12:44</date>
+  <millis>1433455964833</millis>
+  <sequence>5</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT&gt; generated 9832281 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T15:12:44</date>
+  <millis>1433455964833</millis>
+  <sequence>6</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_PARANOID&gt; generated 9311725 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T15:12:45</date>
+  <millis>1433455965839</millis>
+  <sequence>7</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 2 starts.</message>
+</record>
+<record>
+  <date>2015-06-04T15:23:26</date>
+  <millis>1433456606017</millis>
+  <sequence>8</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Winner is: MCTS_UCT_SOS</message>
+</record>
+<record>
+  <date>2015-06-04T15:23:26</date>
+  <millis>1433456606017</millis>
+  <sequence>9</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        033    
+    0003000000 
+    000000000  
+    00000000   
+    2000000    
+   22000001    
+  220000011    
+ 2000000111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-06-04T15:23:26</date>
+  <millis>1433456606017</millis>
+  <sequence>10</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 64</message>
+</record>
+<record>
+  <date>2015-06-04T15:23:26</date>
+  <millis>1433456606018</millis>
+  <sequence>11</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 7065850 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T15:23:26</date>
+  <millis>1433456606018</millis>
+  <sequence>12</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT&gt; generated 7843473 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T15:23:26</date>
+  <millis>1433456606018</millis>
+  <sequence>13</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_PARANOID&gt; generated 9006642 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T15:23:27</date>
+  <millis>1433456607022</millis>
+  <sequence>14</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 3 starts.</message>
+</record>
+<record>
+  <date>2015-06-04T15:34:57</date>
+  <millis>1433457297929</millis>
+  <sequence>15</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Winner is: MCTS_UCT_PARANOID</message>
+</record>
+<record>
+  <date>2015-06-04T15:34:57</date>
+  <millis>1433457297930</millis>
+  <sequence>16</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        333    
+    0000000000 
+    000000000  
+    02000000   
+    0002200    
+   20000011    
+  020000010    
+ 0020001101    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-06-04T15:34:57</date>
+  <millis>1433457297931</millis>
+  <sequence>17</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 69</message>
+</record>
+<record>
+  <date>2015-06-04T15:34:57</date>
+  <millis>1433457297931</millis>
+  <sequence>18</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 2379775 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T15:34:57</date>
+  <millis>1433457297932</millis>
+  <sequence>19</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT&gt; generated 7115163 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T15:34:57</date>
+  <millis>1433457297933</millis>
+  <sequence>20</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_PARANOID&gt; generated 11256162 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T15:34:58</date>
+  <millis>1433457298940</millis>
+  <sequence>21</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 4 starts.</message>
+</record>
+<record>
+  <date>2015-06-04T15:46:09</date>
+  <millis>1433457969634</millis>
+  <sequence>22</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Winner is: MCTS_UCT_SOS</message>
+</record>
+<record>
+  <date>2015-06-04T15:46:09</date>
+  <millis>1433457969635</millis>
+  <sequence>23</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        330    
+    0000030000 
+    000000000  
+    00000000   
+    2020200    
+   00000001    
+  000200011    
+ 0200002111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-06-04T15:46:09</date>
+  <millis>1433457969636</millis>
+  <sequence>24</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 67</message>
+</record>
+<record>
+  <date>2015-06-04T15:46:09</date>
+  <millis>1433457969637</millis>
+  <sequence>25</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 7020605 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T15:46:09</date>
+  <millis>1433457969637</millis>
+  <sequence>26</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT&gt; generated 6618701 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T15:46:09</date>
+  <millis>1433457969638</millis>
+  <sequence>27</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_PARANOID&gt; generated 7846903 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T15:46:10</date>
+  <millis>1433457970643</millis>
+  <sequence>28</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 5 starts.</message>
+</record>
+<record>
+  <date>2015-06-04T15:56:20</date>
+  <millis>1433458580771</millis>
+  <sequence>29</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Winner is: MCTS_UCT_SOS</message>
+</record>
+<record>
+  <date>2015-06-04T15:56:20</date>
+  <millis>1433458580772</millis>
+  <sequence>30</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          3    
+         33    
+        033    
+    0000300000 
+    000000000  
+    00000000   
+    0000000    
+   02000001    
+  200000011    
+ 2200220111    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-06-04T15:56:20</date>
+  <millis>1433458580772</millis>
+  <sequence>31</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 61</message>
+</record>
+<record>
+  <date>2015-06-04T15:56:20</date>
+  <millis>1433458580773</millis>
+  <sequence>32</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 8067344 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T15:56:20</date>
+  <millis>1433458580774</millis>
+  <sequence>33</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT&gt; generated 8640922 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T15:56:20</date>
+  <millis>1433458580775</millis>
+  <sequence>34</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_PARANOID&gt; generated 8481845 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T15:56:21</date>
+  <millis>1433458581782</millis>
+  <sequence>35</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 6 starts.</message>
+</record>
+<record>
+  <date>2015-06-04T16:08:11</date>
+  <millis>1433459291945</millis>
+  <sequence>36</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Winner is: MCTS_UCT</message>
+</record>
+<record>
+  <date>2015-06-04T16:08:11</date>
+  <millis>1433459291946</millis>
+  <sequence>37</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>               
+          0    
+         33    
+        330    
+    0003003000 
+    000000000  
+    00000000   
+    0000100    
+   20000101    
+  220000001    
+ 2220000011    
+    000        
+    00         
+    0          
+               
+</message>
+</record>
+<record>
+  <date>2015-06-04T16:08:11</date>
+  <millis>1433459291947</millis>
+  <sequence>38</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Turns played: 71</message>
+</record>
+<record>
+  <date>2015-06-04T16:08:11</date>
+  <millis>1433459291947</millis>
+  <sequence>39</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_SOS&gt; generated 4361829 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T16:08:11</date>
+  <millis>1433459291948</millis>
+  <sequence>40</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT&gt; generated 13070002 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T16:08:11</date>
+  <millis>1433459291948</millis>
+  <sequence>41</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>&lt;MCTS_UCT_PARANOID&gt; generated 2775327 nodes</message>
+</record>
+<record>
+  <date>2015-06-04T16:08:12</date>
+  <millis>1433459292953</millis>
+  <sequence>42</sequence>
+  <logger>MCTS</logger>
+  <level>INFO</level>
+  <class>CheckerGameJFrame</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Game 7 starts.</message>
+</record>
